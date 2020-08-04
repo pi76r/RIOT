@@ -1,0 +1,3 @@
+/**
+@defgroup    boards_thingsat STM32L051k8
+ */
