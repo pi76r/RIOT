@@ -20,13 +20,47 @@
 #define PERIPH_CONF_H
 
 #include "periph_cpu.h"
-#include "f4/cfg_clock_84_8_1.h"
+
+/**
+ * @name Clock system configuration
+ * @{
+ **/
+#define CLOCK_HSI           (16000000U)             /* frequency of internal oscillator */
+#define CLOCK_CORECLOCK     (12288000U)             /* targeted core clock frequency */
+/*
+ * 0: no external low speed crystal available,
+ * 1: external crystal available (always 32.768kHz)
+ */
+#define CLOCK_LSE           (1)
+
+#define CLOCK_HSE            (25000000U)
+
+/* configuration of peripheral bus clock prescalers */
+#define CLOCK_AHB_DIV       RCC_CFGR_HPRE_DIV1      /* AHB clock -> 32MHz */
+#define CLOCK_APB2_DIV      RCC_CFGR_PPRE2_DIV1     /* APB2 clock -> 32MHz */
+#define CLOCK_APB1_DIV      RCC_CFGR_PPRE1_DIV1     /* APB1 clock -> 32MHz */
+/* configuration of flash access cycles */
+#define CLOCK_FLASH_LATENCY FLASH_ACR_LATENCY
+
+/* bus clocks for simplified peripheral initialization, UPDATE MANUALLY! */
+#define CLOCK_AHB           (CLOCK_CORECLOCK / 1)
+#define CLOCK_APB2          (CLOCK_CORECLOCK / 1)
+#define CLOCK_APB1          (CLOCK_CORECLOCK / 1)
+
+/* Main PLL factors */
+#define CLOCK_PLL_M          (25)
+#define CLOCK_PLL_N          (384)
+#define CLOCK_PLL_P          (4)
+#define CLOCK_PLL_Q          (8)
+/** @} */
+
 #include "cfg_i2c1_pb8_pb9.h"
 #include "cfg_timer_tim5.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+
 
 /**
  * @name    DMA streams configuration
