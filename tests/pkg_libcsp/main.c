@@ -19,15 +19,29 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#if 0
+
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
 
+#include "shell.h"
+
+
+#define CSP_USE_ASSERT 1  // always enable CSP assert
+
 #include <csp/csp.h>
+#include <csp/csp_debug.h>
 #include <csp/arch/csp_thread.h>
+#include <csp/arch/csp_clock.h>
+#include <csp/arch/csp_time.h>
+#include <csp/arch/csp_malloc.h>
+#include <csp/arch/csp_queue.h>
+#include <csp/arch/csp_semaphore.h>
 #include <csp/drivers/can_socketcan.h>
+
+#include <stdlib.h>
+
 
 /* Server port, the port the server listens on for incoming connections from the client. */
 #define MY_SERVER_PORT		10
@@ -149,10 +163,10 @@ CSP_DEFINE_TASK(task_client) {
 }
 /* End of client task */
 
-/* main - initialization of CSP and start of server/client tasks */
-int main(void) {
-    printf("hello world!\n");
-    
+/* initialization of CSP and start of server/client tasks */
+int server_client(int argc, char *argv[]) {
+    (void)argc;
+    (void)argv;
     uint8_t address = 1;
     csp_debug_level_t debug_level = CSP_INFO;
 
@@ -243,21 +257,6 @@ int main(void) {
     return 0;
 }
 
-
-#endif
-
-#define CSP_USE_ASSERT 1  // always enable CSP assert
-
-#include <csp/csp_debug.h>
-#include <csp/arch/csp_thread.h>
-#include <csp/arch/csp_clock.h>
-#include <csp/arch/csp_time.h>
-#include <csp/arch/csp_malloc.h>
-#include <csp/arch/csp_queue.h>
-#include <csp/arch/csp_semaphore.h>
-
-#include <stdlib.h>
-
 static bool thread_executed = false;
 
 void csp_assert_fail_action(const char *assertion, const char *file, int line) {
@@ -269,12 +268,10 @@ CSP_DEFINE_TASK(thread_func) {
     (void)arg;
     csp_log_info("Thread started");
     thread_executed = true;
-    csp_sleep_ms(10000); // safty - ensure process terminates
-    //exit(1);
     return CSP_TASK_RETURN;
 }
 
-int main(int argc, char * argv[]) {
+int test_arch(int argc, char *argv[]) {
     (void)argc;
     (void)argv;
     // debug/log - enable all levels
@@ -377,11 +374,25 @@ int main(int argc, char * argv[]) {
     csp_assert(csp_bin_sem_create(&s) == CSP_SEMAPHORE_OK);
     csp_assert(csp_bin_sem_wait(&s, 0) == CSP_SEMAPHORE_OK);
     csp_assert(csp_bin_sem_post(&s) == CSP_SEMAPHORE_OK);
-    csp_assert(csp_bin_sem_post_isr(&s, NULL) == CSP_SEMAPHORE_ERROR);
+    csp_assert(csp_bin_sem_post_isr(&s, NULL) == CSP_SEMAPHORE_OK);
     csp_assert(csp_bin_sem_wait(&s, 200) == CSP_SEMAPHORE_OK);
     csp_assert(csp_bin_sem_wait(&s, 200) == CSP_SEMAPHORE_ERROR);
     csp_assert(csp_bin_sem_remove(&s) == CSP_SEMAPHORE_OK);
     csp_log_info("semaphore working correctly");
+
+    return 0;
+}
+
+static const shell_command_t _commands[] = {
+    {"test_arch", "Test RIOT architecture implementation for libcsp", test_arch},
+    {"client", "Setup client", server_client},
+    { NULL, NULL, NULL},
+};
+
+int main(void)
+{
+    char line_buf[SHELL_DEFAULT_BUFSIZE];
+    shell_run(_commands, line_buf, SHELL_DEFAULT_BUFSIZE);
 
     return 0;
 }
