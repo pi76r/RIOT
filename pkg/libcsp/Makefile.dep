@@ -1,0 +1,11 @@
+USEMODULE += xtimer 
+USEMODULE += sema 
+USEMODULE += conn_can
+USEMODULE += can_pm
+USEMODULE += can_trx
+USEMODULE += auto_init_can
+USEMODULE += tja1042
+
+FEATURES_REQUIRED += periph_can
+FEATURES_REQUIRED += periph_gpio
+FEATURES_REQUIRED += periph_gpio_irq

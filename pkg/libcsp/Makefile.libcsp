@@ -1,0 +1,4 @@
+MODULE = libcsp
+
+# Compiling for native triggers this warning
+CFLAGS += -Wno-unused-function

@@ -1,0 +1,2 @@
+INCLUDES += -I$(PKGDIRBASE)/libcsp/include
+INCLUDES += -I$(BINDIR)/libcsp/include
