@@ -49,8 +49,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 /* Commandline options */
 static uint8_t server_address = 255;
 
-/* test mode, used for verifying that host & client can exchange packets over the loopback interface */
-static bool test_mode = false;
 static unsigned int server_received = 0;
 
 /* Server task - handles requests from clients */
@@ -114,7 +112,7 @@ CSP_DEFINE_TASK(task_client) {
 
 	while (1) {
 
-		csp_sleep_ms(test_mode ? 200 : 1000);
+		csp_sleep_ms(1000);
 
 		/* Send ping to server, timeout 1000 mS, ping size 100 bytes */
 		int result = csp_ping(server_address, 1000, 100, CSP_O_NONE);
@@ -170,8 +168,6 @@ int server_client(int argc, char *argv[]) {
     uint8_t address = 1;
     csp_debug_level_t debug_level = CSP_INFO;
 
-    const char * can_device = NULL;
-
     const char * rtable = NULL;
    
     /* enable/disable debug levels */
@@ -191,18 +187,16 @@ int server_client(int argc, char *argv[]) {
         exit(1);
     }
 
-    /* Start router task with 10000 bytes of stack (priority is only supported on FreeRTOS) */
-    csp_route_start_task(500, 0);
+    csp_route_start_task(THREAD_STACKSIZE_MAIN, THREAD_PRIORITY_MAIN - 1);
 
     /* Add interface(s) */
     csp_iface_t * default_iface = NULL;
 
-    if (can_device) {
-        error = csp_can_socketcan_open_and_add_interface(can_device, CSP_IF_CAN_DEFAULT_NAME, 0, false, &default_iface);
-        if (error != CSP_ERR_NONE) {
-            csp_log_error("failed to add CAN interface [%s], error: %d", can_device, error);
-            exit(1);
-        }
+    const char * can_device = "can0";
+    error = csp_can_socketcan_open_and_add_interface(can_device, CSP_IF_CAN_DEFAULT_NAME, 0, false, &default_iface);
+    if (error != CSP_ERR_NONE) {
+        csp_log_error("failed to add CAN interface [%s], error: %d", can_device, error);
+        exit(1);
     }
 
     if (rtable) {
@@ -230,28 +224,13 @@ int server_client(int argc, char *argv[]) {
     /* Start server thread */
     if ((server_address == 255) ||  /* no server address specified, I must be server */
         (default_iface == NULL)) {  /* no interfaces specified -> run server & client via loopback */
-        csp_thread_create(task_server, "SERVER", 1000, NULL, 0, NULL);
+        csp_thread_create(task_server, "SERVER", 1000, NULL, THREAD_PRIORITY_MAIN - 1, NULL);
     }
 
     /* Start client thread */
     if ((server_address != 255) ||  /* server address specified, I must be client */
         (default_iface == NULL)) {  /* no interfaces specified -> run server & client via loopback */
-        csp_thread_create(task_client, "CLIENT", 1000, NULL, 0, NULL);
-    }
-
-    /* Wait for execution to end (ctrl+c) */
-    while(1) {
-        csp_sleep_ms(3000);
-
-        if (test_mode) {
-            /* Test mode is intended for checking that host & client can exchange packets over loopback */
-            if (server_received < 5) {
-                csp_log_error("Server received %u packets", server_received);
-                exit(1);
-            }
-            csp_log_info("Server received %u packets", server_received);
-            exit(0);
-        }
+        csp_thread_create(task_client, "CLIENT", 1000, NULL, THREAD_PRIORITY_MAIN - 1, NULL);
     }
 
     return 0;
