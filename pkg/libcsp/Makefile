@@ -1,6 +1,6 @@
 PKG_NAME=libcsp
-PKG_URL=git@gricad-gitlab.univ-grenoble-alpes.fr:thingsat/libcsp.git
-PKG_VERSION=529c39d44798327d0e4a85f4863f5e90f55b8364
+PKG_URL=https://github.com/pi76r/libcsp.git
+PKG_VERSION=cb0888aa75bf8c6670bda64da14a722900010a39
 PKG_LICENSE=LGPL
 
 include $(RIOTBASE)/pkg/pkg.mk

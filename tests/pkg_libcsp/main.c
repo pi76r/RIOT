@@ -40,16 +40,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #include <csp/arch/csp_semaphore.h>
 #include <csp/drivers/can_socketcan.h>
 
-#include <stdlib.h>
+#include "can/raw.h"
 
 
 /* Server port, the port the server listens on for incoming connections from the client. */
 #define MY_SERVER_PORT		10
 
-/* Commandline options */
-static uint8_t server_address = 255;
-
-static unsigned int server_received = 0;
+#define SERVER_ADDRESS      1
 
 /* Server task - handles requests from clients */
 CSP_DEFINE_TASK(task_server) {
@@ -83,7 +80,6 @@ CSP_DEFINE_TASK(task_server) {
 				/* Process packet here */
 				csp_log_info("Packet received on MY_SERVER_PORT: %s", (char *) packet->data);
 				csp_buffer_free(packet);
-				++server_received;
 				break;
 
 			default:
@@ -106,26 +102,25 @@ CSP_DEFINE_TASK(task_server) {
 /* Client task sending requests to server task */
 CSP_DEFINE_TASK(task_client) {
     (void)arg;
+
 	csp_log_info("Client task started");
 
 	unsigned int count = 0;
 
 	while (1) {
-
 		csp_sleep_ms(1000);
-
 		/* Send ping to server, timeout 1000 mS, ping size 100 bytes */
-		int result = csp_ping(server_address, 1000, 100, CSP_O_NONE);
-		csp_log_info("Ping address: %u, result %d [mS]", server_address, result);
+		int result = csp_ping(SERVER_ADDRESS, 1000, 100, CSP_O_NONE);
+		csp_log_info("Ping address: %u, result %d [mS]", SERVER_ADDRESS, result);
 
 		/* Send reboot request to server, the server has no actual implementation of csp_sys_reboot() and fails to reboot */
-		csp_reboot(server_address);
-		csp_log_info("reboot system request sent to address: %u", server_address);
+		csp_reboot(SERVER_ADDRESS);
+		csp_log_info("reboot system request sent to address: %u", SERVER_ADDRESS);
 
 		/* Send data packet (string) to server */
 
-		/* 1. Connect to host on 'server_address', port MY_SERVER_PORT with regular UDP-like protocol and 1000 ms timeout */
-		csp_conn_t * conn = csp_connect(CSP_PRIO_NORM, server_address, MY_SERVER_PORT, 1000, CSP_O_NONE);
+		/* 1. Connect to host on 'SERVER_ADDRESS', port MY_SERVER_PORT with regular UDP-like protocol and 1000 ms timeout */
+		csp_conn_t * conn = csp_connect(CSP_PRIO_NORM, SERVER_ADDRESS, MY_SERVER_PORT, 1000, CSP_O_NONE);
 		if (conn == NULL) {
 			/* Connect failed */
 			csp_log_error("Connection failed");
@@ -162,20 +157,15 @@ CSP_DEFINE_TASK(task_client) {
 /* End of client task */
 
 /* initialization of CSP and start of server/client tasks */
-int server_client(int argc, char *argv[]) {
-    (void)argc;
-    (void)argv;
-    uint8_t address = 1;
+void setup_csp(uint8_t address, const char *device) {
     csp_debug_level_t debug_level = CSP_INFO;
-
-    const char * rtable = NULL;
    
     /* enable/disable debug levels */
     for (csp_debug_level_t i = 0; i <= CSP_LOCK; ++i) {
         csp_debug_set_level(i, (i <= debug_level) ? true : false);
     }
 
-    csp_log_info("Initialising CSP");
+    csp_log_info("Initialising CSP (address=%d)", address);
 
     /* Init CSP with address and default settings */
     csp_conf_t csp_conf;
@@ -192,46 +182,50 @@ int server_client(int argc, char *argv[]) {
     /* Add interface(s) */
     csp_iface_t * default_iface = NULL;
 
-    const char * can_device = "can0";
-    error = csp_can_socketcan_open_and_add_interface(can_device, CSP_IF_CAN_DEFAULT_NAME, 0, false, &default_iface);
+    error = csp_can_socketcan_open_and_add_interface(device, CSP_IF_CAN_DEFAULT_NAME, 0, false, &default_iface);
     if (error != CSP_ERR_NONE) {
-        csp_log_error("failed to add CAN interface [%s], error: %d", can_device, error);
+        csp_log_error("failed to add CAN interface [%s], error: %d", device, error);
         exit(1);
     }
 
-    if (rtable) {
-        error = csp_rtable_load(rtable);
-        if (error < 1) {
-            csp_log_error("csp_rtable_load(%s) failed, error: %d", rtable, error);
-            exit(1);
-        }
-    } else if (default_iface) {
+    if (default_iface) {
         csp_rtable_set(CSP_DEFAULT_ROUTE, 0, default_iface, CSP_NO_VIA_ADDRESS);
-    } else {
-        /* no interfaces configured - run server and client in process, using loopback interface */
-        server_address = address;
     }
 
     printf("Connection table\r\n");
     csp_conn_print_table();
 
     printf("Interfaces\r\n");
-    csp_route_print_interfaces();
+    csp_iflist_print();
 
     printf("Route table\r\n");
-    csp_route_print_table();
+    csp_rtable_print();
 
-    /* Start server thread */
-    if ((server_address == 255) ||  /* no server address specified, I must be server */
-        (default_iface == NULL)) {  /* no interfaces specified -> run server & client via loopback */
+    if (address == SERVER_ADDRESS) {
         csp_thread_create(task_server, "SERVER", 1000, NULL, THREAD_PRIORITY_MAIN - 1, NULL);
-    }
-
-    /* Start client thread */
-    if ((server_address != 255) ||  /* server address specified, I must be client */
-        (default_iface == NULL)) {  /* no interfaces specified -> run server & client via loopback */
+    } else {
         csp_thread_create(task_client, "CLIENT", 1000, NULL, THREAD_PRIORITY_MAIN - 1, NULL);
     }
+}
+
+int server(int argc, char *argv[]) {
+    (void)argc;
+    (void)argv;
+    setup_csp(SERVER_ADDRESS, "can0");
+
+    return 0;
+}
+
+int client(int argc, char *argv[]) {
+    uint8_t address = 2;
+    char *device = "can0";
+    if(argc > 1) {
+        address = atoi(argv[1]);
+    }
+    if(argc > 2) {
+        device = argv[2];
+    }
+    setup_csp(address, (const char *)device);
 
     return 0;
 }
@@ -308,10 +302,12 @@ int test_arch(int argc, char *argv[]) {
     // queue handling
     uint32_t value;
     csp_queue_handle_t q = csp_queue_create(3, sizeof(value));
+    // if test_arch crashes, you need to add a puts("something") right here
+    // so there is now way to debug it
     csp_assert(csp_queue_size(q) == 0);
     csp_assert(csp_queue_size_isr(q) == 0);
     csp_assert(csp_queue_dequeue(q, &value, 0) == CSP_QUEUE_ERROR);
-    csp_assert(csp_queue_dequeue(q, &value, 200) == CSP_QUEUE_ERROR);
+    csp_assert(csp_queue_dequeue(q, &value, 1000) == CSP_QUEUE_ERROR);
     csp_assert(csp_queue_dequeue_isr(q, &value, NULL) == CSP_QUEUE_ERROR);
     value = 1;
     csp_assert(csp_queue_enqueue(q, &value, 0) == CSP_QUEUE_OK);
@@ -362,9 +358,39 @@ int test_arch(int argc, char *argv[]) {
     return 0;
 }
 
+static int get_bitrate(int argc, char **argv)
+{
+    if (argc < 2) {
+        printf("Usage: %s ifnum\n", argv[0]);
+        return 1;
+    }
+
+    int ifnum = strtol(argv[1], NULL, 0);
+    struct can_bittiming bittiming;
+    can_opt_t opt;
+    opt.data = &bittiming;
+    opt.data_len = sizeof(bittiming);
+    opt.opt = CANOPT_BITTIMING;
+
+    int ret = raw_can_get_can_opt(ifnum, &opt);
+    if (ret < 0) {
+        printf("Error when getting bitrate: res=%d\n", ret);
+        return 1;
+    }
+
+    printf("Bitrate read: bitrate=%" PRIu32 ", sample_point=%" PRIu32
+           "\nbrp=%" PRIu32 "phase-seg1=%" PRIu32
+           ", phase-seg2=%" PRIu32 ", sjw=%" PRIu32 "\n", bittiming.bitrate,
+           bittiming.sample_point, bittiming.brp, bittiming.phase_seg1,
+           bittiming.phase_seg2, bittiming.sjw);
+    return 0;
+}
+
 static const shell_command_t _commands[] = {
     {"test_arch", "Test RIOT architecture implementation for libcsp", test_arch},
-    {"client", "Setup client", server_client},
+    {"client", "Setup client", client},
+    {"server", "Setup server", server},
+    {"bitrate", "Get bitrate", get_bitrate},
     { NULL, NULL, NULL},
 };
 
