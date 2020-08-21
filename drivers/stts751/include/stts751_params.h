@@ -13,7 +13,7 @@
  * @{
  *
  * @author      Pierre Millot
- * @file        stts751_params.h
+ * @file
  */
 #ifndef STTS751_PARAMS_H
 #define STTS751_PARAMS_H

@@ -10,7 +10,7 @@
  * @ingroup     drivers_stts751
  * @brief       Register definitions for the STTS751 I2C Temperature Sensor
  * @author      Pierre Millot
- * @file        stts751_regs.h
+ * @file
  * @{
  */
 

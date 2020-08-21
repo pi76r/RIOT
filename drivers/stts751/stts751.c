@@ -11,17 +11,12 @@
  * @{
  * @brief       Device driver for the STTS751 I2C Temperature Sensor
  * @author      Pierre Millot
- * @file        stts751.c
+ * @file
  * @}
  */
 
-#include <stdio.h>
-
 #include "stts751.h"
 #include "stts751_regs.h"
-
-#define ENABLE_DEBUG (0)
-#include "debug.h"
 
 /**
  * @brief Write data to a register.
@@ -65,18 +60,17 @@ int _write_reg(const stts751_t *dev, uint8_t reg, uint8_t data)
  * @return  -EOPNOTSUPP When MCU driver doesn't support the flag operation
  * @return  -EAGAIN When a lost bus arbitration occurs
  */
-static int _read_reg(const stts751_t *dev, uint8_t reg)
+static int _read_reg(const stts751_t *dev, uint8_t reg, uint8_t *data)
 {
     i2c_t i2c_dev = dev->params.i2c_dev;
 
     if (i2c_acquire(i2c_dev) != 0) {
         return -1;
     }
-    uint8_t data;
-    i2c_read_reg(i2c_dev, dev->params.i2c_addr, reg, &data, 0);
+    int rc = i2c_read_reg(i2c_dev, dev->params.i2c_addr, reg, data, 0);
     i2c_release(i2c_dev);
 
-    return data;
+    return rc;
 }
 
 int stts751_init(stts751_t *dev, const stts751_params_t *params)
@@ -85,16 +79,62 @@ int stts751_init(stts751_t *dev, const stts751_params_t *params)
     assert(params);
 
     dev->params = *params;
+    dev->conversion_rate = STTS751_CONV_RATE_1;
+    dev->conversion_resolution = STTS751_CONV_RES_10;
 
-    i2c_init(dev->params.i2c_dev);
+    /* check id */
+    uint8_t id;
+    int rc = stts751_get_manufacturer_id(dev, &id);
+    if(rc != 0 || id != STTS751_DEFAULT_MANUFACTURER_ID) 
+        return -1;
 
-    return 0;
+    return STTS751_OK;
 }
 
-double stts751_get_temperature(const stts751_t *dev)
+int stts751_get_manufacturer_id(const stts751_t *dev, uint8_t *id) {
+    return _read_reg(dev, STTS751_REG_PROD_ID, id);
+}
+
+STTS751_conversion_rate_e stts751_get_conversion_rate(const stts751_t *dev) {
+    return dev->conversion_rate;
+}
+
+int stts751_set_conversion_rate(const stts751_t *dev, STTS751_conversion_rate_e rate) {
+    if(stts751_get_conversion_rate(dev) == rate) {
+        return STTS751_OK;
+    }
+
+    dev->conversion_rate = rate;
+    return _write_reg(dev, STTS751_REG_RATE, rate);
+}
+
+STTS751_conversion_resolution_e stts751_get_conversion_resolution(const stts751_t *dev) {
+    return dev->conversion_resolution;
+}
+
+int stts751_set_conversion_resolution(const stts751_t *dev, STTS751_conversion_resolution_e res) {
+    if(stts751_get_conversion_resolution(dev) == res) {
+        return STTS751_OK;
+    }
+
+    dev->conversion_resolution = res;
+    uint8_t old_conf;
+    int rc = _read_reg(dev, STTS751_REG_CONF, old_conf);
+    if(rc != 0)
+        return rc;
+
+    old_conf &= 0xF3; /* set res to 0 */
+    old_conf |= res << 2;
+    return _write_reg(dev, STTS751_REG_CONF, old_conf);
+}
+
+int stts751_get_temperature(const stts751_t *dev, uint16_t *temperature)
 {
-    uint8_t high = _read_reg(dev, STTS751_REG_TEMP_H);
+    uint8_t high;
+    _read_reg(dev, STTS751_REG_TEMP_H, &high);
     uint8_t low = _read_reg(dev, STTS751_REG_TEMP_L);
+
+
 
     return ((high << 8) | low) / 256.0;
 }
