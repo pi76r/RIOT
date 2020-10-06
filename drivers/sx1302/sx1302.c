@@ -105,9 +105,8 @@ void sx1302_radio_reset(sx1302_t *dev, uint8_t rf_chain) {
     uint16_t reg_radio_en;
     uint16_t reg_radio_rst;
 
-
-    //sx1302_spi_acquire_set(false);
-    //sx1302_spi_acquire(dev);
+    sx1302_spi_acquire_set(false);
+    sx1302_spi_acquire(dev);
 
 
     /* Switch to SPI clock before reseting the radio */
@@ -133,8 +132,8 @@ void sx1302_radio_reset(sx1302_t *dev, uint8_t rf_chain) {
           SX1302_REG_SELECT(rf_chain, "A", "B"));
 
 
-    //sx1302_spi_release(dev);
-    //sx1302_spi_acquire_set(true);
+    sx1302_spi_release(dev);
+    sx1302_spi_acquire_set(true);
 }
 
 void sx1302_radio_set_mode(sx1302_t *dev, uint8_t rf_chain) {

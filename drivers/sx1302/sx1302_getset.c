@@ -35,7 +35,8 @@ uint64_t sx1302_get_eui(sx1302_t *dev) {
     uint64_t eui = 0;
     for (int i = 0; i < 8; i++) {
         sx1302_reg_write(dev, SX1302_REG_OTP_BYTE_ADDR_ADDR, i);
-        xtimer_usleep(10000);
+        //xtimer_usleep(10000);
+        //xtimer_usleep(10);
         val = sx1302_reg_read(dev, SX1302_REG_OTP_RD_DATA_RD_DATA);
         eui |= (uint64_t)((uint8_t)val) << (56 - (i * 8));
     }

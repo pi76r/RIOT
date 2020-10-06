@@ -43,6 +43,9 @@
 #include "xtimer.h"
 #include "random.h"
 
+#define START_CHRONO	uint32_t _benchmark_time = xtimer_now_usec()
+#define PRINT_CHRONO    printf("Time: %ld us\n", (xtimer_now_usec() - _benchmark_time))
+
 #define SX1302_LORA_MSG_QUEUE (16U)
 #define SX1302_STACKSIZE      (THREAD_STACKSIZE_DEFAULT)
 
@@ -208,6 +211,7 @@ int syncword_cmd(int argc, char **argv) {
 
     return 0;
 }
+
 int channel_cmd(int argc, char **argv) {
     if (argc < 2) {
         puts("usage: channel <get|set>");
@@ -287,15 +291,63 @@ int eui_cmd(int argc, char **argv) {
     (void)argv;
     char eui[20] = {0};
 
+    START_CHRONO;
+
     sx1302_spi_acquire_set(false);
     sx1302_spi_acquire(&sx1302);
 
     fmt_u64_hex(eui, sx1302_get_eui(&sx1302));
     printf("SX1302 EUI: 0x%s\n", eui);
 
-
     sx1302_spi_release(&sx1302);
     sx1302_spi_acquire_set(true);
+
+    PRINT_CHRONO;
+
+    return 0;
+}
+
+int stress_test_cmd(int argc, char **argv) {
+    (void)argc;
+    (void)argv;
+
+
+    if (argc < 3) {
+        puts("usage: stress_test <nbloop> <acquire>");
+        return -1;
+    }
+
+    int nbloop = atoi(argv[1]);
+    int acquire = atoi(argv[2]);
+
+    char eui[20] = {0};
+
+    START_CHRONO;
+
+    if(acquire == 0) {
+        sx1302_spi_acquire_set(false);
+        sx1302_spi_acquire(&sx1302);
+    }
+
+    uint64_t _eui = sx1302_get_eui(&sx1302);
+	fmt_u64_hex(eui, _eui);
+	printf("SX1302 EUI: 0x%s\n", eui);
+
+    for(int i=0; i<nbloop; i++) {
+    	if(_eui != sx1302_get_eui(&sx1302)){
+    		printf("Error nbloop: %d\n", i);
+    		return 1;
+    	}
+    }
+	printf("Success\n");
+
+    if(acquire == 0) {
+		sx1302_spi_release(&sx1302);
+		sx1302_spi_acquire_set(true);
+    }
+
+    PRINT_CHRONO;
+
 
     return 0;
 }
@@ -445,6 +497,7 @@ static const shell_command_t shell_commands[] = {
     {"listen", "Start raw payload listener", listen_cmd},
     {"reset", "Reset the sx1302 device", reset_cmd},
     {"eui", "Get the unique identifier", eui_cmd},
+    {"stress_test", "Stress test", stress_test_cmd},
     {"status", "Get the TX status", status_cmd},
     {"test_reg", "Test writing and reading from registers", reg_cmd},
     {"syncword", "Get/Set the syncword", syncword_cmd},

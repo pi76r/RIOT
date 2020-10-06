@@ -40,8 +40,9 @@ static bool SX1302_SPI_ACQUIRE = true;
 #define SX1302_SPI_MODE  (SPI_MODE_0)
 #endif
 
-#ifndef SX1302_SPI_SET
-#define SX1302_SPI_SPEED  (SPI_CLK_400KHZ)
+#ifndef SX1302_SPI_SPEED
+//#define SX1302_SPI_SPEED  (SPI_CLK_400KHZ)
+#define SX1302_SPI_SPEED  (SPI_CLK_5MHZ)
 #endif
 
 void sx1302_spi_acquire_set(const bool acquire) {
