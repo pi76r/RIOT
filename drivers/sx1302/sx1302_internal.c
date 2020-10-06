@@ -34,15 +34,46 @@
 
 #define CHUNK_SIZE_MAX 1024
 
-#define SX1302_SPI_SPEED (SPI_CLK_400KHZ)
+static bool SX1302_SPI_ACQUIRE = true;
+
+#ifndef SX1302_SPI_MODE
 #define SX1302_SPI_MODE  (SPI_MODE_0)
+#endif
+
+#ifndef SX1302_SPI_SET
+#define SX1302_SPI_SPEED  (SPI_CLK_400KHZ)
+#endif
+
+void sx1302_spi_acquire_set(const bool acquire) {
+	SX1302_SPI_ACQUIRE = acquire;
+}
+
+void sx1302_spi_acquire(const sx1302_t *dev) {
+    if(!SX1302_SPI_ACQUIRE) spi_acquire(dev->params.spi, dev->params.nss_pin, SX1302_SPI_MODE,
+                SX1302_SPI_SPEED);
+}
+
+void sx1302_spi_release(const sx1302_t *dev) {
+    if(!SX1302_SPI_ACQUIRE) spi_release(dev->params.spi);
+}
+
+static void _sx1302_spi_acquire(const sx1302_t *dev) {
+    if(SX1302_SPI_ACQUIRE) spi_acquire(dev->params.spi, dev->params.nss_pin, SX1302_SPI_MODE,
+                SX1302_SPI_SPEED);
+}
+
+static void _sx1302_spi_release(const sx1302_t *dev) {
+    if(SX1302_SPI_ACQUIRE) spi_release(dev->params.spi);
+}
+
+
 
 static void sx1302_write_reg_buffer(const sx1302_t *dev,
                                     SX1302_SpiMuxTarget_t target, uint16_t addr,
                                     const uint8_t *buffer, uint16_t size) {
+
     // wait_on_busy(dev);
-    spi_acquire(dev->params.spi, dev->params.nss_pin, SX1302_SPI_MODE,
-                SX1302_SPI_SPEED);
+	_sx1302_spi_acquire(dev);
 
     uint8_t cmd[size + 3];
     cmd[0] = target;
@@ -52,7 +83,7 @@ static void sx1302_write_reg_buffer(const sx1302_t *dev,
     spi_transfer_bytes(dev->params.spi, dev->params.nss_pin, false, cmd, NULL,
                        size + 3);
 
-    spi_release(dev->params.spi);
+    _sx1302_spi_release(dev);
     // wait_on_busy(dev);
 }
 
@@ -60,8 +91,7 @@ static void sx1302_read_reg_buffer(const sx1302_t *dev,
                                    SX1302_SpiMuxTarget_t target, uint16_t addr,
                                    uint8_t *buffer, uint16_t size) {
     // wait_on_busy(dev);
-    spi_acquire(dev->params.spi, dev->params.nss_pin, SX1302_SPI_MODE,
-                SX1302_SPI_SPEED);
+	_sx1302_spi_acquire(dev);
 
     uint8_t cmd[4];
     cmd[0] = target;
@@ -73,7 +103,7 @@ static void sx1302_read_reg_buffer(const sx1302_t *dev,
     spi_transfer_bytes(dev->params.spi, dev->params.nss_pin, false, NULL,
                        buffer, size);
 
-    spi_release(dev->params.spi);
+    _sx1302_spi_release(dev);
     // wait_on_busy(dev);
 }
 
@@ -85,8 +115,7 @@ void sx1302_reg_read_batch(const sx1302_t *dev, uint16_t register_id,
     }
     sx1302_regs_t r = loregs[register_id];
 
-    spi_acquire(dev->params.spi, dev->params.nss_pin, SX1302_SPI_MODE,
-                SX1302_SPI_SPEED);
+	_sx1302_spi_acquire(dev);
 
     uint8_t cmd[4];
     cmd[0] = SX1302_SPI_MUX_TARGET_SX1302;
@@ -113,14 +142,14 @@ void sx1302_reg_read_batch(const sx1302_t *dev, uint16_t register_id,
         offset += CHUNK_SIZE_MAX;
     }
 
-    spi_release(dev->params.spi);
+    _sx1302_spi_release(dev);
 }
 
 static void sx1302_write_reg_align32(const sx1302_t *dev,
                                      SX1302_SpiMuxTarget_t spi_mux_target,
                                      sx1302_regs_t r, int32_t reg_value) {
     int i, size_byte;
-    uint8_t buf[4] = {0};
+    uint8_t buf[4] = {0,0,0,0};
 
     if ((r.leng == 8) && (r.offs == 0)) {
         /* direct write */
@@ -156,7 +185,7 @@ static void sx1302_write_reg_align32(const sx1302_t *dev,
 static int32_t sx1302_read_reg_align32(const sx1302_t *dev,
                                        uint8_t spi_mux_target,
                                        sx1302_regs_t r) {
-    uint8_t bufu[4] = {0};
+    uint8_t bufu[4] = {0,0,0,0};
     int8_t *bufs    = (int8_t *)bufu;
     int i, size_byte;
     uint32_t u = 0;
@@ -292,8 +321,7 @@ void sx1250_write_command(const sx1302_t *dev, uint8_t rf_chain,
                           SX1250_op_code_t op_code, uint8_t *data,
                           uint16_t size) {
     // wait_on_busy(dev);
-    spi_acquire(dev->params.spi, dev->params.nss_pin, SX1302_SPI_MODE,
-                SX1302_SPI_SPEED);
+	_sx1302_spi_acquire(dev);
 
     uint8_t cmd[size + 2];
     cmd[0] = (rf_chain == 0) ? SX1302_SPI_MUX_TARGET_RADIOA
@@ -303,7 +331,7 @@ void sx1250_write_command(const sx1302_t *dev, uint8_t rf_chain,
     spi_transfer_bytes(dev->params.spi, dev->params.nss_pin, false, cmd, NULL,
                        size + 2);
 
-    spi_release(dev->params.spi);
+    _sx1302_spi_release(dev);
     // wait_on_busy(dev);
 }
 
@@ -311,8 +339,7 @@ void sx1250_read_command(const sx1302_t *dev, uint8_t rf_chain,
                          SX1250_op_code_t op_code, uint8_t *data,
                          uint16_t size) {
     // wait_on_busy(dev);
-    spi_acquire(dev->params.spi, dev->params.nss_pin, SX1302_SPI_MODE,
-                SX1302_SPI_SPEED);
+	_sx1302_spi_acquire(dev);
 
     uint8_t cmd[size + 2];
     cmd[0] = (rf_chain == 0) ? SX1302_SPI_MUX_TARGET_RADIOA
@@ -324,7 +351,7 @@ void sx1250_read_command(const sx1302_t *dev, uint8_t rf_chain,
     spi_transfer_bytes(dev->params.spi, dev->params.nss_pin, false, data, data,
                        size);
 
-    spi_release(dev->params.spi);
+    _sx1302_spi_release(dev);
     // wait_on_busy(dev);
 }
 

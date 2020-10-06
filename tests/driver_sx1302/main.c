@@ -268,9 +268,17 @@ int reset_cmd(int argc, char **argv) {
     (void)argc;
     (void)argv;
     netdev_t *netdev = (netdev_t *)&sx1302;
+
+    //sx1302_spi_acquire_set(false);
+    //sx1302_spi_acquire(&sx1302);
+
     puts("resetting sx1302...");
     netopt_state_t state = NETOPT_STATE_RESET;
     netdev->driver->set(netdev, NETOPT_STATE, &state, sizeof(netopt_state_t));
+
+    //sx1302_spi_release(&sx1302);
+    //sx1302_spi_acquire_set(true);
+
     return 0;
 }
 
@@ -278,16 +286,33 @@ int eui_cmd(int argc, char **argv) {
     (void)argc;
     (void)argv;
     char eui[20] = {0};
+
+    sx1302_spi_acquire_set(false);
+    sx1302_spi_acquire(&sx1302);
+
     fmt_u64_hex(eui, sx1302_get_eui(&sx1302));
     printf("SX1302 EUI: 0x%s\n", eui);
+
+
+    sx1302_spi_release(&sx1302);
+    sx1302_spi_acquire_set(true);
+
     return 0;
 }
 
 int status_cmd(int argc, char **argv) {
     (void)argc;
     (void)argv;
+
+    sx1302_spi_acquire_set(false);
+    sx1302_spi_acquire(&sx1302);
+
     static char *status[] = {"unkonwn", "off", "free", "scheduled", "emitting"};
     printf("SX1302 TX status: %s\n", status[sx1302_tx_status(&sx1302, 0)]);
+
+    sx1302_spi_release(&sx1302);
+    sx1302_spi_acquire_set(true);
+
     return 0;
 }
 
@@ -297,6 +322,10 @@ uint8_t rand_values[SX1302_TOTALREGS] = {0};
 int reg_cmd(int argc, char **argv) {
     (void)argc;
     (void)argv;
+
+
+    sx1302_spi_acquire_set(false);
+    sx1302_spi_acquire(&sx1302);
 
     static bool ran = false;
 
@@ -322,6 +351,13 @@ int reg_cmd(int argc, char **argv) {
                         "should be %ld\n",
                         i, val, loregs[i].dflt);
                     error_found = true;
+                } else {
+                    printf(
+                        "SUCCESS: default value for "
+                        "register at index %d is %ld"
+                        "\n",
+                        i, val);
+
                 }
             }
         }
@@ -385,6 +421,9 @@ int reg_cmd(int argc, char **argv) {
     printf("------------------\n");
     printf(" TEST#2 %s\n", (error_found == false) ? "PASSED" : "FAILED");
     printf("------------------\n\n");
+
+    sx1302_spi_release(&sx1302);
+    sx1302_spi_acquire_set(true);
 
     return 0;
 }

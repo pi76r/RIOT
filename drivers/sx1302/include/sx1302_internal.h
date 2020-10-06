@@ -27,6 +27,12 @@
 extern "C" {
 #endif
 
+void sx1302_spi_acquire_set(const bool acquire);
+
+void sx1302_spi_acquire(const sx1302_t *dev);
+
+void sx1302_spi_release(const sx1302_t *dev);
+
 /**
  * @brief   Writes the radio register at specified address.
  *
