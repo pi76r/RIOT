@@ -137,6 +137,10 @@ int send_cmd(int argc, char **argv) {
     }
     char random_payload[17] = { 0 };
 
+    sx1302_spi_acquire_set(false);
+    sx1302_spi_acquire(&sx1302);
+
+
     for (int i = 1; i <= count; i++) {
         char *to_send = payload;
         if (payload == NULL) {
@@ -156,6 +160,10 @@ int send_cmd(int argc, char **argv) {
 
         xtimer_usleep(100000);
     }
+
+    sx1302_spi_release(&sx1302);
+    sx1302_spi_acquire_set(true);
+
 
     return 0;
 }
@@ -375,6 +383,8 @@ int reg_cmd(int argc, char **argv) {
     (void)argc;
     (void)argv;
 
+    START_CHRONO;
+
 
     sx1302_spi_acquire_set(false);
     sx1302_spi_acquire(&sx1302);
@@ -398,17 +408,28 @@ int reg_cmd(int argc, char **argv) {
                 int32_t val = sx1302_reg_read(&sx1302, i);
                 if (val != loregs[i].dflt) {
                     printf(
-                        "ERROR: default value for "
-                        "register at index %d is %ld, "
+                        "ERROR : default value for "
+                        "register at index %d (0x%x, %d, %d, %d, %d) is %ld, "
                         "should be %ld\n",
-                        i, val, loregs[i].dflt);
+                        i, loregs[i].addr, loregs[i].offs,  loregs[i].sign, loregs[i].leng, loregs[i].chck, val, loregs[i].dflt);
+
+
+//                    uint16_t addr; /*!< base address of the register (15 bit) */
+//                    uint8_t offs;  /*!< position of the register LSB (between 0 to 7) */
+//                    bool sign;     /*!< 1 indicates the register is signed (2 complem.) */
+//                    uint8_t leng;  /*!< number of bits in the register */
+//                    bool rdon;     /*!< 1 indicates a read-only register */
+//                    bool chck;     /*!< register can be checked or not: (pulse, w0clr, w1clr) */
+//                    int32_t dflt;  /*!< register default value */
+
+
                     error_found = true;
                 } else {
                     printf(
                         "SUCCESS: default value for "
-                        "register at index %d is %ld"
-                        "\n",
-                        i, val);
+                        "register at index %d (0x%x, %d, %d, %d, %d) is %ld, "
+                        "should be %ld\n",
+                        i, loregs[i].addr, loregs[i].offs,  loregs[i].sign, loregs[i].leng, loregs[i].chck, val, loregs[i].dflt);
 
                 }
             }
@@ -476,6 +497,8 @@ int reg_cmd(int argc, char **argv) {
 
     sx1302_spi_release(&sx1302);
     sx1302_spi_acquire_set(true);
+
+    PRINT_CHRONO;
 
     return 0;
 }

@@ -136,7 +136,7 @@ void sx1302_set_default(sx1302_t *dev) {
     settings.lora.preamble_len = SX1302_STD_LORA_PREAMBLE;
     settings.lora.power        = 14;
     settings.lora.bandwidth    = SX1302_LORA_BW_125_KHZ;
-    settings.lora.datarate     = SX1302_DR_LORA_SF7;
+    settings.lora.datarate     = SX1302_DR_LORA_SF12;
     settings.lora.coderate     = SX1302_CR_LORA_4_5;
     settings.lora.rx_timeout   = 100000;
     settings.lora.tx_timeout   = 100000;
@@ -146,7 +146,8 @@ void sx1302_set_default(sx1302_t *dev) {
     dev->rf_chain[0].enable            = true;
     dev->rf_chain[0].freq_hz           = SX1302_CHANNEL_DEFAULT;
     dev->rf_chain[0].rssi_tcomp        = (sx1302_rssi_tconf_t){0, 0, 0, 0, 0};
-    dev->rf_chain[0].tx_enable         = false;
+    //dev->rf_chain[0].tx_enable         = false;
+    dev->rf_chain[0].tx_enable         = true;
     dev->rf_chain[0].single_input_mode = false;
 
     dev->rf_chain[1].enable            = true;

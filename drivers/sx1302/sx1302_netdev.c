@@ -67,12 +67,14 @@ static int _send(netdev_t *netdev, const iolist_t *iolist) {
             sx1302_send(dev, dev->board.lorawan_public, &packet);
 
             // wait for packet to be sent
-            /*SX1302_TX_Status_t tx_status;
+            SX1302_TX_Status_t tx_status;
             do {
                     xtimer_usleep(5000);
                     tx_status =
                             sx1302_tx_status(dev, packet.rf_chain);
-            } while ((tx_status != SX1302_TX_FREE));*/
+                    printf("[sx1302] tx_status: %d\n",tx_status);
+
+            } while ((tx_status != SX1302_TX_FREE));
         }
     }
 

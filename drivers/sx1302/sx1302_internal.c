@@ -45,6 +45,30 @@ static bool SX1302_SPI_ACQUIRE = true;
 #define SX1302_SPI_SPEED  (SPI_CLK_5MHZ)
 #endif
 
+#define DEBUG_SPI 1
+#if DEBUG_SPI == 1
+
+static void printfhex(const uint8_t *data, const uint16_t size)
+{
+        for (int i=0; i < size; ++i) {
+                printf("%02x", data[i]);
+        }
+        printf("\n");
+}
+
+    #define DEBUG_MSG(str)                printf(str)
+	#define DEBUG_PRINTF(fmt, args...)    printf("%s:%d: "fmt, __FUNCTION__, __LINE__, args)
+    #define DEBUG_RW(fmt, args...)    	  printf(fmt, args)
+    #define DEBUG_HEX(data, size)    	  printfhex(data, size)
+#else
+    #define DEBUG_MSG(str)
+    #define DEBUG_PRINTF(fmt, args...)
+    #define DEBUG_RW(fmt, args...)
+    #define DEBUG_HEX(data, size)
+#endif
+
+
+
 void sx1302_spi_acquire_set(const bool acquire) {
 	SX1302_SPI_ACQUIRE = acquire;
 }
@@ -67,11 +91,14 @@ static void _sx1302_spi_release(const sx1302_t *dev) {
     if(SX1302_SPI_ACQUIRE) spi_release(dev->params.spi);
 }
 
-
-
 static void sx1302_write_reg_buffer(const sx1302_t *dev,
                                     SX1302_SpiMuxTarget_t target, uint16_t addr,
                                     const uint8_t *buffer, uint16_t size) {
+
+
+    DEBUG_RW("[lgw_spi_wbu] %4x %d ", addr, size); // TODO add data
+    DEBUG_HEX(buffer,size);
+    DEBUG_MSG("\n");
 
     // wait_on_busy(dev);
 	_sx1302_spi_acquire(dev);
@@ -91,6 +118,7 @@ static void sx1302_write_reg_buffer(const sx1302_t *dev,
 static void sx1302_read_reg_buffer(const sx1302_t *dev,
                                    SX1302_SpiMuxTarget_t target, uint16_t addr,
                                    uint8_t *buffer, uint16_t size) {
+
     // wait_on_busy(dev);
 	_sx1302_spi_acquire(dev);
 
@@ -106,10 +134,16 @@ static void sx1302_read_reg_buffer(const sx1302_t *dev,
 
     _sx1302_spi_release(dev);
     // wait_on_busy(dev);
+
+    DEBUG_RW("[lgw_spi_rbu] %4x %d ", addr, size);
+    DEBUG_HEX(buffer,size);
+    DEBUG_MSG("\n");
+
 }
 
 void sx1302_reg_read_batch(const sx1302_t *dev, uint16_t register_id,
                            uint8_t *data, uint16_t size) {
+
     if (register_id >= SX1302_TOTALREGS) {
         DEBUG_PUTS("ERROR: REGISTER NUMBER OUT OF DEFINED RANGE\n");
         return;
@@ -144,6 +178,11 @@ void sx1302_reg_read_batch(const sx1302_t *dev, uint16_t register_id,
     }
 
     _sx1302_spi_release(dev);
+
+    DEBUG_RW("[lgw_spi_rba] %4x %d ", register_id, size);
+    DEBUG_HEX(data,size);
+    DEBUG_MSG("\n");
+
 }
 
 static void sx1302_write_reg_align32(const sx1302_t *dev,
@@ -261,6 +300,8 @@ int32_t sx1302_reg_read(const sx1302_t *dev, uint16_t register_id) {
 
 int sx1302_mem_write(const sx1302_t *dev, uint16_t addr, const uint8_t *data,
                      uint16_t size) {
+
+
     int chunk_cnt = 0;
     uint16_t chunk_size;
 
@@ -289,7 +330,7 @@ int sx1302_mem_write(const sx1302_t *dev, uint16_t addr, const uint8_t *data,
 
 void sx1302_mem_read(sx1302_t *dev, uint16_t addr, uint8_t *data, uint16_t size,
                      bool fifo_mode) {
-    int chunk_cnt = 0;
+	int chunk_cnt = 0;
     uint16_t chunk_size;
 
     if (size == 0) {
@@ -321,7 +362,12 @@ void sx1302_mem_read(sx1302_t *dev, uint16_t addr, uint8_t *data, uint16_t size,
 void sx1250_write_command(const sx1302_t *dev, uint8_t rf_chain,
                           SX1250_op_code_t op_code, uint8_t *data,
                           uint16_t size) {
-    // wait_on_busy(dev);
+
+    DEBUG_RW("[sx1250_write_command] %d %2x %d ", rf_chain, op_code, size);
+    DEBUG_HEX(data,size);
+    DEBUG_MSG("\n");
+
+	// wait_on_busy(dev);
 	_sx1302_spi_acquire(dev);
 
     uint8_t cmd[size + 2];
@@ -354,6 +400,10 @@ void sx1250_read_command(const sx1302_t *dev, uint8_t rf_chain,
 
     _sx1302_spi_release(dev);
     // wait_on_busy(dev);
+
+	DEBUG_RW("[sx1250_read_command] %d %2x %d ", rf_chain, op_code, size);
+    DEBUG_HEX(data,size);
+    DEBUG_MSG("\n");
 }
 
 const sx1302_regs_t loregs[SX1302_TOTALREGS+1] = {
