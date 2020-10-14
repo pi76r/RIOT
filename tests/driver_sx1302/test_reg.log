@@ -1,0 +1,8015 @@
+> main(): This is RIOT! (Version: 2020.07-devel-2794-g771fc-stess_driver_sx1302)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[sx1302] netdev: initializing driver...
+[sx1302] SPI_0 initialized with success
+[sx1302] netdev: initialization done
+Initialization successful - starting the shell now
+> test_reg
+## TEST#1: read all registers and check default value for non-read-only registers
+[lgw_spi_rbu] 5600 1 00
+
+SUCCESS: default value for register at index 0 (0x5600, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5601 1 0b
+
+SUCCESS: default value for register at index 1 (0x5601, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5601 1 0b
+
+SUCCESS: default value for register at index 2 (0x5601, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5601 1 0b
+
+SUCCESS: default value for register at index 3 (0x5601, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5601 1 0b
+
+SUCCESS: default value for register at index 4 (0x5601, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5601 1 0b
+
+SUCCESS: default value for register at index 5 (0x5601, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5602 1 05
+
+SUCCESS: default value for register at index 6 (0x5602, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5602 1 05
+
+SUCCESS: default value for register at index 7 (0x5602, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5602 1 05
+
+SUCCESS: default value for register at index 8 (0x5602, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5602 1 05
+
+SUCCESS: default value for register at index 9 (0x5602, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5603 1 02
+
+SUCCESS: default value for register at index 10 (0x5603, 0, 0, 8, 1) is 2, should be 2
+[lgw_spi_rbu] 5604 1 80
+
+SUCCESS: default value for register at index 11 (0x5604, 0, 0, 8, 1) is 128, should be 128
+[lgw_spi_rbu] 5605 1 00
+
+SUCCESS: default value for register at index 12 (0x5605, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5605 1 00
+
+SUCCESS: default value for register at index 13 (0x5605, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5605 1 00
+
+SUCCESS: default value for register at index 14 (0x5605, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5605 1 00
+
+SUCCESS: default value for register at index 15 (0x5605, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5780 1 14
+
+SUCCESS: default value for register at index 18 (0x5780, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5780 1 14
+
+SUCCESS: default value for register at index 19 (0x5780, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5780 1 14
+
+SUCCESS: default value for register at index 20 (0x5780, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5780 1 14
+
+SUCCESS: default value for register at index 21 (0x5780, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5782 1 00
+
+SUCCESS: default value for register at index 24 (0x5782, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5782 1 00
+
+SUCCESS: default value for register at index 25 (0x5782, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5783 1 00
+
+SUCCESS: default value for register at index 26 (0x5783, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5783 1 00
+
+SUCCESS: default value for register at index 27 (0x5783, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5783 1 00
+
+SUCCESS: default value for register at index 28 (0x5783, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5783 1 00
+
+SUCCESS: default value for register at index 29 (0x5783, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5784 1 00
+
+SUCCESS: default value for register at index 30 (0x5784, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5784 1 00
+
+SUCCESS: default value for register at index 31 (0x5784, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5784 1 00
+
+SUCCESS: default value for register at index 32 (0x5784, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5784 1 00
+
+SUCCESS: default value for register at index 33 (0x5784, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5785 1 00
+
+SUCCESS: default value for register at index 34 (0x5785, 4, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5785 1 00
+
+SUCCESS: default value for register at index 35 (0x5785, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5786 1 00
+
+SUCCESS: default value for register at index 36 (0x5786, 4, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5786 1 00
+
+SUCCESS: default value for register at index 37 (0x5786, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5787 1 01
+
+SUCCESS: default value for register at index 38 (0x5787, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5787 1 01
+
+SUCCESS: default value for register at index 39 (0x5787, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5787 1 01
+
+SUCCESS: default value for register at index 40 (0x5787, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5787 1 01
+
+SUCCESS: default value for register at index 41 (0x5787, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5787 1 01
+
+SUCCESS: default value for register at index 42 (0x5787, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5787 1 01
+
+SUCCESS: default value for register at index 43 (0x5787, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5788 1 00
+
+SUCCESS: default value for register at index 44 (0x5788, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5789 1 00
+
+SUCCESS: default value for register at index 45 (0x5789, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 578a 1 00
+
+SUCCESS: default value for register at index 46 (0x578a, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 578b 1 00
+
+SUCCESS: default value for register at index 47 (0x578b, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 578c 1 00
+
+SUCCESS: default value for register at index 48 (0x578c, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 57c0 1 00
+
+SUCCESS: default value for register at index 54 (0x57c0, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 57c0 1 00
+
+SUCCESS: default value for register at index 55 (0x57c0, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 57c0 1 00
+
+SUCCESS: default value for register at index 56 (0x57c0, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5200 1 00
+
+SUCCESS: default value for register at index 58 (0x5200, 3, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5200 1 00
+
+SUCCESS: default value for register at index 59 (0x5200, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5200 1 00
+
+SUCCESS: default value for register at index 60 (0x5200, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5200 1 00
+
+SUCCESS: default value for register at index 61 (0x5200, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5201 1 00
+
+SUCCESS: default value for register at index 62 (0x5201, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5202 1 00
+
+SUCCESS: default value for register at index 63 (0x5202, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5203 1 00
+
+SUCCESS: default value for register at index 64 (0x5203, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5204 1 00
+
+SUCCESS: default value for register at index 65 (0x5204, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5205 1 bb
+
+SUCCESS: default value for register at index 66 (0x5205, 0, 0, 8, 1) is 187, should be 187
+[lgw_spi_rbu] 5206 1 80
+
+SUCCESS: default value for register at index 67 (0x5206, 0, 0, 8, 1) is 128, should be 128
+[lgw_spi_rbu] 5207 1 00
+
+SUCCESS: default value for register at index 68 (0x5207, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5208 1 01
+
+SUCCESS: default value for register at index 69 (0x5208, 0, 0, 3, 1) is 1, should be 1
+[lgw_spi_rbu] 5209 1 00
+
+SUCCESS: default value for register at index 70 (0x5209, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 520a 1 00
+
+SUCCESS: default value for register at index 71 (0x520a, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 520a 1 00
+
+SUCCESS: default value for register at index 72 (0x520a, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 520b 1 00
+
+SUCCESS: default value for register at index 73 (0x520b, 1, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 520b 1 00
+
+SUCCESS: default value for register at index 74 (0x520b, 0, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 520c 1 00
+
+SUCCESS: default value for register at index 75 (0x520c, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 520d 1 00
+
+SUCCESS: default value for register at index 76 (0x520d, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 520e 1 00
+
+SUCCESS: default value for register at index 77 (0x520e, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 520f 1 00
+
+SUCCESS: default value for register at index 78 (0x520f, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5210 1 00
+
+SUCCESS: default value for register at index 79 (0x5210, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5220 1 18
+
+SUCCESS: default value for register at index 82 (0x5220, 5, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5220 1 18
+
+SUCCESS: default value for register at index 83 (0x5220, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5220 1 18
+
+SUCCESS: default value for register at index 84 (0x5220, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5220 1 18
+
+SUCCESS: default value for register at index 85 (0x5220, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5220 1 18
+
+SUCCESS: default value for register at index 86 (0x5220, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5221 1 00
+
+SUCCESS: default value for register at index 87 (0x5221, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5221 1 00
+
+SUCCESS: default value for register at index 88 (0x5221, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5222 1 00
+
+SUCCESS: default value for register at index 89 (0x5222, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5223 1 00
+
+SUCCESS: default value for register at index 90 (0x5223, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5224 1 00
+
+SUCCESS: default value for register at index 91 (0x5224, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5225 1 6c
+
+SUCCESS: default value for register at index 92 (0x5225, 0, 0, 8, 1) is 108, should be 108
+[lgw_spi_rbu] 5226 1 90
+
+SUCCESS: default value for register at index 93 (0x5226, 0, 0, 8, 1) is 144, should be 144
+[lgw_spi_rbu] 5227 1 00
+
+SUCCESS: default value for register at index 94 (0x5227, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5228 1 00
+
+SUCCESS: default value for register at index 95 (0x5228, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5229 1 00
+
+SUCCESS: default value for register at index 96 (0x5229, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 522a 1 40
+
+SUCCESS: default value for register at index 97 (0x522a, 0, 0, 8, 1) is 64, should be 64
+[lgw_spi_rbu] 5240 1 0f
+
+SUCCESS: default value for register at index 99 (0x5240, 0, 0, 8, 1) is 15, should be 15
+[lgw_spi_rbu] 5241 1 02
+
+SUCCESS: default value for register at index 100 (0x5241, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5241 1 02
+
+SUCCESS: default value for register at index 101 (0x5241, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5241 1 02
+
+SUCCESS: default value for register at index 102 (0x5241, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5241 1 02
+
+SUCCESS: default value for register at index 103 (0x5241, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5241 1 02
+
+SUCCESS: default value for register at index 104 (0x5241, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5242 1 00
+
+SUCCESS: default value for register at index 105 (0x5242, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5243 1 14
+
+SUCCESS: default value for register at index 106 (0x5243, 0, 0, 8, 1) is 20, should be 20
+[lgw_spi_rbu] 5244 1 1a
+
+SUCCESS: default value for register at index 107 (0x5244, 0, 0, 8, 1) is 26, should be 26
+[lgw_spi_rbu] 5245 1 0b
+
+SUCCESS: default value for register at index 108 (0x5245, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 5246 1 68
+
+SUCCESS: default value for register at index 109 (0x5246, 5, 0, 3, 1) is 3, should be 3
+[lgw_spi_rbu] 5246 1 68
+
+SUCCESS: default value for register at index 110 (0x5246, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5246 1 68
+
+SUCCESS: default value for register at index 111 (0x5246, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5246 1 68
+
+SUCCESS: default value for register at index 112 (0x5246, 1, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5246 1 68
+
+SUCCESS: default value for register at index 113 (0x5246, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5247 1 97
+
+SUCCESS: default value for register at index 114 (0x5247, 0, 0, 8, 1) is 151, should be 151
+[lgw_spi_rbu] 5248 1 23
+
+SUCCESS: default value for register at index 115 (0x5248, 0, 0, 8, 1) is 35, should be 35
+[lgw_spi_rbu] 5249 1 52
+
+SUCCESS: default value for register at index 116 (0x5249, 0, 0, 8, 1) is 82, should be 82
+[lgw_spi_rbu] 524a 1 25
+
+SUCCESS: default value for register at index 117 (0x524a, 0, 0, 8, 1) is 37, should be 37
+[lgw_spi_rbu] 524b 1 56
+
+SUCCESS: default value for register at index 118 (0x524b, 0, 0, 8, 1) is 86, should be 86
+[lgw_spi_rbu] 524c 1 53
+
+SUCCESS: default value for register at index 119 (0x524c, 0, 0, 8, 1) is 83, should be 83
+[lgw_spi_rbu] 524d 1 65
+
+SUCCESS: default value for register at index 120 (0x524d, 0, 0, 8, 1) is 101, should be 101
+[lgw_spi_rbu] 524e 1 64
+
+SUCCESS: default value for register at index 121 (0x524e, 0, 0, 8, 1) is 100, should be 100
+[lgw_spi_rbu] 5260 1 57
+
+SUCCESS: default value for register at index 123 (0x5260, 4, 0, 4, 1) is 5, should be 5
+[lgw_spi_rbu] 5260 1 57
+
+SUCCESS: default value for register at index 124 (0x5260, 0, 0, 4, 1) is 7, should be 7
+[lgw_spi_rbu] 5261 1 82
+
+SUCCESS: default value for register at index 125 (0x5261, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5261 1 82
+
+SUCCESS: default value for register at index 126 (0x5261, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5261 1 82
+
+SUCCESS: default value for register at index 127 (0x5261, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5261 1 82
+
+SUCCESS: default value for register at index 128 (0x5261, 0, 0, 3, 1) is 2, should be 2
+[lgw_spi_rbu] 5262 1 21
+
+SUCCESS: default value for register at index 129 (0x5262, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5262 1 21
+
+SUCCESS: default value for register at index 130 (0x5262, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5262 1 21
+
+SUCCESS: default value for register at index 131 (0x5262, 4, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5262 1 21
+
+SUCCESS: default value for register at index 132 (0x5262, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5262 1 21
+
+SUCCESS: default value for register at index 133 (0x5262, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5263 1 0c
+
+SUCCESS: default value for register at index 134 (0x5263, 0, 0, 8, 1) is 12, should be 12
+[lgw_spi_rbu] 5264 1 00
+
+SUCCESS: default value for register at index 135 (0x5264, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5264 1 00
+
+SUCCESS: default value for register at index 136 (0x5264, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 5265 1 00
+
+SUCCESS: default value for register at index 137 (0x5265, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5265 1 00
+
+SUCCESS: default value for register at index 138 (0x5265, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5265 1 00
+
+SUCCESS: default value for register at index 139 (0x5265, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 5266 1 08
+
+SUCCESS: default value for register at index 140 (0x5266, 0, 0, 8, 1) is 8, should be 8
+[lgw_spi_rbu] 5267 1 00
+
+SUCCESS: default value for register at index 141 (0x5267, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5268 1 40
+
+SUCCESS: default value for register at index 142 (0x5268, 6, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5268 1 40
+
+SUCCESS: default value for register at index 143 (0x5268, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5268 1 40
+
+SUCCESS: default value for register at index 144 (0x5268, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5269 1 06
+
+SUCCESS: default value for register at index 145 (0x5269, 4, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5269 1 06
+
+SUCCESS: default value for register at index 146 (0x5269, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5269 1 06
+
+SUCCESS: default value for register at index 147 (0x5269, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5269 1 06
+
+SUCCESS: default value for register at index 148 (0x5269, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5269 1 06
+
+SUCCESS: default value for register at index 149 (0x5269, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 526a 1 14
+
+SUCCESS: default value for register at index 150 (0x526a, 0, 0, 6, 1) is 20, should be 20
+[lgw_spi_rbu] 526b 1 00
+
+SUCCESS: default value for register at index 151 (0x526b, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 526c 1 0a
+
+SUCCESS: default value for register at index 152 (0x526c, 5, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 526c 1 0a
+
+SUCCESS: default value for register at index 153 (0x526c, 0, 0, 5, 1) is 10, should be 10
+[lgw_spi_rbu] 526d 1 a2
+
+SUCCESS: default value for register at index 154 (0x526d, 7, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 526d 1 a2
+
+SUCCESS: default value for register at index 155 (0x526d, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 526d 1 a2
+
+SUCCESS: default value for register at index 156 (0x526d, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 526d 1 a2
+
+SUCCESS: default value for register at index 157 (0x526d, 0, 1, 5, 1) is 2, should be 2
+[lgw_spi_rbu] 526e 1 64
+
+SUCCESS: default value for register at index 158 (0x526e, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 526e 1 64
+
+SUCCESS: default value for register at index 159 (0x526e, 5, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 526e 1 64
+
+SUCCESS: default value for register at index 160 (0x526e, 0, 1, 5, 1) is 4, should be 4
+[lgw_spi_rbu] 5270 1 00
+
+SUCCESS: default value for register at index 162 (0x5270, 2, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5270 1 00
+
+SUCCESS: default value for register at index 163 (0x5270, 1, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5270 1 00
+
+SUCCESS: default value for register at index 164 (0x5270, 0, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5400 1 00
+
+SUCCESS: default value for register at index 166 (0x5400, 3, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5400 1 00
+
+SUCCESS: default value for register at index 167 (0x5400, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5400 1 00
+
+SUCCESS: default value for register at index 168 (0x5400, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5400 1 00
+
+SUCCESS: default value for register at index 169 (0x5400, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5401 1 00
+
+SUCCESS: default value for register at index 170 (0x5401, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5402 1 00
+
+SUCCESS: default value for register at index 171 (0x5402, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5403 1 00
+
+SUCCESS: default value for register at index 172 (0x5403, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5404 1 00
+
+SUCCESS: default value for register at index 173 (0x5404, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5405 1 bb
+
+SUCCESS: default value for register at index 174 (0x5405, 0, 0, 8, 1) is 187, should be 187
+[lgw_spi_rbu] 5406 1 80
+
+SUCCESS: default value for register at index 175 (0x5406, 0, 0, 8, 1) is 128, should be 128
+[lgw_spi_rbu] 5407 1 00
+
+SUCCESS: default value for register at index 176 (0x5407, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5408 1 01
+
+SUCCESS: default value for register at index 177 (0x5408, 0, 0, 3, 1) is 1, should be 1
+[lgw_spi_rbu] 5409 1 00
+
+SUCCESS: default value for register at index 178 (0x5409, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 540a 1 00
+
+SUCCESS: default value for register at index 179 (0x540a, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 540a 1 00
+
+SUCCESS: default value for register at index 180 (0x540a, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 540b 1 00
+
+SUCCESS: default value for register at index 181 (0x540b, 1, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 540b 1 00
+
+SUCCESS: default value for register at index 182 (0x540b, 0, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 540c 1 00
+
+SUCCESS: default value for register at index 183 (0x540c, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 540d 1 00
+
+SUCCESS: default value for register at index 184 (0x540d, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 540e 1 00
+
+SUCCESS: default value for register at index 185 (0x540e, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 540f 1 00
+
+SUCCESS: default value for register at index 186 (0x540f, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5410 1 00
+
+SUCCESS: default value for register at index 187 (0x5410, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5420 1 18
+
+SUCCESS: default value for register at index 190 (0x5420, 5, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5420 1 18
+
+SUCCESS: default value for register at index 191 (0x5420, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5420 1 18
+
+SUCCESS: default value for register at index 192 (0x5420, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5420 1 18
+
+SUCCESS: default value for register at index 193 (0x5420, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5420 1 18
+
+SUCCESS: default value for register at index 194 (0x5420, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5421 1 00
+
+SUCCESS: default value for register at index 195 (0x5421, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5421 1 00
+
+SUCCESS: default value for register at index 196 (0x5421, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5422 1 00
+
+SUCCESS: default value for register at index 197 (0x5422, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5423 1 00
+
+SUCCESS: default value for register at index 198 (0x5423, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5424 1 00
+
+SUCCESS: default value for register at index 199 (0x5424, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5425 1 6c
+
+SUCCESS: default value for register at index 200 (0x5425, 0, 0, 8, 1) is 108, should be 108
+[lgw_spi_rbu] 5426 1 90
+
+SUCCESS: default value for register at index 201 (0x5426, 0, 0, 8, 1) is 144, should be 144
+[lgw_spi_rbu] 5427 1 00
+
+SUCCESS: default value for register at index 202 (0x5427, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5428 1 00
+
+SUCCESS: default value for register at index 203 (0x5428, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5429 1 00
+
+SUCCESS: default value for register at index 204 (0x5429, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 542a 1 40
+
+SUCCESS: default value for register at index 205 (0x542a, 0, 0, 8, 1) is 64, should be 64
+[lgw_spi_rbu] 5440 1 0f
+
+SUCCESS: default value for register at index 207 (0x5440, 0, 0, 8, 1) is 15, should be 15
+[lgw_spi_rbu] 5441 1 02
+
+SUCCESS: default value for register at index 208 (0x5441, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5441 1 02
+
+SUCCESS: default value for register at index 209 (0x5441, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5441 1 02
+
+SUCCESS: default value for register at index 210 (0x5441, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5441 1 02
+
+SUCCESS: default value for register at index 211 (0x5441, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5441 1 02
+
+SUCCESS: default value for register at index 212 (0x5441, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5442 1 00
+
+SUCCESS: default value for register at index 213 (0x5442, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5443 1 14
+
+SUCCESS: default value for register at index 214 (0x5443, 0, 0, 8, 1) is 20, should be 20
+[lgw_spi_rbu] 5444 1 1a
+
+SUCCESS: default value for register at index 215 (0x5444, 0, 0, 8, 1) is 26, should be 26
+[lgw_spi_rbu] 5445 1 0b
+
+SUCCESS: default value for register at index 216 (0x5445, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 5446 1 68
+
+SUCCESS: default value for register at index 217 (0x5446, 5, 0, 3, 1) is 3, should be 3
+[lgw_spi_rbu] 5446 1 68
+
+SUCCESS: default value for register at index 218 (0x5446, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5446 1 68
+
+SUCCESS: default value for register at index 219 (0x5446, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5446 1 68
+
+SUCCESS: default value for register at index 220 (0x5446, 1, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5446 1 68
+
+SUCCESS: default value for register at index 221 (0x5446, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5447 1 97
+
+SUCCESS: default value for register at index 222 (0x5447, 0, 0, 8, 1) is 151, should be 151
+[lgw_spi_rbu] 5448 1 23
+
+SUCCESS: default value for register at index 223 (0x5448, 0, 0, 8, 1) is 35, should be 35
+[lgw_spi_rbu] 5449 1 52
+
+SUCCESS: default value for register at index 224 (0x5449, 0, 0, 8, 1) is 82, should be 82
+[lgw_spi_rbu] 544a 1 25
+
+SUCCESS: default value for register at index 225 (0x544a, 0, 0, 8, 1) is 37, should be 37
+[lgw_spi_rbu] 544b 1 56
+
+SUCCESS: default value for register at index 226 (0x544b, 0, 0, 8, 1) is 86, should be 86
+[lgw_spi_rbu] 544c 1 53
+
+SUCCESS: default value for register at index 227 (0x544c, 0, 0, 8, 1) is 83, should be 83
+[lgw_spi_rbu] 544d 1 65
+
+SUCCESS: default value for register at index 228 (0x544d, 0, 0, 8, 1) is 101, should be 101
+[lgw_spi_rbu] 544e 1 64
+
+SUCCESS: default value for register at index 229 (0x544e, 0, 0, 8, 1) is 100, should be 100
+[lgw_spi_rbu] 5460 1 57
+
+SUCCESS: default value for register at index 231 (0x5460, 4, 0, 4, 1) is 5, should be 5
+[lgw_spi_rbu] 5460 1 57
+
+SUCCESS: default value for register at index 232 (0x5460, 0, 0, 4, 1) is 7, should be 7
+[lgw_spi_rbu] 5461 1 82
+
+SUCCESS: default value for register at index 233 (0x5461, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5461 1 82
+
+SUCCESS: default value for register at index 234 (0x5461, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5461 1 82
+
+SUCCESS: default value for register at index 235 (0x5461, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5461 1 82
+
+SUCCESS: default value for register at index 236 (0x5461, 0, 0, 3, 1) is 2, should be 2
+[lgw_spi_rbu] 5462 1 21
+
+SUCCESS: default value for register at index 237 (0x5462, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5462 1 21
+
+SUCCESS: default value for register at index 238 (0x5462, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5462 1 21
+
+SUCCESS: default value for register at index 239 (0x5462, 4, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5462 1 21
+
+SUCCESS: default value for register at index 240 (0x5462, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5462 1 21
+
+SUCCESS: default value for register at index 241 (0x5462, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5463 1 0c
+
+SUCCESS: default value for register at index 242 (0x5463, 0, 0, 8, 1) is 12, should be 12
+[lgw_spi_rbu] 5464 1 00
+
+SUCCESS: default value for register at index 243 (0x5464, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5464 1 00
+
+SUCCESS: default value for register at index 244 (0x5464, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 5465 1 00
+
+SUCCESS: default value for register at index 245 (0x5465, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5465 1 00
+
+SUCCESS: default value for register at index 246 (0x5465, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5465 1 00
+
+SUCCESS: default value for register at index 247 (0x5465, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 5466 1 08
+
+SUCCESS: default value for register at index 248 (0x5466, 0, 0, 8, 1) is 8, should be 8
+[lgw_spi_rbu] 5467 1 00
+
+SUCCESS: default value for register at index 249 (0x5467, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5468 1 40
+
+SUCCESS: default value for register at index 250 (0x5468, 6, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5468 1 40
+
+SUCCESS: default value for register at index 251 (0x5468, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5468 1 40
+
+SUCCESS: default value for register at index 252 (0x5468, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5469 1 06
+
+SUCCESS: default value for register at index 253 (0x5469, 4, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5469 1 06
+
+SUCCESS: default value for register at index 254 (0x5469, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5469 1 06
+
+SUCCESS: default value for register at index 255 (0x5469, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5469 1 06
+
+SUCCESS: default value for register at index 256 (0x5469, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5469 1 06
+
+SUCCESS: default value for register at index 257 (0x5469, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 546a 1 14
+
+SUCCESS: default value for register at index 258 (0x546a, 0, 0, 6, 1) is 20, should be 20
+[lgw_spi_rbu] 546b 1 00
+
+SUCCESS: default value for register at index 259 (0x546b, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 546c 1 0a
+
+SUCCESS: default value for register at index 260 (0x546c, 5, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 546c 1 0a
+
+SUCCESS: default value for register at index 261 (0x546c, 0, 0, 5, 1) is 10, should be 10
+[lgw_spi_rbu] 546d 1 a2
+
+SUCCESS: default value for register at index 262 (0x546d, 7, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 546d 1 a2
+
+SUCCESS: default value for register at index 263 (0x546d, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 546d 1 a2
+
+SUCCESS: default value for register at index 264 (0x546d, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 546d 1 a2
+
+SUCCESS: default value for register at index 265 (0x546d, 0, 1, 5, 1) is 2, should be 2
+[lgw_spi_rbu] 546e 1 64
+
+SUCCESS: default value for register at index 266 (0x546e, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 546e 1 64
+
+SUCCESS: default value for register at index 267 (0x546e, 5, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 546e 1 64
+
+SUCCESS: default value for register at index 268 (0x546e, 0, 1, 5, 1) is 4, should be 4
+[lgw_spi_rbu] 5470 1 00
+
+SUCCESS: default value for register at index 270 (0x5470, 2, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5470 1 00
+
+SUCCESS: default value for register at index 271 (0x5470, 1, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5470 1 00
+
+SUCCESS: default value for register at index 272 (0x5470, 0, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5640 1 00
+
+SUCCESS: default value for register at index 274 (0x5640, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5641 1 00
+
+SUCCESS: default value for register at index 275 (0x5641, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5642 1 00
+
+SUCCESS: default value for register at index 276 (0x5642, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5643 1 00
+
+SUCCESS: default value for register at index 277 (0x5643, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5646 1 00
+
+SUCCESS: default value for register at index 280 (0x5646, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5647 1 00
+
+SUCCESS: default value for register at index 281 (0x5647, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5648 1 00
+
+SUCCESS: default value for register at index 282 (0x5648, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5649 1 00
+
+SUCCESS: default value for register at index 283 (0x5649, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 564a 1 00
+
+SUCCESS: default value for register at index 284 (0x564a, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 564b 1 00
+
+SUCCESS: default value for register at index 285 (0x564b, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 564c 1 00
+
+SUCCESS: default value for register at index 286 (0x564c, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 564d 1 00
+
+SUCCESS: default value for register at index 287 (0x564d, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 564e 1 00
+
+SUCCESS: default value for register at index 288 (0x564e, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 564f 1 00
+
+SUCCESS: default value for register at index 289 (0x564f, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5650 1 00
+
+SUCCESS: default value for register at index 290 (0x5650, 1, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5650 1 00
+
+SUCCESS: default value for register at index 291 (0x5650, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5651 1 00
+
+SUCCESS: default value for register at index 292 (0x5651, 5, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5651 1 00
+
+SUCCESS: default value for register at index 293 (0x5651, 4, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5651 1 00
+
+SUCCESS: default value for register at index 294 (0x5651, 3, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5651 1 00
+
+SUCCESS: default value for register at index 295 (0x5651, 2, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5651 1 00
+
+SUCCESS: default value for register at index 296 (0x5651, 1, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5651 1 00
+
+SUCCESS: default value for register at index 297 (0x5651, 0, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 5652 1 00
+
+SUCCESS: default value for register at index 298 (0x5652, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5652 1 00
+
+SUCCESS: default value for register at index 299 (0x5652, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5652 1 00
+
+SUCCESS: default value for register at index 300 (0x5652, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5652 1 00
+
+SUCCESS: default value for register at index 301 (0x5652, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5652 1 00
+
+SUCCESS: default value for register at index 302 (0x5652, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5652 1 00
+
+SUCCESS: default value for register at index 303 (0x5652, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6100 1 00
+
+SUCCESS: default value for register at index 305 (0x6100, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6100 1 00
+
+SUCCESS: default value for register at index 306 (0x6100, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6109 1 00
+
+SUCCESS: default value for register at index 315 (0x6109, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 610a 1 00
+
+SUCCESS: default value for register at index 316 (0x610a, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 610b 1 00
+
+SUCCESS: default value for register at index 317 (0x610b, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 610c 1 00
+
+SUCCESS: default value for register at index 318 (0x610c, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 610d 1 00
+
+SUCCESS: default value for register at index 319 (0x610d, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 610e 1 00
+
+SUCCESS: default value for register at index 320 (0x610e, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 610f 1 00
+
+SUCCESS: default value for register at index 321 (0x610f, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 6110 1 00
+
+SUCCESS: default value for register at index 322 (0x6110, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5800 1 00
+
+SUCCESS: default value for register at index 324 (0x5800, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 5801 1 80
+
+SUCCESS: default value for register at index 325 (0x5801, 0, 0, 8, 1) is 128, should be 128
+[lgw_spi_rbu] 5802 1 01
+
+SUCCESS: default value for register at index 326 (0x5802, 0, 0, 5, 1) is 1, should be 1
+[lgw_spi_rbu] 5803 1 80
+
+SUCCESS: default value for register at index 327 (0x5803, 0, 0, 8, 1) is 128, should be 128
+[lgw_spi_rbu] 5804 1 1e
+
+SUCCESS: default value for register at index 328 (0x5804, 0, 0, 5, 1) is 30, should be 30
+[lgw_spi_rbu] 5805 1 80
+
+SUCCESS: default value for register at index 329 (0x5805, 0, 0, 8, 1) is 128, should be 128
+[lgw_spi_rbu] 5806 1 00
+
+SUCCESS: default value for register at index 330 (0x5806, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 5807 1 80
+
+SUCCESS: default value for register at index 331 (0x5807, 0, 0, 8, 1) is 128, should be 128
+[lgw_spi_rbu] 5808 1 00
+
+SUCCESS: default value for register at index 332 (0x5808, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 5809 1 32
+
+SUCCESS: default value for register at index 333 (0x5809, 0, 0, 8, 1) is 50, should be 50
+[lgw_spi_rbu] 580a 1 00
+
+SUCCESS: default value for register at index 334 (0x580a, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 580b 1 3c
+
+SUCCESS: default value for register at index 335 (0x580b, 0, 0, 8, 1) is 60, should be 60
+[lgw_spi_rbu] 580c 1 00
+
+SUCCESS: default value for register at index 336 (0x580c, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 580d 1 46
+
+SUCCESS: default value for register at index 337 (0x580d, 0, 0, 8, 1) is 70, should be 70
+[lgw_spi_rbu] 580e 1 00
+
+SUCCESS: default value for register at index 338 (0x580e, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 580f 1 50
+
+SUCCESS: default value for register at index 339 (0x580f, 0, 0, 8, 1) is 80, should be 80
+[lgw_spi_rbu] 5810 1 00
+
+SUCCESS: default value for register at index 340 (0x5810, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5811 1 38
+
+SUCCESS: default value for register at index 341 (0x5811, 3, 0, 5, 1) is 7, should be 7
+[lgw_spi_rbu] 5811 1 38
+
+SUCCESS: default value for register at index 342 (0x5811, 0, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5812 1 00
+
+SUCCESS: default value for register at index 343 (0x5812, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5813 1 00
+
+SUCCESS: default value for register at index 344 (0x5813, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5814 1 00
+
+SUCCESS: default value for register at index 345 (0x5814, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5815 1 f0
+
+SUCCESS: default value for register at index 346 (0x5815, 4, 0, 4, 1) is 15, should be 15
+[lgw_spi_rbu] 5815 1 f0
+
+SUCCESS: default value for register at index 347 (0x5815, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5816 1 00
+
+SUCCESS: default value for register at index 348 (0x5816, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5817 1 00
+
+SUCCESS: default value for register at index 349 (0x5817, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5819 1 00
+
+SUCCESS: default value for register at index 351 (0x5819, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5819 1 00
+
+SUCCESS: default value for register at index 352 (0x5819, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 581a 1 01
+
+SUCCESS: default value for register at index 353 (0x581a, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5820 1 ff
+
+SUCCESS: default value for register at index 355 (0x5820, 0, 0, 8, 1) is 255, should be 255
+[lgw_spi_rbu] 5821 1 00
+
+SUCCESS: default value for register at index 356 (0x5821, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5822 1 ff
+
+SUCCESS: default value for register at index 357 (0x5822, 0, 0, 8, 1) is 255, should be 255
+[lgw_spi_rbu] 5823 1 ff
+
+SUCCESS: default value for register at index 358 (0x5823, 0, 0, 8, 1) is 255, should be 255
+[lgw_spi_rbu] 5824 1 ff
+
+SUCCESS: default value for register at index 359 (0x5824, 0, 0, 8, 1) is 255, should be 255
+[lgw_spi_rbu] 5825 1 bb
+
+SUCCESS: default value for register at index 360 (0x5825, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5825 1 bb
+
+SUCCESS: default value for register at index 361 (0x5825, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5825 1 bb
+
+SUCCESS: default value for register at index 362 (0x5825, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5825 1 bb
+
+SUCCESS: default value for register at index 363 (0x5825, 2, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5825 1 bb
+
+SUCCESS: default value for register at index 364 (0x5825, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5825 1 bb
+
+SUCCESS: default value for register at index 365 (0x5825, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5826 1 37
+
+SUCCESS: default value for register at index 366 (0x5826, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5826 1 37
+
+SUCCESS: default value for register at index 367 (0x5826, 0, 0, 7, 1) is 55, should be 55
+[lgw_spi_rbu] 5827 1 0b
+
+SUCCESS: default value for register at index 368 (0x5827, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 5828 1 20
+
+SUCCESS: default value for register at index 369 (0x5828, 0, 0, 7, 1) is 32, should be 32
+[lgw_spi_rbu] 5829 1 30
+
+SUCCESS: default value for register at index 370 (0x5829, 0, 0, 7, 1) is 48, should be 48
+[lgw_spi_rbu] 582a 1 2b
+
+SUCCESS: default value for register at index 371 (0x582a, 3, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 582a 1 2b
+
+SUCCESS: default value for register at index 372 (0x582a, 1, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 582a 1 2b
+
+SUCCESS: default value for register at index 373 (0x582a, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 582b 1 16
+
+SUCCESS: default value for register at index 374 (0x582b, 2, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 582b 1 16
+
+SUCCESS: default value for register at index 375 (0x582b, 0, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 582c 1 bb
+
+SUCCESS: default value for register at index 376 (0x582c, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 582c 1 bb
+
+SUCCESS: default value for register at index 377 (0x582c, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 582c 1 bb
+
+SUCCESS: default value for register at index 378 (0x582c, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 582c 1 bb
+
+SUCCESS: default value for register at index 379 (0x582c, 2, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 582c 1 bb
+
+SUCCESS: default value for register at index 380 (0x582c, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 582c 1 bb
+
+SUCCESS: default value for register at index 381 (0x582c, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 582d 1 37
+
+SUCCESS: default value for register at index 382 (0x582d, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 582d 1 37
+
+SUCCESS: default value for register at index 383 (0x582d, 0, 0, 7, 1) is 55, should be 55
+[lgw_spi_rbu] 582e 1 0b
+
+SUCCESS: default value for register at index 384 (0x582e, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 582f 1 20
+
+SUCCESS: default value for register at index 385 (0x582f, 0, 0, 7, 1) is 32, should be 32
+[lgw_spi_rbu] 5830 1 30
+
+SUCCESS: default value for register at index 386 (0x5830, 0, 0, 7, 1) is 48, should be 48
+[lgw_spi_rbu] 5831 1 23
+
+SUCCESS: default value for register at index 387 (0x5831, 3, 0, 3, 1) is 4, should be 4
+[lgw_spi_rbu] 5831 1 23
+
+SUCCESS: default value for register at index 388 (0x5831, 1, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5831 1 23
+
+SUCCESS: default value for register at index 389 (0x5831, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5832 1 16
+
+SUCCESS: default value for register at index 390 (0x5832, 2, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 5832 1 16
+
+SUCCESS: default value for register at index 391 (0x5832, 0, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5833 1 bb
+
+SUCCESS: default value for register at index 392 (0x5833, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5833 1 bb
+
+SUCCESS: default value for register at index 393 (0x5833, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5833 1 bb
+
+SUCCESS: default value for register at index 394 (0x5833, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5833 1 bb
+
+SUCCESS: default value for register at index 395 (0x5833, 2, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5833 1 bb
+
+SUCCESS: default value for register at index 396 (0x5833, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5833 1 bb
+
+SUCCESS: default value for register at index 397 (0x5833, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5834 1 37
+
+SUCCESS: default value for register at index 398 (0x5834, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5834 1 37
+
+SUCCESS: default value for register at index 399 (0x5834, 0, 0, 7, 1) is 55, should be 55
+[lgw_spi_rbu] 5835 1 0b
+
+SUCCESS: default value for register at index 400 (0x5835, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 5836 1 20
+
+SUCCESS: default value for register at index 401 (0x5836, 0, 0, 7, 1) is 32, should be 32
+[lgw_spi_rbu] 5837 1 30
+
+SUCCESS: default value for register at index 402 (0x5837, 0, 0, 7, 1) is 48, should be 48
+[lgw_spi_rbu] 5838 1 1b
+
+SUCCESS: default value for register at index 403 (0x5838, 3, 0, 3, 1) is 3, should be 3
+[lgw_spi_rbu] 5838 1 1b
+
+SUCCESS: default value for register at index 404 (0x5838, 1, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5838 1 1b
+
+SUCCESS: default value for register at index 405 (0x5838, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5839 1 16
+
+SUCCESS: default value for register at index 406 (0x5839, 2, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 5839 1 16
+
+SUCCESS: default value for register at index 407 (0x5839, 0, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 583a 1 bb
+
+SUCCESS: default value for register at index 408 (0x583a, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 583a 1 bb
+
+SUCCESS: default value for register at index 409 (0x583a, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 583a 1 bb
+
+SUCCESS: default value for register at index 410 (0x583a, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 583a 1 bb
+
+SUCCESS: default value for register at index 411 (0x583a, 2, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 583a 1 bb
+
+SUCCESS: default value for register at index 412 (0x583a, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 583a 1 bb
+
+SUCCESS: default value for register at index 413 (0x583a, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 583b 1 38
+
+SUCCESS: default value for register at index 414 (0x583b, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 583b 1 38
+
+SUCCESS: default value for register at index 415 (0x583b, 0, 0, 7, 1) is 56, should be 56
+[lgw_spi_rbu] 583c 1 0b
+
+SUCCESS: default value for register at index 416 (0x583c, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 583d 1 20
+
+SUCCESS: default value for register at index 417 (0x583d, 0, 0, 7, 1) is 32, should be 32
+[lgw_spi_rbu] 583e 1 30
+
+SUCCESS: default value for register at index 418 (0x583e, 0, 0, 7, 1) is 48, should be 48
+[lgw_spi_rbu] 583f 1 1b
+
+SUCCESS: default value for register at index 419 (0x583f, 3, 0, 3, 1) is 3, should be 3
+[lgw_spi_rbu] 583f 1 1b
+
+SUCCESS: default value for register at index 420 (0x583f, 1, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 583f 1 1b
+
+SUCCESS: default value for register at index 421 (0x583f, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5840 1 16
+
+SUCCESS: default value for register at index 422 (0x5840, 2, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 5840 1 16
+
+SUCCESS: default value for register at index 423 (0x5840, 0, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5841 1 bb
+
+SUCCESS: default value for register at index 424 (0x5841, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5841 1 bb
+
+SUCCESS: default value for register at index 425 (0x5841, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5841 1 bb
+
+SUCCESS: default value for register at index 426 (0x5841, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5841 1 bb
+
+SUCCESS: default value for register at index 427 (0x5841, 2, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5841 1 bb
+
+SUCCESS: default value for register at index 428 (0x5841, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5841 1 bb
+
+SUCCESS: default value for register at index 429 (0x5841, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5842 1 3a
+
+SUCCESS: default value for register at index 430 (0x5842, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5842 1 3a
+
+SUCCESS: default value for register at index 431 (0x5842, 0, 0, 7, 1) is 58, should be 58
+[lgw_spi_rbu] 5843 1 0b
+
+SUCCESS: default value for register at index 432 (0x5843, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 5844 1 20
+
+SUCCESS: default value for register at index 433 (0x5844, 0, 0, 7, 1) is 32, should be 32
+[lgw_spi_rbu] 5845 1 30
+
+SUCCESS: default value for register at index 434 (0x5845, 0, 0, 7, 1) is 48, should be 48
+[lgw_spi_rbu] 5846 1 1b
+
+SUCCESS: default value for register at index 435 (0x5846, 3, 0, 3, 1) is 3, should be 3
+[lgw_spi_rbu] 5846 1 1b
+
+SUCCESS: default value for register at index 436 (0x5846, 1, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5846 1 1b
+
+SUCCESS: default value for register at index 437 (0x5846, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5847 1 16
+
+SUCCESS: default value for register at index 438 (0x5847, 2, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 5847 1 16
+
+SUCCESS: default value for register at index 439 (0x5847, 0, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5848 1 bb
+
+SUCCESS: default value for register at index 440 (0x5848, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5848 1 bb
+
+SUCCESS: default value for register at index 441 (0x5848, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5848 1 bb
+
+SUCCESS: default value for register at index 442 (0x5848, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5848 1 bb
+
+SUCCESS: default value for register at index 443 (0x5848, 2, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5848 1 bb
+
+SUCCESS: default value for register at index 444 (0x5848, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5848 1 bb
+
+SUCCESS: default value for register at index 445 (0x5848, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5849 1 3c
+
+SUCCESS: default value for register at index 446 (0x5849, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5849 1 3c
+
+SUCCESS: default value for register at index 447 (0x5849, 0, 0, 7, 1) is 60, should be 60
+[lgw_spi_rbu] 584a 1 0b
+
+SUCCESS: default value for register at index 448 (0x584a, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 584b 1 20
+
+SUCCESS: default value for register at index 449 (0x584b, 0, 0, 7, 1) is 32, should be 32
+[lgw_spi_rbu] 584c 1 30
+
+SUCCESS: default value for register at index 450 (0x584c, 0, 0, 7, 1) is 48, should be 48
+[lgw_spi_rbu] 584d 1 1b
+
+SUCCESS: default value for register at index 451 (0x584d, 3, 0, 3, 1) is 3, should be 3
+[lgw_spi_rbu] 584d 1 1b
+
+SUCCESS: default value for register at index 452 (0x584d, 1, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 584d 1 1b
+
+SUCCESS: default value for register at index 453 (0x584d, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 584e 1 16
+
+SUCCESS: default value for register at index 454 (0x584e, 2, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 584e 1 16
+
+SUCCESS: default value for register at index 455 (0x584e, 0, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 584f 1 bb
+
+SUCCESS: default value for register at index 456 (0x584f, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 584f 1 bb
+
+SUCCESS: default value for register at index 457 (0x584f, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 584f 1 bb
+
+SUCCESS: default value for register at index 458 (0x584f, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 584f 1 bb
+
+SUCCESS: default value for register at index 459 (0x584f, 2, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 584f 1 bb
+
+SUCCESS: default value for register at index 460 (0x584f, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 584f 1 bb
+
+SUCCESS: default value for register at index 461 (0x584f, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5850 1 3c
+
+SUCCESS: default value for register at index 462 (0x5850, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5850 1 3c
+
+SUCCESS: default value for register at index 463 (0x5850, 0, 0, 7, 1) is 60, should be 60
+[lgw_spi_rbu] 5851 1 0b
+
+SUCCESS: default value for register at index 464 (0x5851, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 5852 1 20
+
+SUCCESS: default value for register at index 465 (0x5852, 0, 0, 7, 1) is 32, should be 32
+[lgw_spi_rbu] 5853 1 30
+
+SUCCESS: default value for register at index 466 (0x5853, 0, 0, 7, 1) is 48, should be 48
+[lgw_spi_rbu] 5854 1 1b
+
+SUCCESS: default value for register at index 467 (0x5854, 3, 0, 3, 1) is 3, should be 3
+[lgw_spi_rbu] 5854 1 1b
+
+SUCCESS: default value for register at index 468 (0x5854, 1, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5854 1 1b
+
+SUCCESS: default value for register at index 469 (0x5854, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5855 1 16
+
+SUCCESS: default value for register at index 470 (0x5855, 2, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 5855 1 16
+
+SUCCESS: default value for register at index 471 (0x5855, 0, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5856 1 bb
+
+SUCCESS: default value for register at index 472 (0x5856, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5856 1 bb
+
+SUCCESS: default value for register at index 473 (0x5856, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5856 1 bb
+
+SUCCESS: default value for register at index 474 (0x5856, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5856 1 bb
+
+SUCCESS: default value for register at index 475 (0x5856, 2, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5856 1 bb
+
+SUCCESS: default value for register at index 476 (0x5856, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5856 1 bb
+
+SUCCESS: default value for register at index 477 (0x5856, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5857 1 3c
+
+SUCCESS: default value for register at index 478 (0x5857, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5857 1 3c
+
+SUCCESS: default value for register at index 479 (0x5857, 0, 0, 7, 1) is 60, should be 60
+[lgw_spi_rbu] 5858 1 0b
+
+SUCCESS: default value for register at index 480 (0x5858, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 5859 1 20
+
+SUCCESS: default value for register at index 481 (0x5859, 0, 0, 7, 1) is 32, should be 32
+[lgw_spi_rbu] 585a 1 30
+
+SUCCESS: default value for register at index 482 (0x585a, 0, 0, 7, 1) is 48, should be 48
+[lgw_spi_rbu] 585b 1 1b
+
+SUCCESS: default value for register at index 483 (0x585b, 3, 0, 3, 1) is 3, should be 3
+[lgw_spi_rbu] 585b 1 1b
+
+SUCCESS: default value for register at index 484 (0x585b, 1, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 585b 1 1b
+
+SUCCESS: default value for register at index 485 (0x585b, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 585c 1 16
+
+SUCCESS: default value for register at index 486 (0x585c, 2, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 585c 1 16
+
+SUCCESS: default value for register at index 487 (0x585c, 0, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5860 1 08
+
+SUCCESS: default value for register at index 489 (0x5860, 4, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5860 1 08
+
+SUCCESS: default value for register at index 490 (0x5860, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5860 1 08
+
+SUCCESS: default value for register at index 491 (0x5860, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5860 1 08
+
+SUCCESS: default value for register at index 492 (0x5860, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5860 1 08
+
+SUCCESS: default value for register at index 493 (0x5860, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5861 1 0d
+
+SUCCESS: default value for register at index 494 (0x5861, 3, 0, 3, 1) is 1, should be 1
+[lgw_spi_rbu] 5861 1 0d
+
+SUCCESS: default value for register at index 495 (0x5861, 0, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 5862 1 00
+
+SUCCESS: default value for register at index 496 (0x5862, 0, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5863 1 00
+
+SUCCESS: default value for register at index 497 (0x5863, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5864 1 02
+
+SUCCESS: default value for register at index 498 (0x5864, 0, 1, 8, 1) is 2, should be 2
+[lgw_spi_rbu] 5865 1 03
+
+SUCCESS: default value for register at index 499 (0x5865, 0, 1, 8, 1) is 3, should be 3
+[lgw_spi_rbu] 5866 1 02
+
+SUCCESS: default value for register at index 500 (0x5866, 0, 1, 8, 1) is 2, should be 2
+[lgw_spi_rbu] 5867 1 03
+
+SUCCESS: default value for register at index 501 (0x5867, 0, 1, 8, 1) is 3, should be 3
+[lgw_spi_rbu] 5868 1 05
+
+SUCCESS: default value for register at index 502 (0x5868, 0, 1, 8, 1) is 5, should be 5
+[lgw_spi_rbu] 5869 1 08
+
+SUCCESS: default value for register at index 503 (0x5869, 0, 1, 8, 1) is 8, should be 8
+[lgw_spi_rbu] 586a 1 06
+
+SUCCESS: default value for register at index 504 (0x586a, 0, 1, 8, 1) is 6, should be 6
+[lgw_spi_rbu] 586b 1 04
+
+SUCCESS: default value for register at index 505 (0x586b, 0, 1, 8, 1) is 4, should be 4
+[lgw_spi_rbu] 586c 1 02
+
+SUCCESS: default value for register at index 506 (0x586c, 0, 1, 8, 1) is 2, should be 2
+[lgw_spi_rbu] 586d 1 fe
+
+SUCCESS: default value for register at index 507 (0x586d, 0, 1, 8, 1) is -2, should be -2
+[lgw_spi_rbu] 586e 1 fc
+
+SUCCESS: default value for register at index 508 (0x586e, 0, 1, 8, 1) is -4, should be -4
+[lgw_spi_rbu] 586f 1 fd
+
+SUCCESS: default value for register at index 509 (0x586f, 0, 1, 8, 1) is -3, should be -3
+[lgw_spi_rbu] 5870 1 03
+
+SUCCESS: default value for register at index 510 (0x5870, 0, 1, 8, 1) is 3, should be 3
+[lgw_spi_rbu] 5871 1 0b
+
+SUCCESS: default value for register at index 511 (0x5871, 0, 1, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 5872 1 13
+
+SUCCESS: default value for register at index 512 (0x5872, 0, 1, 8, 1) is 19, should be 19
+[lgw_spi_rbu] 5873 1 0a
+
+SUCCESS: default value for register at index 513 (0x5873, 0, 1, 8, 1) is 10, should be 10
+[lgw_spi_rbu] 5874 1 00
+
+SUCCESS: default value for register at index 514 (0x5874, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5874 1 00
+
+SUCCESS: default value for register at index 515 (0x5874, 0, 0, 7, 1) is 0, should be 0
+[lgw_spi_rbu] 5875 1 07
+
+SUCCESS: default value for register at index 516 (0x5875, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5875 1 07
+
+SUCCESS: default value for register at index 517 (0x5875, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5875 1 07
+
+SUCCESS: default value for register at index 518 (0x5875, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5875 1 07
+
+SUCCESS: default value for register at index 519 (0x5875, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5876 1 2a
+
+SUCCESS: default value for register at index 520 (0x5876, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5876 1 2a
+
+SUCCESS: default value for register at index 521 (0x5876, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5876 1 2a
+
+SUCCESS: default value for register at index 522 (0x5876, 3, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5876 1 2a
+
+SUCCESS: default value for register at index 523 (0x5876, 0, 0, 3, 1) is 2, should be 2
+[lgw_spi_rbu] 5877 1 31
+
+SUCCESS: default value for register at index 524 (0x5877, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5877 1 31
+
+SUCCESS: default value for register at index 525 (0x5877, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5877 1 31
+
+SUCCESS: default value for register at index 526 (0x5877, 4, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5877 1 31
+
+SUCCESS: default value for register at index 527 (0x5877, 0, 0, 3, 1) is 1, should be 1
+[lgw_spi_rbu] 5878 1 0b
+
+SUCCESS: default value for register at index 528 (0x5878, 6, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5878 1 0b
+
+SUCCESS: default value for register at index 529 (0x5878, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5878 1 0b
+
+SUCCESS: default value for register at index 530 (0x5878, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5878 1 0b
+
+SUCCESS: default value for register at index 531 (0x5878, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5878 1 0b
+
+SUCCESS: default value for register at index 532 (0x5878, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5878 1 0b
+
+SUCCESS: default value for register at index 533 (0x5878, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5879 1 3c
+
+SUCCESS: default value for register at index 534 (0x5879, 0, 0, 8, 1) is 60, should be 60
+[lgw_spi_rbu] 587a 1 06
+
+SUCCESS: default value for register at index 535 (0x587a, 0, 0, 8, 1) is 6, should be 6
+[lgw_spi_rbu] 587b 1 19
+
+SUCCESS: default value for register at index 536 (0x587b, 0, 0, 8, 1) is 25, should be 25
+[lgw_spi_rbu] 587c 1 2a
+
+SUCCESS: default value for register at index 537 (0x587c, 0, 0, 8, 1) is 42, should be 42
+[lgw_spi_rbu] 587d 1 80
+
+SUCCESS: default value for register at index 538 (0x587d, 4, 0, 4, 1) is 8, should be 8
+[lgw_spi_rbu] 587d 1 80
+
+SUCCESS: default value for register at index 539 (0x587d, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 587e 1 82
+
+SUCCESS: default value for register at index 540 (0x587e, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 587e 1 82
+
+SUCCESS: default value for register at index 541 (0x587e, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 587e 1 82
+
+SUCCESS: default value for register at index 542 (0x587e, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 587e 1 82
+
+SUCCESS: default value for register at index 543 (0x587e, 0, 0, 3, 1) is 2, should be 2
+[lgw_spi_rbu] 587f 1 05
+
+SUCCESS: default value for register at index 544 (0x587f, 4, 0, 1, 0) is 0, should be 0
+[lgw_spi_rbu] 587f 1 05
+
+SUCCESS: default value for register at index 545 (0x587f, 2, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 587f 1 05
+
+SUCCESS: default value for register at index 546 (0x587f, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 587f 1 05
+
+SUCCESS: default value for register at index 547 (0x587f, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5880 1 0c
+
+SUCCESS: default value for register at index 548 (0x5880, 0, 0, 8, 1) is 12, should be 12
+[lgw_spi_rbu] 5881 1 00
+
+SUCCESS: default value for register at index 549 (0x5881, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5881 1 00
+
+SUCCESS: default value for register at index 550 (0x5881, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 5882 1 00
+
+SUCCESS: default value for register at index 551 (0x5882, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5882 1 00
+
+SUCCESS: default value for register at index 552 (0x5882, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 5883 1 08
+
+SUCCESS: default value for register at index 553 (0x5883, 0, 0, 8, 1) is 8, should be 8
+[lgw_spi_rbu] 5884 1 00
+
+SUCCESS: default value for register at index 554 (0x5884, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5885 1 08
+
+SUCCESS: default value for register at index 555 (0x5885, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5885 1 08
+
+SUCCESS: default value for register at index 556 (0x5885, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5885 1 08
+
+SUCCESS: default value for register at index 557 (0x5885, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5885 1 08
+
+SUCCESS: default value for register at index 558 (0x5885, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5886 1 03
+
+SUCCESS: default value for register at index 559 (0x5886, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5886 1 03
+
+SUCCESS: default value for register at index 560 (0x5886, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5886 1 03
+
+SUCCESS: default value for register at index 561 (0x5886, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5886 1 03
+
+SUCCESS: default value for register at index 562 (0x5886, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5886 1 03
+
+SUCCESS: default value for register at index 563 (0x5886, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5886 1 03
+
+SUCCESS: default value for register at index 564 (0x5886, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5886 1 03
+
+SUCCESS: default value for register at index 565 (0x5886, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5886 1 03
+
+SUCCESS: default value for register at index 566 (0x5886, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5887 1 34
+
+SUCCESS: default value for register at index 567 (0x5887, 4, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5887 1 34
+
+SUCCESS: default value for register at index 568 (0x5887, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5887 1 34
+
+SUCCESS: default value for register at index 569 (0x5887, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5887 1 34
+
+SUCCESS: default value for register at index 570 (0x5887, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5888 1 00
+
+SUCCESS: default value for register at index 571 (0x5888, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5889 1 1b
+
+SUCCESS: default value for register at index 572 (0x5889, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5889 1 1b
+
+SUCCESS: default value for register at index 573 (0x5889, 0, 0, 4, 1) is 11, should be 11
+[lgw_spi_rbu] 588a 1 02
+
+SUCCESS: default value for register at index 574 (0x588a, 0, 1, 5, 1) is 2, should be 2
+[lgw_spi_rbu] 588b 1 04
+
+SUCCESS: default value for register at index 575 (0x588b, 0, 1, 5, 1) is 4, should be 4
+[lgw_spi_rbu] 588c 1 02
+
+SUCCESS: default value for register at index 576 (0x588c, 0, 1, 5, 1) is 2, should be 2
+[lgw_spi_rbu] 588d 1 04
+
+SUCCESS: default value for register at index 577 (0x588d, 0, 1, 5, 1) is 4, should be 4
+[lgw_spi_rbu] 588e 1 02
+
+SUCCESS: default value for register at index 578 (0x588e, 0, 1, 5, 1) is 2, should be 2
+[lgw_spi_rbu] 588f 1 04
+
+SUCCESS: default value for register at index 579 (0x588f, 0, 1, 5, 1) is 4, should be 4
+[lgw_spi_rbu] 5890 1 17
+
+SUCCESS: default value for register at index 580 (0x5890, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5890 1 17
+
+SUCCESS: default value for register at index 581 (0x5890, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5890 1 17
+
+SUCCESS: default value for register at index 582 (0x5890, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5890 1 17
+
+SUCCESS: default value for register at index 583 (0x5890, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5890 1 17
+
+SUCCESS: default value for register at index 584 (0x5890, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5891 1 83
+
+SUCCESS: default value for register at index 585 (0x5891, 7, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5891 1 83
+
+SUCCESS: default value for register at index 586 (0x5891, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5891 1 83
+
+SUCCESS: default value for register at index 587 (0x5891, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5891 1 83
+
+SUCCESS: default value for register at index 588 (0x5891, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5891 1 83
+
+SUCCESS: default value for register at index 589 (0x5891, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5892 1 56
+
+SUCCESS: default value for register at index 590 (0x5892, 6, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5892 1 56
+
+SUCCESS: default value for register at index 591 (0x5892, 3, 0, 3, 1) is 2, should be 2
+[lgw_spi_rbu] 5892 1 56
+
+SUCCESS: default value for register at index 592 (0x5892, 0, 0, 3, 1) is 6, should be 6
+[lgw_spi_rbu] 5893 1 cc
+
+SUCCESS: default value for register at index 593 (0x5893, 6, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5893 1 cc
+
+SUCCESS: default value for register at index 594 (0x5893, 3, 0, 3, 1) is 1, should be 1
+[lgw_spi_rbu] 5893 1 cc
+
+SUCCESS: default value for register at index 595 (0x5893, 0, 0, 3, 1) is 4, should be 4
+[lgw_spi_rbu] 5894 1 50
+
+SUCCESS: default value for register at index 596 (0x5894, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5894 1 50
+
+SUCCESS: default value for register at index 597 (0x5894, 4, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 5895 1 00
+
+SUCCESS: default value for register at index 598 (0x5895, 6, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5895 1 00
+
+SUCCESS: default value for register at index 599 (0x5895, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5895 1 00
+
+SUCCESS: default value for register at index 600 (0x5895, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5895 1 00
+
+SUCCESS: default value for register at index 601 (0x5895, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5896 1 00
+
+SUCCESS: default value for register at index 602 (0x5896, 6, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5896 1 00
+
+SUCCESS: default value for register at index 603 (0x5896, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5896 1 00
+
+SUCCESS: default value for register at index 604 (0x5896, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5896 1 00
+
+SUCCESS: default value for register at index 605 (0x5896, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5897 1 74
+
+SUCCESS: default value for register at index 606 (0x5897, 4, 0, 3, 1) is 7, should be 7
+[lgw_spi_rbu] 5897 1 74
+
+SUCCESS: default value for register at index 607 (0x5897, 0, 0, 3, 1) is 4, should be 4
+[lgw_spi_rbu] 5898 1 00
+
+SUCCESS: default value for register at index 608 (0x5898, 4, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5898 1 00
+
+SUCCESS: default value for register at index 609 (0x5898, 0, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5899 1 83
+
+SUCCESS: default value for register at index 610 (0x5899, 7, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5899 1 83
+
+SUCCESS: default value for register at index 611 (0x5899, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5899 1 83
+
+SUCCESS: default value for register at index 612 (0x5899, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5899 1 83
+
+SUCCESS: default value for register at index 613 (0x5899, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5899 1 83
+
+SUCCESS: default value for register at index 614 (0x5899, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 589a 1 56
+
+SUCCESS: default value for register at index 615 (0x589a, 6, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 589a 1 56
+
+SUCCESS: default value for register at index 616 (0x589a, 3, 0, 3, 1) is 2, should be 2
+[lgw_spi_rbu] 589a 1 56
+
+SUCCESS: default value for register at index 617 (0x589a, 0, 0, 3, 1) is 6, should be 6
+[lgw_spi_rbu] 589b 1 cc
+
+SUCCESS: default value for register at index 618 (0x589b, 6, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 589b 1 cc
+
+SUCCESS: default value for register at index 619 (0x589b, 3, 0, 3, 1) is 1, should be 1
+[lgw_spi_rbu] 589b 1 cc
+
+SUCCESS: default value for register at index 620 (0x589b, 0, 0, 3, 1) is 4, should be 4
+[lgw_spi_rbu] 589c 1 50
+
+SUCCESS: default value for register at index 621 (0x589c, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 589c 1 50
+
+SUCCESS: default value for register at index 622 (0x589c, 4, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 589d 1 00
+
+SUCCESS: default value for register at index 623 (0x589d, 6, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 589d 1 00
+
+SUCCESS: default value for register at index 624 (0x589d, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 589d 1 00
+
+SUCCESS: default value for register at index 625 (0x589d, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 589d 1 00
+
+SUCCESS: default value for register at index 626 (0x589d, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 589e 1 00
+
+SUCCESS: default value for register at index 627 (0x589e, 6, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 589e 1 00
+
+SUCCESS: default value for register at index 628 (0x589e, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 589e 1 00
+
+SUCCESS: default value for register at index 629 (0x589e, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 589e 1 00
+
+SUCCESS: default value for register at index 630 (0x589e, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 589f 1 74
+
+SUCCESS: default value for register at index 631 (0x589f, 4, 0, 3, 1) is 7, should be 7
+[lgw_spi_rbu] 589f 1 74
+
+SUCCESS: default value for register at index 632 (0x589f, 0, 0, 3, 1) is 4, should be 4
+[lgw_spi_rbu] 58a0 1 09
+
+SUCCESS: default value for register at index 633 (0x58a0, 0, 0, 4, 1) is 9, should be 9
+[lgw_spi_rbu] 58a1 1 70
+
+SUCCESS: default value for register at index 634 (0x58a1, 0, 0, 8, 1) is 112, should be 112
+[lgw_spi_rbu] 58a2 1 03
+
+SUCCESS: default value for register at index 635 (0x58a2, 0, 0, 3, 1) is 3, should be 3
+[lgw_spi_rbu] 58a3 1 09
+
+SUCCESS: default value for register at index 636 (0x58a3, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58a3 1 09
+
+SUCCESS: default value for register at index 637 (0x58a3, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58a3 1 09
+
+SUCCESS: default value for register at index 638 (0x58a3, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 58a3 1 09
+
+SUCCESS: default value for register at index 639 (0x58a3, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58a3 1 09
+
+SUCCESS: default value for register at index 640 (0x58a3, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58a3 1 09
+
+SUCCESS: default value for register at index 641 (0x58a3, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 58a4 1 21
+
+SUCCESS: default value for register at index 642 (0x58a4, 0, 0, 8, 1) is 33, should be 33
+[lgw_spi_rbu] 58a5 1 ff
+
+SUCCESS: default value for register at index 643 (0x58a5, 6, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a5 1 ff
+
+SUCCESS: default value for register at index 644 (0x58a5, 4, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a5 1 ff
+
+SUCCESS: default value for register at index 645 (0x58a5, 2, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a5 1 ff
+
+SUCCESS: default value for register at index 646 (0x58a5, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a6 1 ff
+
+SUCCESS: default value for register at index 647 (0x58a6, 6, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a6 1 ff
+
+SUCCESS: default value for register at index 648 (0x58a6, 4, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a6 1 ff
+
+SUCCESS: default value for register at index 649 (0x58a6, 2, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a6 1 ff
+
+SUCCESS: default value for register at index 650 (0x58a6, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a7 1 ff
+
+SUCCESS: default value for register at index 651 (0x58a7, 6, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a7 1 ff
+
+SUCCESS: default value for register at index 652 (0x58a7, 4, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a7 1 ff
+
+SUCCESS: default value for register at index 653 (0x58a7, 2, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a7 1 ff
+
+SUCCESS: default value for register at index 654 (0x58a7, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a8 1 ff
+
+SUCCESS: default value for register at index 655 (0x58a8, 6, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a8 1 ff
+
+SUCCESS: default value for register at index 656 (0x58a8, 4, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a8 1 ff
+
+SUCCESS: default value for register at index 657 (0x58a8, 2, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a8 1 ff
+
+SUCCESS: default value for register at index 658 (0x58a8, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58a9 1 40
+
+SUCCESS: default value for register at index 659 (0x58a9, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58a9 1 40
+
+SUCCESS: default value for register at index 660 (0x58a9, 4, 0, 3, 1) is 4, should be 4
+[lgw_spi_rbu] 58aa 1 53
+
+SUCCESS: default value for register at index 661 (0x58aa, 4, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 58aa 1 53
+
+SUCCESS: default value for register at index 662 (0x58aa, 0, 0, 4, 1) is 3, should be 3
+[lgw_spi_rbu] 58ab 1 28
+
+SUCCESS: default value for register at index 663 (0x58ab, 5, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 58ab 1 28
+
+SUCCESS: default value for register at index 664 (0x58ab, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58ab 1 28
+
+SUCCESS: default value for register at index 665 (0x58ab, 0, 0, 4, 1) is 8, should be 8
+[lgw_spi_rbu] 58ac 1 20
+
+SUCCESS: default value for register at index 666 (0x58ac, 0, 0, 7, 1) is 32, should be 32
+[lgw_spi_rbu] 58ad 1 30
+
+SUCCESS: default value for register at index 667 (0x58ad, 0, 0, 7, 1) is 48, should be 48
+[lgw_spi_rbu] 58ae 1 53
+
+SUCCESS: default value for register at index 668 (0x58ae, 4, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 58ae 1 53
+
+SUCCESS: default value for register at index 669 (0x58ae, 0, 0, 3, 1) is 3, should be 3
+[lgw_spi_rbu] 58af 1 25
+
+SUCCESS: default value for register at index 670 (0x58af, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58af 1 25
+
+SUCCESS: default value for register at index 671 (0x58af, 4, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 58af 1 25
+
+SUCCESS: default value for register at index 672 (0x58af, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 58af 1 25
+
+SUCCESS: default value for register at index 673 (0x58af, 0, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 58b0 1 40
+
+SUCCESS: default value for register at index 674 (0x58b0, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58b0 1 40
+
+SUCCESS: default value for register at index 675 (0x58b0, 0, 0, 7, 1) is 64, should be 64
+[lgw_spi_rbu] 58b1 1 af
+
+SUCCESS: default value for register at index 676 (0x58b1, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 58b1 1 af
+
+SUCCESS: default value for register at index 677 (0x58b1, 4, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 58b1 1 af
+
+SUCCESS: default value for register at index 678 (0x58b1, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 58b1 1 af
+
+SUCCESS: default value for register at index 679 (0x58b1, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 58b1 1 af
+
+SUCCESS: default value for register at index 680 (0x58b1, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 58b1 1 af
+
+SUCCESS: default value for register at index 681 (0x58b1, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 58b2 1 0b
+
+SUCCESS: default value for register at index 682 (0x58b2, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 58b3 1 07
+
+SUCCESS: default value for register at index 683 (0x58b3, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58b3 1 07
+
+SUCCESS: default value for register at index 684 (0x58b3, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58b3 1 07
+
+SUCCESS: default value for register at index 685 (0x58b3, 0, 0, 3, 1) is 7, should be 7
+[lgw_spi_rbu] 58b7 1 b8
+
+SUCCESS: default value for register at index 690 (0x58b7, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 58b7 1 b8
+
+SUCCESS: default value for register at index 691 (0x58b7, 4, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 58b7 1 b8
+
+SUCCESS: default value for register at index 692 (0x58b7, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 58b7 1 b8
+
+SUCCESS: default value for register at index 693 (0x58b7, 0, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 58b8 1 7f
+
+SUCCESS: default value for register at index 694 (0x58b8, 0, 0, 8, 1) is 127, should be 127
+[lgw_spi_rbu] 58b9 1 00
+
+SUCCESS: default value for register at index 695 (0x58b9, 6, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 58b9 1 00
+
+SUCCESS: default value for register at index 696 (0x58b9, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 58b9 1 00
+
+SUCCESS: default value for register at index 697 (0x58b9, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 58b9 1 00
+
+SUCCESS: default value for register at index 698 (0x58b9, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 58ba 1 50
+
+SUCCESS: default value for register at index 699 (0x58ba, 6, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 58ba 1 50
+
+SUCCESS: default value for register at index 700 (0x58ba, 4, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 58ba 1 50
+
+SUCCESS: default value for register at index 701 (0x58ba, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 58ba 1 50
+
+SUCCESS: default value for register at index 702 (0x58ba, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 58bb 1 55
+
+SUCCESS: default value for register at index 703 (0x58bb, 0, 0, 8, 1) is 85, should be 85
+[lgw_spi_rbu] 58bc 1 55
+
+SUCCESS: default value for register at index 704 (0x58bc, 0, 0, 8, 1) is 85, should be 85
+[lgw_spi_rbu] 58bd 1 55
+
+SUCCESS: default value for register at index 705 (0x58bd, 0, 0, 8, 1) is 85, should be 85
+[lgw_spi_rbu] 58be 1 55
+
+SUCCESS: default value for register at index 706 (0x58be, 0, 0, 8, 1) is 85, should be 85
+[lgw_spi_rbu] 58c0 1 00
+
+SUCCESS: default value for register at index 708 (0x58c0, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58c0 1 00
+
+SUCCESS: default value for register at index 709 (0x58c0, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58c0 1 00
+
+SUCCESS: default value for register at index 710 (0x58c0, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58c0 1 00
+
+SUCCESS: default value for register at index 711 (0x58c0, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58c0 1 00
+
+SUCCESS: default value for register at index 712 (0x58c0, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 58c1 1 ff
+
+SUCCESS: default value for register at index 713 (0x58c1, 0, 0, 8, 1) is 255, should be 255
+[lgw_spi_rbu] 58c2 1 00
+
+SUCCESS: default value for register at index 714 (0x58c2, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 58c3 1 15
+
+SUCCESS: default value for register at index 715 (0x58c3, 0, 0, 8, 1) is 21, should be 21
+[lgw_spi_rbu] 58d9 1 01
+
+SUCCESS: default value for register at index 737 (0x58d9, 0, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 6080 1 24
+
+SUCCESS: default value for register at index 740 (0x6080, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 6080 1 24
+
+SUCCESS: default value for register at index 741 (0x6080, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6080 1 24
+
+SUCCESS: default value for register at index 742 (0x6080, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6080 1 24
+
+SUCCESS: default value for register at index 743 (0x6080, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 6080 1 24
+
+SUCCESS: default value for register at index 744 (0x6080, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6087 1 01
+
+SUCCESS: default value for register at index 747 (0x6087, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6087 1 01
+
+SUCCESS: default value for register at index 748 (0x6087, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6087 1 01
+
+SUCCESS: default value for register at index 749 (0x6087, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6087 1 01
+
+SUCCESS: default value for register at index 750 (0x6087, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6087 1 01
+
+SUCCESS: default value for register at index 751 (0x6087, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6087 1 01
+
+SUCCESS: default value for register at index 752 (0x6087, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 6088 1 00
+
+SUCCESS: default value for register at index 753 (0x6088, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 6089 1 00
+
+SUCCESS: default value for register at index 754 (0x6089, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 608a 1 00
+
+SUCCESS: default value for register at index 755 (0x608a, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 608b 1 00
+
+SUCCESS: default value for register at index 756 (0x608b, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 608c 1 00
+
+SUCCESS: default value for register at index 757 (0x608c, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 609d 1 00
+
+SUCCESS: default value for register at index 774 (0x609d, 4, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 609d 1 00
+
+SUCCESS: default value for register at index 775 (0x609d, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 609e 1 00
+
+SUCCESS: default value for register at index 776 (0x609e, 4, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 609e 1 00
+
+SUCCESS: default value for register at index 777 (0x609e, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 609f 1 00
+
+SUCCESS: default value for register at index 778 (0x609f, 4, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 609f 1 00
+
+SUCCESS: default value for register at index 779 (0x609f, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 60a0 1 00
+
+SUCCESS: default value for register at index 780 (0x60a0, 4, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 60a0 1 00
+
+SUCCESS: default value for register at index 781 (0x60a0, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5700 1 00
+
+SUCCESS: default value for register at index 783 (0x5700, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5700 1 00
+
+SUCCESS: default value for register at index 784 (0x5700, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5701 1 00
+
+SUCCESS: default value for register at index 785 (0x5701, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5701 1 00
+
+SUCCESS: default value for register at index 786 (0x5701, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5701 1 00
+
+SUCCESS: default value for register at index 787 (0x5701, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 5702 1 00
+
+SUCCESS: default value for register at index 788 (0x5702, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5703 1 00
+
+SUCCESS: default value for register at index 789 (0x5703, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5707 1 00
+
+SUCCESS: default value for register at index 793 (0x5707, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 5708 1 00
+
+SUCCESS: default value for register at index 794 (0x5708, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 5709 1 00
+
+SUCCESS: default value for register at index 795 (0x5709, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 570a 1 00
+
+SUCCESS: default value for register at index 796 (0x570a, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 570b 1 00
+
+SUCCESS: default value for register at index 797 (0x570b, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 570c 1 00
+
+SUCCESS: default value for register at index 798 (0x570c, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 570e 1 00
+
+SUCCESS: default value for register at index 800 (0x570e, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 570e 1 00
+
+SUCCESS: default value for register at index 801 (0x570e, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 570e 1 00
+
+SUCCESS: default value for register at index 802 (0x570e, 0, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 570f 1 00
+
+SUCCESS: default value for register at index 803 (0x570f, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5710 1 00
+
+SUCCESS: default value for register at index 804 (0x5710, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5714 1 00
+
+SUCCESS: default value for register at index 808 (0x5714, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 5715 1 00
+
+SUCCESS: default value for register at index 809 (0x5715, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 5716 1 00
+
+SUCCESS: default value for register at index 810 (0x5716, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 5717 1 00
+
+SUCCESS: default value for register at index 811 (0x5717, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 5718 1 00
+
+SUCCESS: default value for register at index 812 (0x5718, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 5719 1 00
+
+SUCCESS: default value for register at index 813 (0x5719, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 571b 1 00
+
+SUCCESS: default value for register at index 817 (0x571b, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 571b 1 00
+
+SUCCESS: default value for register at index 818 (0x571b, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 571b 1 00
+
+SUCCESS: default value for register at index 819 (0x571b, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 571b 1 00
+
+SUCCESS: default value for register at index 820 (0x571b, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 571b 1 00
+
+SUCCESS: default value for register at index 821 (0x571b, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 571c 1 00
+
+SUCCESS: default value for register at index 822 (0x571c, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 6180 1 00
+
+SUCCESS: default value for register at index 826 (0x6180, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 6183 1 00
+
+SUCCESS: default value for register at index 830 (0x6183, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 6184 1 00
+
+SUCCESS: default value for register at index 831 (0x6184, 0, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 6185 1 00
+
+SUCCESS: default value for register at index 832 (0x6185, 4, 0, 4, 1) is 0, should be 0
+[lgw_spi_rbu] 6185 1 00
+
+SUCCESS: default value for register at index 833 (0x6185, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6185 1 00
+
+SUCCESS: default value for register at index 834 (0x6185, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6185 1 00
+
+SUCCESS: default value for register at index 835 (0x6185, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6185 1 00
+
+SUCCESS: default value for register at index 836 (0x6185, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6186 1 00
+
+SUCCESS: default value for register at index 837 (0x6186, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6186 1 00
+
+SUCCESS: default value for register at index 838 (0x6186, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6186 1 00
+
+SUCCESS: default value for register at index 839 (0x6186, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6188 1 ff
+
+SUCCESS: default value for register at index 841 (0x6188, 0, 0, 8, 1) is 255, should be 255
+[lgw_spi_rbu] 6189 1 ff
+
+SUCCESS: default value for register at index 842 (0x6189, 0, 0, 8, 1) is 255, should be 255
+[lgw_spi_rbu] 618a 1 ff
+
+SUCCESS: default value for register at index 843 (0x618a, 0, 0, 8, 1) is 255, should be 255
+[lgw_spi_rbu] 618b 1 01
+
+SUCCESS: default value for register at index 844 (0x618b, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b00 1 00
+
+SUCCESS: default value for register at index 846 (0x5b00, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 5b01 1 80
+
+SUCCESS: default value for register at index 847 (0x5b01, 0, 0, 8, 1) is 128, should be 128
+[lgw_spi_rbu] 5b02 1 00
+
+SUCCESS: default value for register at index 848 (0x5b02, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b03 1 08
+
+SUCCESS: default value for register at index 849 (0x5b03, 4, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5b03 1 08
+
+SUCCESS: default value for register at index 850 (0x5b03, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b03 1 08
+
+SUCCESS: default value for register at index 851 (0x5b03, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b03 1 08
+
+SUCCESS: default value for register at index 852 (0x5b03, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b03 1 08
+
+SUCCESS: default value for register at index 853 (0x5b03, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b04 1 0d
+
+SUCCESS: default value for register at index 854 (0x5b04, 3, 0, 3, 1) is 1, should be 1
+[lgw_spi_rbu] 5b04 1 0d
+
+SUCCESS: default value for register at index 855 (0x5b04, 0, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 5b05 1 00
+
+SUCCESS: default value for register at index 856 (0x5b05, 0, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5b06 1 00
+
+SUCCESS: default value for register at index 857 (0x5b06, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b07 1 02
+
+SUCCESS: default value for register at index 858 (0x5b07, 0, 1, 8, 1) is 2, should be 2
+[lgw_spi_rbu] 5b08 1 03
+
+SUCCESS: default value for register at index 859 (0x5b08, 0, 1, 8, 1) is 3, should be 3
+[lgw_spi_rbu] 5b09 1 02
+
+SUCCESS: default value for register at index 860 (0x5b09, 0, 1, 8, 1) is 2, should be 2
+[lgw_spi_rbu] 5b0a 1 03
+
+SUCCESS: default value for register at index 861 (0x5b0a, 0, 1, 8, 1) is 3, should be 3
+[lgw_spi_rbu] 5b0b 1 05
+
+SUCCESS: default value for register at index 862 (0x5b0b, 0, 1, 8, 1) is 5, should be 5
+[lgw_spi_rbu] 5b0c 1 08
+
+SUCCESS: default value for register at index 863 (0x5b0c, 0, 1, 8, 1) is 8, should be 8
+[lgw_spi_rbu] 5b0d 1 06
+
+SUCCESS: default value for register at index 864 (0x5b0d, 0, 1, 8, 1) is 6, should be 6
+[lgw_spi_rbu] 5b0e 1 04
+
+SUCCESS: default value for register at index 865 (0x5b0e, 0, 1, 8, 1) is 4, should be 4
+[lgw_spi_rbu] 5b0f 1 02
+
+SUCCESS: default value for register at index 866 (0x5b0f, 0, 1, 8, 1) is 2, should be 2
+[lgw_spi_rbu] 5b10 1 fe
+
+SUCCESS: default value for register at index 867 (0x5b10, 0, 1, 8, 1) is -2, should be -2
+[lgw_spi_rbu] 5b11 1 fc
+
+SUCCESS: default value for register at index 868 (0x5b11, 0, 1, 8, 1) is -4, should be -4
+[lgw_spi_rbu] 5b12 1 fd
+
+SUCCESS: default value for register at index 869 (0x5b12, 0, 1, 8, 1) is -3, should be -3
+[lgw_spi_rbu] 5b13 1 03
+
+SUCCESS: default value for register at index 870 (0x5b13, 0, 1, 8, 1) is 3, should be 3
+[lgw_spi_rbu] 5b14 1 0b
+
+SUCCESS: default value for register at index 871 (0x5b14, 0, 1, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 5b15 1 13
+
+SUCCESS: default value for register at index 872 (0x5b15, 0, 1, 8, 1) is 19, should be 19
+[lgw_spi_rbu] 5b16 1 0a
+
+SUCCESS: default value for register at index 873 (0x5b16, 0, 1, 8, 1) is 10, should be 10
+[lgw_spi_rbu] 5b17 1 00
+
+SUCCESS: default value for register at index 874 (0x5b17, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b17 1 00
+
+SUCCESS: default value for register at index 875 (0x5b17, 0, 0, 7, 1) is 0, should be 0
+[lgw_spi_rbu] 5b18 1 07
+
+SUCCESS: default value for register at index 876 (0x5b18, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b18 1 07
+
+SUCCESS: default value for register at index 877 (0x5b18, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b18 1 07
+
+SUCCESS: default value for register at index 878 (0x5b18, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b18 1 07
+
+SUCCESS: default value for register at index 879 (0x5b18, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5b19 1 2a
+
+SUCCESS: default value for register at index 880 (0x5b19, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b19 1 2a
+
+SUCCESS: default value for register at index 881 (0x5b19, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b19 1 2a
+
+SUCCESS: default value for register at index 882 (0x5b19, 3, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5b19 1 2a
+
+SUCCESS: default value for register at index 883 (0x5b19, 0, 0, 3, 1) is 2, should be 2
+[lgw_spi_rbu] 5b1a 1 31
+
+SUCCESS: default value for register at index 884 (0x5b1a, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b1a 1 31
+
+SUCCESS: default value for register at index 885 (0x5b1a, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b1a 1 31
+
+SUCCESS: default value for register at index 886 (0x5b1a, 4, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5b1a 1 31
+
+SUCCESS: default value for register at index 887 (0x5b1a, 0, 0, 3, 1) is 1, should be 1
+[lgw_spi_rbu] 5b1b 1 0b
+
+SUCCESS: default value for register at index 888 (0x5b1b, 6, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5b1b 1 0b
+
+SUCCESS: default value for register at index 889 (0x5b1b, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b1b 1 0b
+
+SUCCESS: default value for register at index 890 (0x5b1b, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b1b 1 0b
+
+SUCCESS: default value for register at index 891 (0x5b1b, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b1b 1 0b
+
+SUCCESS: default value for register at index 892 (0x5b1b, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b1b 1 0b
+
+SUCCESS: default value for register at index 893 (0x5b1b, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5b1c 1 3c
+
+SUCCESS: default value for register at index 894 (0x5b1c, 0, 0, 8, 1) is 60, should be 60
+[lgw_spi_rbu] 5b1d 1 06
+
+SUCCESS: default value for register at index 895 (0x5b1d, 0, 0, 8, 1) is 6, should be 6
+[lgw_spi_rbu] 5b1e 1 19
+
+SUCCESS: default value for register at index 896 (0x5b1e, 0, 0, 8, 1) is 25, should be 25
+[lgw_spi_rbu] 5b1f 1 2a
+
+SUCCESS: default value for register at index 897 (0x5b1f, 0, 0, 8, 1) is 42, should be 42
+[lgw_spi_rbu] 5b20 1 80
+
+SUCCESS: default value for register at index 898 (0x5b20, 4, 0, 4, 1) is 8, should be 8
+[lgw_spi_rbu] 5b20 1 80
+
+SUCCESS: default value for register at index 899 (0x5b20, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b21 1 47
+
+SUCCESS: default value for register at index 900 (0x5b21, 4, 0, 4, 1) is 4, should be 4
+[lgw_spi_rbu] 5b21 1 47
+
+SUCCESS: default value for register at index 901 (0x5b21, 0, 0, 4, 1) is 7, should be 7
+[lgw_spi_rbu] 5b22 1 82
+
+SUCCESS: default value for register at index 902 (0x5b22, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5b22 1 82
+
+SUCCESS: default value for register at index 903 (0x5b22, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5b22 1 82
+
+SUCCESS: default value for register at index 904 (0x5b22, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b22 1 82
+
+SUCCESS: default value for register at index 905 (0x5b22, 0, 0, 3, 1) is 2, should be 2
+[lgw_spi_rbu] 5b23 1 05
+
+SUCCESS: default value for register at index 906 (0x5b23, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b23 1 05
+
+SUCCESS: default value for register at index 907 (0x5b23, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b23 1 05
+
+SUCCESS: default value for register at index 908 (0x5b23, 2, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5b23 1 05
+
+SUCCESS: default value for register at index 909 (0x5b23, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b23 1 05
+
+SUCCESS: default value for register at index 910 (0x5b23, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b24 1 0c
+
+SUCCESS: default value for register at index 911 (0x5b24, 0, 0, 8, 1) is 12, should be 12
+[lgw_spi_rbu] 5b25 1 00
+
+SUCCESS: default value for register at index 912 (0x5b25, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b25 1 00
+
+SUCCESS: default value for register at index 913 (0x5b25, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 5b26 1 00
+
+SUCCESS: default value for register at index 914 (0x5b26, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b26 1 00
+
+SUCCESS: default value for register at index 915 (0x5b26, 0, 0, 6, 1) is 0, should be 0
+[lgw_spi_rbu] 5b27 1 08
+
+SUCCESS: default value for register at index 916 (0x5b27, 0, 0, 8, 1) is 8, should be 8
+[lgw_spi_rbu] 5b28 1 00
+
+SUCCESS: default value for register at index 917 (0x5b28, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b29 1 08
+
+SUCCESS: default value for register at index 918 (0x5b29, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b29 1 08
+
+SUCCESS: default value for register at index 919 (0x5b29, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b29 1 08
+
+SUCCESS: default value for register at index 920 (0x5b29, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b29 1 08
+
+SUCCESS: default value for register at index 921 (0x5b29, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b2a 1 34
+
+SUCCESS: default value for register at index 922 (0x5b2a, 4, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5b2a 1 34
+
+SUCCESS: default value for register at index 923 (0x5b2a, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b2a 1 34
+
+SUCCESS: default value for register at index 924 (0x5b2a, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b2a 1 34
+
+SUCCESS: default value for register at index 925 (0x5b2a, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b2b 1 00
+
+SUCCESS: default value for register at index 926 (0x5b2b, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b2c 1 56
+
+SUCCESS: default value for register at index 927 (0x5b2c, 5, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5b2c 1 56
+
+SUCCESS: default value for register at index 928 (0x5b2c, 0, 0, 5, 1) is 22, should be 22
+[lgw_spi_rbu] 5b2d 1 3b
+
+SUCCESS: default value for register at index 929 (0x5b2d, 5, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b2d 1 3b
+
+SUCCESS: default value for register at index 930 (0x5b2d, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b2d 1 3b
+
+SUCCESS: default value for register at index 931 (0x5b2d, 0, 0, 4, 1) is 11, should be 11
+[lgw_spi_rbu] 5b2e 1 02
+
+SUCCESS: default value for register at index 932 (0x5b2e, 0, 1, 5, 1) is 2, should be 2
+[lgw_spi_rbu] 5b2f 1 04
+
+SUCCESS: default value for register at index 933 (0x5b2f, 0, 1, 5, 1) is 4, should be 4
+[lgw_spi_rbu] 5b30 1 17
+
+SUCCESS: default value for register at index 934 (0x5b30, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b30 1 17
+
+SUCCESS: default value for register at index 935 (0x5b30, 4, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b30 1 17
+
+SUCCESS: default value for register at index 936 (0x5b30, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b30 1 17
+
+SUCCESS: default value for register at index 937 (0x5b30, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b30 1 17
+
+SUCCESS: default value for register at index 938 (0x5b30, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5b31 1 83
+
+SUCCESS: default value for register at index 939 (0x5b31, 7, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b31 1 83
+
+SUCCESS: default value for register at index 940 (0x5b31, 6, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b31 1 83
+
+SUCCESS: default value for register at index 941 (0x5b31, 4, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5b31 1 83
+
+SUCCESS: default value for register at index 942 (0x5b31, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5b31 1 83
+
+SUCCESS: default value for register at index 943 (0x5b31, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5b32 1 94
+
+SUCCESS: default value for register at index 944 (0x5b32, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5b32 1 94
+
+SUCCESS: default value for register at index 945 (0x5b32, 3, 0, 3, 1) is 2, should be 2
+[lgw_spi_rbu] 5b32 1 94
+
+SUCCESS: default value for register at index 946 (0x5b32, 0, 0, 3, 1) is 4, should be 4
+[lgw_spi_rbu] 5b33 1 0c
+
+SUCCESS: default value for register at index 947 (0x5b33, 6, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5b33 1 0c
+
+SUCCESS: default value for register at index 948 (0x5b33, 3, 0, 3, 1) is 1, should be 1
+[lgw_spi_rbu] 5b33 1 0c
+
+SUCCESS: default value for register at index 949 (0x5b33, 0, 0, 3, 1) is 4, should be 4
+[lgw_spi_rbu] 5b34 1 53
+
+SUCCESS: default value for register at index 950 (0x5b34, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b34 1 53
+
+SUCCESS: default value for register at index 951 (0x5b34, 4, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 5b34 1 53
+
+SUCCESS: default value for register at index 952 (0x5b34, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5b35 1 00
+
+SUCCESS: default value for register at index 953 (0x5b35, 4, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5b35 1 00
+
+SUCCESS: default value for register at index 954 (0x5b35, 0, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5b36 1 09
+
+SUCCESS: default value for register at index 955 (0x5b36, 0, 0, 4, 1) is 9, should be 9
+[lgw_spi_rbu] 5b37 1 70
+
+SUCCESS: default value for register at index 956 (0x5b37, 0, 0, 8, 1) is 112, should be 112
+[lgw_spi_rbu] 5b38 1 03
+
+SUCCESS: default value for register at index 957 (0x5b38, 0, 0, 3, 1) is 3, should be 3
+[lgw_spi_rbu] 5b39 1 09
+
+SUCCESS: default value for register at index 958 (0x5b39, 5, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b39 1 09
+
+SUCCESS: default value for register at index 959 (0x5b39, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b39 1 09
+
+SUCCESS: default value for register at index 960 (0x5b39, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b39 1 09
+
+SUCCESS: default value for register at index 961 (0x5b39, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b39 1 09
+
+SUCCESS: default value for register at index 962 (0x5b39, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b39 1 09
+
+SUCCESS: default value for register at index 963 (0x5b39, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b3a 1 21
+
+SUCCESS: default value for register at index 964 (0x5b3a, 0, 0, 8, 1) is 33, should be 33
+[lgw_spi_rbu] 5b3b 1 43
+
+SUCCESS: default value for register at index 965 (0x5b3b, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b3b 1 43
+
+SUCCESS: default value for register at index 966 (0x5b3b, 4, 0, 3, 1) is 4, should be 4
+[lgw_spi_rbu] 5b3b 1 43
+
+SUCCESS: default value for register at index 967 (0x5b3b, 0, 0, 2, 1) is 3, should be 3
+[lgw_spi_rbu] 5b3c 1 53
+
+SUCCESS: default value for register at index 968 (0x5b3c, 4, 0, 3, 1) is 5, should be 5
+[lgw_spi_rbu] 5b3c 1 53
+
+SUCCESS: default value for register at index 969 (0x5b3c, 0, 0, 4, 1) is 3, should be 3
+[lgw_spi_rbu] 5b3d 1 28
+
+SUCCESS: default value for register at index 970 (0x5b3d, 5, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5b3d 1 28
+
+SUCCESS: default value for register at index 971 (0x5b3d, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b3d 1 28
+
+SUCCESS: default value for register at index 972 (0x5b3d, 0, 0, 4, 1) is 8, should be 8
+[lgw_spi_rbu] 5b3e 1 18
+
+SUCCESS: default value for register at index 973 (0x5b3e, 0, 0, 7, 1) is 24, should be 24
+[lgw_spi_rbu] 5b3f 1 30
+
+SUCCESS: default value for register at index 974 (0x5b3f, 0, 0, 7, 1) is 48, should be 48
+[lgw_spi_rbu] 5b40 1 77
+
+SUCCESS: default value for register at index 975 (0x5b40, 4, 0, 3, 1) is 7, should be 7
+[lgw_spi_rbu] 5b40 1 77
+
+SUCCESS: default value for register at index 976 (0x5b40, 0, 0, 3, 1) is 7, should be 7
+[lgw_spi_rbu] 5b41 1 25
+
+SUCCESS: default value for register at index 977 (0x5b41, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b41 1 25
+
+SUCCESS: default value for register at index 978 (0x5b41, 4, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5b41 1 25
+
+SUCCESS: default value for register at index 979 (0x5b41, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b41 1 25
+
+SUCCESS: default value for register at index 980 (0x5b41, 0, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5b42 1 37
+
+SUCCESS: default value for register at index 981 (0x5b42, 7, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b42 1 37
+
+SUCCESS: default value for register at index 982 (0x5b42, 0, 0, 7, 1) is 55, should be 55
+[lgw_spi_rbu] 5b43 1 af
+
+SUCCESS: default value for register at index 983 (0x5b43, 6, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5b43 1 af
+
+SUCCESS: default value for register at index 984 (0x5b43, 4, 0, 2, 1) is 2, should be 2
+[lgw_spi_rbu] 5b43 1 af
+
+SUCCESS: default value for register at index 985 (0x5b43, 3, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b43 1 af
+
+SUCCESS: default value for register at index 986 (0x5b43, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b43 1 af
+
+SUCCESS: default value for register at index 987 (0x5b43, 1, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b43 1 af
+
+SUCCESS: default value for register at index 988 (0x5b43, 0, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b44 1 0b
+
+SUCCESS: default value for register at index 989 (0x5b44, 0, 0, 8, 1) is 11, should be 11
+[lgw_spi_rbu] 5b45 1 07
+
+SUCCESS: default value for register at index 990 (0x5b45, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b45 1 07
+
+SUCCESS: default value for register at index 991 (0x5b45, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b45 1 07
+
+SUCCESS: default value for register at index 992 (0x5b45, 0, 0, 3, 1) is 7, should be 7
+[lgw_spi_rbu] 5b46 1 55
+
+SUCCESS: default value for register at index 993 (0x5b46, 6, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5b46 1 55
+
+SUCCESS: default value for register at index 994 (0x5b46, 4, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5b46 1 55
+
+SUCCESS: default value for register at index 995 (0x5b46, 2, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5b46 1 55
+
+SUCCESS: default value for register at index 996 (0x5b46, 0, 0, 2, 1) is 1, should be 1
+[lgw_spi_rbu] 5b50 1 00
+
+SUCCESS: default value for register at index 998 (0x5b50, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 5b51 1 80
+
+SUCCESS: default value for register at index 999 (0x5b51, 0, 0, 8, 1) is 128, should be 128
+[lgw_spi_rbu] 5b52 1 00
+
+SUCCESS: default value for register at index 1000 (0x5b52, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b52 1 00
+
+SUCCESS: default value for register at index 1001 (0x5b52, 2, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5b52 1 00
+
+SUCCESS: default value for register at index 1002 (0x5b52, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b52 1 00
+
+SUCCESS: default value for register at index 1003 (0x5b52, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b53 1 00
+
+SUCCESS: default value for register at index 1004 (0x5b53, 6, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5b53 1 00
+
+SUCCESS: default value for register at index 1005 (0x5b53, 3, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5b53 1 00
+
+SUCCESS: default value for register at index 1006 (0x5b53, 0, 0, 3, 1) is 0, should be 0
+[lgw_spi_rbu] 5b54 1 04
+
+SUCCESS: default value for register at index 1007 (0x5b54, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b54 1 04
+
+SUCCESS: default value for register at index 1008 (0x5b54, 2, 0, 1, 1) is 1, should be 1
+[lgw_spi_rbu] 5b54 1 04
+
+SUCCESS: default value for register at index 1009 (0x5b54, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b54 1 04
+
+SUCCESS: default value for register at index 1010 (0x5b54, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 5b55 1 80
+
+SUCCESS: default value for register at index 1011 (0x5b55, 5, 0, 3, 1) is 4, should be 4
+[lgw_spi_rbu] 5b55 1 80
+
+SUCCESS: default value for register at index 1012 (0x5b55, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 5b56 1 00
+
+SUCCESS: default value for register at index 1013 (0x5b56, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b57 1 00
+
+SUCCESS: default value for register at index 1014 (0x5b57, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b58 1 00
+
+SUCCESS: default value for register at index 1015 (0x5b58, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b59 1 00
+
+SUCCESS: default value for register at index 1016 (0x5b59, 0, 0, 2, 1) is 0, should be 0
+[lgw_spi_rbu] 5b5a 1 00
+
+SUCCESS: default value for register at index 1017 (0x5b5a, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b5b 1 00
+
+SUCCESS: default value for register at index 1018 (0x5b5b, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b5c 1 00
+
+SUCCESS: default value for register at index 1019 (0x5b5c, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b5d 1 00
+
+SUCCESS: default value for register at index 1020 (0x5b5d, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b5e 1 00
+
+SUCCESS: default value for register at index 1021 (0x5b5e, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b5f 1 00
+
+SUCCESS: default value for register at index 1022 (0x5b5f, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b60 1 00
+
+SUCCESS: default value for register at index 1023 (0x5b60, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b61 1 00
+
+SUCCESS: default value for register at index 1024 (0x5b61, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b62 1 00
+
+SUCCESS: default value for register at index 1025 (0x5b62, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b63 1 00
+
+SUCCESS: default value for register at index 1026 (0x5b63, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b64 1 00
+
+SUCCESS: default value for register at index 1027 (0x5b64, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 5b65 1 04
+
+SUCCESS: default value for register at index 1028 (0x5b65, 0, 0, 4, 1) is 4, should be 4
+[lgw_spi_rbu] 6000 1 00
+
+SUCCESS: default value for register at index 1030 (0x6000, 4, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6000 1 00
+
+SUCCESS: default value for register at index 1031 (0x6000, 3, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6000 1 00
+
+SUCCESS: default value for register at index 1032 (0x6000, 2, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6000 1 00
+
+SUCCESS: default value for register at index 1033 (0x6000, 1, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6000 1 00
+
+SUCCESS: default value for register at index 1034 (0x6000, 0, 0, 1, 1) is 0, should be 0
+[lgw_spi_rbu] 6001 1 00
+
+SUCCESS: default value for register at index 1035 (0x6001, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 6002 1 00
+
+SUCCESS: default value for register at index 1036 (0x6002, 0, 0, 5, 1) is 0, should be 0
+[lgw_spi_rbu] 6003 1 00
+
+SUCCESS: default value for register at index 1037 (0x6003, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 6004 1 00
+
+SUCCESS: default value for register at index 1038 (0x6004, 0, 0, 8, 1) is 0, should be 0
+[lgw_spi_rbu] 6008 1 02
+
+SUCCESS: default value for register at index 1042 (0x6008, 0, 0, 2, 1) is 2, should be 2
+------------------
+ TEST#1 PASSED
+------------------
+
+## TEST#2: read/write test on all non-read-only, non-pulse, non-w0clr, non-w1clr registers
+[lgw_spi_rbu] 5600 1 00
+
+[lgw_spi_wbu] 5600 1 02
+
+[lgw_spi_rbu] 5601 1 0b
+
+[lgw_spi_wbu] 5601 1 03
+
+[lgw_spi_rbu] 5601 1 03
+
+[lgw_spi_wbu] 5601 1 07
+
+[lgw_spi_rbu] 5601 1 07
+
+[lgw_spi_wbu] 5601 1 05
+
+[lgw_spi_rbu] 5601 1 05
+
+[lgw_spi_wbu] 5601 1 04
+
+[lgw_spi_rbu] 5602 1 05
+
+[lgw_spi_wbu] 5602 1 0d
+
+[lgw_spi_rbu] 5602 1 0d
+
+[lgw_spi_wbu] 5602 1 09
+
+[lgw_spi_rbu] 5602 1 09
+
+[lgw_spi_wbu] 5602 1 0b
+
+[lgw_spi_rbu] 5602 1 0b
+
+[lgw_spi_wbu] 5602 1 0a
+
+[lgw_spi_wbu] 5603 1 4e
+
+[lgw_spi_wbu] 5604 1 3e
+
+[lgw_spi_rbu] 5605 1 00
+
+[lgw_spi_wbu] 5605 1 08
+
+[lgw_spi_rbu] 5605 1 08
+
+[lgw_spi_wbu] 5605 1 0c
+
+[lgw_spi_rbu] 5605 1 0c
+
+[lgw_spi_wbu] 5605 1 0e
+
+[lgw_spi_rbu] 5605 1 0e
+
+[lgw_spi_wbu] 5605 1 0f
+
+[lgw_spi_rbu] 5780 1 14
+
+[lgw_spi_wbu] 5780 1 04
+
+[lgw_spi_rbu] 5780 1 04
+
+[lgw_spi_wbu] 5780 1 0c
+
+[lgw_spi_rbu] 5780 1 0c
+
+[lgw_spi_wbu] 5780 1 08
+
+[lgw_spi_rbu] 5780 1 08
+
+[lgw_spi_wbu] 5780 1 0a
+
+[lgw_spi_rbu] 5782 1 00
+
+[lgw_spi_wbu] 5782 1 08
+
+[lgw_spi_rbu] 5782 1 08
+
+[lgw_spi_wbu] 5782 1 09
+
+[lgw_spi_rbu] 5783 1 00
+
+[lgw_spi_wbu] 5783 1 08
+
+[lgw_spi_rbu] 5783 1 08
+
+[lgw_spi_wbu] 5783 1 0c
+
+[lgw_spi_rbu] 5783 1 0c
+
+[lgw_spi_wbu] 5783 1 0e
+
+[lgw_spi_rbu] 5783 1 0e
+
+[lgw_spi_wbu] 5783 1 0f
+
+[lgw_spi_rbu] 5784 1 00
+
+[lgw_spi_wbu] 5784 1 08
+
+[lgw_spi_rbu] 5784 1 08
+
+[lgw_spi_wbu] 5784 1 0c
+
+[lgw_spi_rbu] 5784 1 0c
+
+[lgw_spi_wbu] 5784 1 0e
+
+[lgw_spi_rbu] 5784 1 0e
+
+[lgw_spi_wbu] 5784 1 0f
+
+[lgw_spi_rbu] 5785 1 00
+
+[lgw_spi_wbu] 5785 1 60
+
+[lgw_spi_rbu] 5785 1 60
+
+[lgw_spi_wbu] 5785 1 6b
+
+[lgw_spi_rbu] 5786 1 00
+
+[lgw_spi_wbu] 5786 1 40
+
+[lgw_spi_rbu] 5786 1 40
+
+[lgw_spi_wbu] 5786 1 46
+
+[lgw_spi_rbu] 5787 1 01
+
+[lgw_spi_wbu] 5787 1 21
+
+[lgw_spi_rbu] 5787 1 21
+
+[lgw_spi_wbu] 5787 1 31
+
+[lgw_spi_rbu] 5787 1 31
+
+[lgw_spi_wbu] 5787 1 39
+
+[lgw_spi_rbu] 5787 1 39
+
+[lgw_spi_wbu] 5787 1 3d
+
+[lgw_spi_rbu] 5787 1 3d
+
+[lgw_spi_wbu] 5787 1 3f
+
+[lgw_spi_rbu] 5787 1 3f
+
+[lgw_spi_wbu] 5787 1 3e
+
+[lgw_spi_wbu] 5788 1 bf
+
+[lgw_spi_wbu] 5789 1 e4
+
+[lgw_spi_wbu] 578a 1 b9
+
+[lgw_spi_wbu] 578b 1 3f
+
+[lgw_spi_wbu] 578c 1 35
+
+[lgw_spi_rbu] 57c0 1 00
+
+[lgw_spi_wbu] 57c0 1 04
+
+[lgw_spi_rbu] 57c0 1 04
+
+[lgw_spi_wbu] 57c0 1 06
+
+[lgw_spi_rbu] 57c0 1 06
+
+[lgw_spi_wbu] 57c0 1 07
+
+[lgw_spi_rbu] 5200 1 00
+
+[lgw_spi_wbu] 5200 1 08
+
+[lgw_spi_rbu] 5200 1 00
+
+[lgw_spi_wbu] 5200 1 04
+
+[lgw_spi_rbu] 5200 1 04
+
+[lgw_spi_wbu] 5200 1 06
+
+[lgw_spi_rbu] 5200 1 06
+
+[lgw_spi_wbu] 5200 1 07
+
+[lgw_spi_wbu] 5201 1 4b
+
+[lgw_spi_wbu] 5202 1 c9
+
+[lgw_spi_wbu] 5203 1 e0
+
+[lgw_spi_wbu] 5204 1 d4
+
+[lgw_spi_wbu] 5205 1 e8
+
+[lgw_spi_wbu] 5206 1 6b
+
+[lgw_spi_rbu] 5207 1 00
+
+[lgw_spi_wbu] 5207 1 01
+
+[lgw_spi_rbu] 5208 1 01
+
+[lgw_spi_wbu] 5208 1 02
+
+[lgw_spi_rbu] 5209 1 00
+
+[lgw_spi_wbu] 5209 1 01
+
+[lgw_spi_rbu] 520a 1 00
+
+[lgw_spi_wbu] 520a 1 02
+
+[lgw_spi_rbu] 520a 1 02
+
+[lgw_spi_wbu] 520a 1 03
+
+[lgw_spi_rbu] 520b 1 00
+
+[lgw_spi_wbu] 520b 1 02
+
+[lgw_spi_rbu] 520b 1 00
+
+[lgw_spi_wbu] 520b 1 01
+
+[lgw_spi_wbu] 520c 1 f8
+
+[lgw_spi_wbu] 520d 1 82
+
+[lgw_spi_wbu] 520e 1 2b
+
+[lgw_spi_wbu] 520f 1 18
+
+[lgw_spi_wbu] 5210 1 66
+
+[lgw_spi_rbu] 5220 1 18
+
+[lgw_spi_wbu] 5220 1 b8
+
+[lgw_spi_rbu] 5220 1 b8
+
+[lgw_spi_wbu] 5220 1 a8
+
+[lgw_spi_rbu] 5220 1 a8
+
+[lgw_spi_wbu] 5220 1 a0
+
+[lgw_spi_rbu] 5220 1 a0
+
+[lgw_spi_wbu] 5220 1 a4
+
+[lgw_spi_rbu] 5220 1 a4
+
+[lgw_spi_wbu] 5220 1 a5
+
+[lgw_spi_rbu] 5221 1 00
+
+[lgw_spi_wbu] 5221 1 02
+
+[lgw_spi_rbu] 5221 1 02
+
+[lgw_spi_wbu] 5221 1 03
+
+[lgw_spi_rbu] 5222 1 00
+
+[lgw_spi_wbu] 5222 1 02
+
+[lgw_spi_wbu] 5223 1 fa
+
+[lgw_spi_wbu] 5224 1 cc
+
+[lgw_spi_wbu] 5225 1 1e
+
+[lgw_spi_wbu] 5226 1 50
+
+[lgw_spi_wbu] 5227 1 4a
+
+[lgw_spi_rbu] 5228 1 00
+
+[lgw_spi_wbu] 5228 1 05
+
+[lgw_spi_wbu] 5229 1 25
+
+[lgw_spi_wbu] 522a 1 59
+
+[lgw_spi_wbu] 5240 1 c6
+
+[lgw_spi_rbu] 5241 1 02
+
+[lgw_spi_wbu] 5241 1 22
+
+[lgw_spi_rbu] 5241 1 22
+
+[lgw_spi_wbu] 5241 1 32
+
+[lgw_spi_rbu] 5241 1 32
+
+[lgw_spi_wbu] 5241 1 36
+
+[lgw_spi_rbu] 5241 1 36
+
+[lgw_spi_wbu] 5241 1 34
+
+[lgw_spi_rbu] 5241 1 34
+
+[lgw_spi_wbu] 5241 1 35
+
+[lgw_spi_wbu] 5242 1 9c
+
+[lgw_spi_wbu] 5243 1 81
+
+[lgw_spi_wbu] 5244 1 9d
+
+[lgw_spi_wbu] 5245 1 82
+
+[lgw_spi_rbu] 5246 1 68
+
+[lgw_spi_wbu] 5246 1 a8
+
+[lgw_spi_rbu] 5246 1 a8
+
+[lgw_spi_wbu] 5246 1 b8
+
+[lgw_spi_rbu] 5246 1 b8
+
+[lgw_spi_wbu] 5246 1 b0
+
+[lgw_spi_rbu] 5246 1 b0
+
+[lgw_spi_wbu] 5246 1 b4
+
+[lgw_spi_rbu] 5246 1 b4
+
+[lgw_spi_wbu] 5246 1 b5
+
+[lgw_spi_wbu] 5247 1 ae
+
+[lgw_spi_wbu] 5248 1 81
+
+[lgw_spi_wbu] 5249 1 64
+
+[lgw_spi_wbu] 524a 1 90
+
+[lgw_spi_wbu] 524b 1 3c
+
+[lgw_spi_wbu] 524c 1 48
+
+[lgw_spi_wbu] 524d 1 dd
+
+[lgw_spi_wbu] 524e 1 4e
+
+[lgw_spi_rbu] 5260 1 57
+
+[lgw_spi_wbu] 5260 1 47
+
+[lgw_spi_rbu] 5260 1 47
+
+[lgw_spi_wbu] 5260 1 49
+
+[lgw_spi_rbu] 5261 1 82
+
+[lgw_spi_wbu] 5261 1 42
+
+[lgw_spi_rbu] 5261 1 42
+
+[lgw_spi_wbu] 5261 1 62
+
+[lgw_spi_rbu] 5261 1 62
+
+[lgw_spi_wbu] 5261 1 6a
+
+[lgw_spi_rbu] 5261 1 6a
+
+[lgw_spi_wbu] 5261 1 69
+
+[lgw_spi_rbu] 5262 1 21
+
+[lgw_spi_wbu] 5262 1 a1
+
+[lgw_spi_rbu] 5262 1 a1
+
+[lgw_spi_wbu] 5262 1 e1
+
+[lgw_spi_rbu] 5262 1 e1
+
+[lgw_spi_wbu] 5262 1 d1
+
+[lgw_spi_rbu] 5262 1 d1
+
+[lgw_spi_wbu] 5262 1 d3
+
+[lgw_spi_rbu] 5262 1 d3
+
+[lgw_spi_wbu] 5262 1 d2
+
+[lgw_spi_wbu] 5263 1 20
+
+[lgw_spi_rbu] 5264 1 00
+
+[lgw_spi_wbu] 5264 1 80
+
+[lgw_spi_rbu] 5264 1 80
+
+[lgw_spi_wbu] 5264 1 a2
+
+[lgw_spi_rbu] 5265 1 00
+
+[lgw_spi_wbu] 5265 1 80
+
+[lgw_spi_rbu] 5265 1 80
+
+[lgw_spi_wbu] 5265 1 c0
+
+[lgw_spi_rbu] 5265 1 c0
+
+[lgw_spi_wbu] 5265 1 e0
+
+[lgw_spi_wbu] 5266 1 0a
+
+[lgw_spi_wbu] 5267 1 59
+
+[lgw_spi_rbu] 5268 1 40
+
+[lgw_spi_wbu] 5268 1 00
+
+[lgw_spi_rbu] 5268 1 00
+
+[lgw_spi_wbu] 5268 1 20
+
+[lgw_spi_rbu] 5268 1 20
+
+[lgw_spi_wbu] 5268 1 30
+
+[lgw_spi_rbu] 5269 1 06
+
+[lgw_spi_wbu] 5269 1 46
+
+[lgw_spi_rbu] 5269 1 46
+
+[lgw_spi_wbu] 5269 1 4e
+
+[lgw_spi_rbu] 5269 1 4e
+
+[lgw_spi_wbu] 5269 1 4a
+
+[lgw_spi_rbu] 5269 1 4a
+
+[lgw_spi_wbu] 5269 1 48
+
+[lgw_spi_rbu] 5269 1 48
+
+[lgw_spi_wbu] 5269 1 49
+
+[lgw_spi_rbu] 526a 1 14
+
+[lgw_spi_wbu] 526a 1 1e
+
+[lgw_spi_wbu] 526b 1 f0
+
+[lgw_spi_rbu] 526c 1 0a
+
+[lgw_spi_wbu] 526c 1 4a
+
+[lgw_spi_rbu] 526c 1 4a
+
+[lgw_spi_wbu] 526c 1 45
+
+[lgw_spi_rbu] 526d 1 a2
+
+[lgw_spi_wbu] 526d 1 22
+
+[lgw_spi_rbu] 526d 1 22
+
+[lgw_spi_wbu] 526d 1 62
+
+[lgw_spi_rbu] 526d 1 62
+
+[lgw_spi_wbu] 526d 1 42
+
+[lgw_spi_rbu] 526d 1 42
+
+[lgw_spi_wbu] 526d 1 44
+
+[lgw_spi_rbu] 526e 1 64
+
+[lgw_spi_wbu] 526e 1 e4
+
+[lgw_spi_rbu] 526e 1 e4
+
+[lgw_spi_wbu] 526e 1 c4
+
+[lgw_spi_rbu] 526e 1 c4
+
+[lgw_spi_wbu] 526e 1 ce
+
+[lgw_spi_rbu] 5270 1 00
+
+[lgw_spi_wbu] 5270 1 04
+
+[lgw_spi_rbu] 5270 1 00
+
+[lgw_spi_wbu] 5270 1 02
+
+[lgw_spi_rbu] 5270 1 00
+
+[lgw_spi_wbu] 5270 1 01
+
+[lgw_spi_rbu] 5400 1 00
+
+[lgw_spi_wbu] 5400 1 08
+
+[lgw_spi_rbu] 5400 1 00
+
+[lgw_spi_wbu] 5400 1 04
+
+[lgw_spi_rbu] 5400 1 04
+
+[lgw_spi_wbu] 5400 1 06
+
+[lgw_spi_rbu] 5400 1 06
+
+[lgw_spi_wbu] 5400 1 07
+
+[lgw_spi_wbu] 5401 1 42
+
+[lgw_spi_wbu] 5402 1 f9
+
+[lgw_spi_wbu] 5403 1 83
+
+[lgw_spi_wbu] 5404 1 fe
+
+[lgw_spi_wbu] 5405 1 12
+
+[lgw_spi_wbu] 5406 1 b4
+
+[lgw_spi_rbu] 5407 1 00
+
+[lgw_spi_wbu] 5407 1 01
+
+[lgw_spi_rbu] 5408 1 01
+
+[lgw_spi_wbu] 5408 1 05
+
+[lgw_spi_rbu] 5409 1 00
+
+[lgw_spi_wbu] 5409 1 01
+
+[lgw_spi_rbu] 540a 1 00
+
+[lgw_spi_wbu] 540a 1 02
+
+[lgw_spi_rbu] 540a 1 02
+
+[lgw_spi_wbu] 540a 1 03
+
+[lgw_spi_rbu] 540b 1 00
+
+[lgw_spi_wbu] 540b 1 02
+
+[lgw_spi_rbu] 540b 1 00
+
+[lgw_spi_wbu] 540b 1 01
+
+[lgw_spi_wbu] 540c 1 38
+
+[lgw_spi_wbu] 540d 1 77
+
+[lgw_spi_wbu] 540e 1 2c
+
+[lgw_spi_wbu] 540f 1 8e
+
+[lgw_spi_wbu] 5410 1 50
+
+[lgw_spi_rbu] 5420 1 18
+
+[lgw_spi_wbu] 5420 1 d8
+
+[lgw_spi_rbu] 5420 1 d8
+
+[lgw_spi_wbu] 5420 1 c8
+
+[lgw_spi_rbu] 5420 1 c8
+
+[lgw_spi_wbu] 5420 1 c0
+
+[lgw_spi_rbu] 5420 1 c0
+
+[lgw_spi_wbu] 5420 1 c4
+
+[lgw_spi_rbu] 5420 1 c4
+
+[lgw_spi_wbu] 5420 1 c5
+
+[lgw_spi_rbu] 5421 1 00
+
+[lgw_spi_wbu] 5421 1 02
+
+[lgw_spi_rbu] 5421 1 02
+
+[lgw_spi_wbu] 5421 1 03
+
+[lgw_spi_rbu] 5422 1 00
+
+[lgw_spi_wbu] 5422 1 01
+
+[lgw_spi_wbu] 5423 1 3c
+
+[lgw_spi_wbu] 5424 1 d9
+
+[lgw_spi_wbu] 5425 1 46
+
+[lgw_spi_wbu] 5426 1 2e
+
+[lgw_spi_wbu] 5427 1 71
+
+[lgw_spi_rbu] 5428 1 00
+
+[lgw_spi_wbu] 5428 1 0b
+
+[lgw_spi_wbu] 5429 1 48
+
+[lgw_spi_wbu] 542a 1 16
+
+[lgw_spi_wbu] 5440 1 0b
+
+[lgw_spi_rbu] 5441 1 02
+
+[lgw_spi_wbu] 5441 1 22
+
+[lgw_spi_rbu] 5441 1 22
+
+[lgw_spi_wbu] 5441 1 32
+
+[lgw_spi_rbu] 5441 1 32
+
+[lgw_spi_wbu] 5441 1 3a
+
+[lgw_spi_rbu] 5441 1 3a
+
+[lgw_spi_wbu] 5441 1 38
+
+[lgw_spi_rbu] 5441 1 38
+
+[lgw_spi_wbu] 5441 1 39
+
+[lgw_spi_wbu] 5442 1 9d
+
+[lgw_spi_wbu] 5443 1 06
+
+[lgw_spi_wbu] 5444 1 14
+
+[lgw_spi_wbu] 5445 1 8c
+
+[lgw_spi_rbu] 5446 1 68
+
+[lgw_spi_wbu] 5446 1 c8
+
+[lgw_spi_rbu] 5446 1 c8
+
+[lgw_spi_wbu] 5446 1 d8
+
+[lgw_spi_rbu] 5446 1 d8
+
+[lgw_spi_wbu] 5446 1 d0
+
+[lgw_spi_rbu] 5446 1 d0
+
+[lgw_spi_wbu] 5446 1 d4
+
+[lgw_spi_rbu] 5446 1 d4
+
+[lgw_spi_wbu] 5446 1 d5
+
+[lgw_spi_wbu] 5447 1 bb
+
+[lgw_spi_wbu] 5448 1 9a
+
+[lgw_spi_wbu] 5449 1 39
+
+[lgw_spi_wbu] 544a 1 78
+
+[lgw_spi_wbu] 544b 1 e4
+
+[lgw_spi_wbu] 544c 1 ba
+
+[lgw_spi_wbu] 544d 1 3f
+
+[lgw_spi_wbu] 544e 1 75
+
+[lgw_spi_rbu] 5460 1 57
+
+[lgw_spi_wbu] 5460 1 67
+
+[lgw_spi_rbu] 5460 1 67
+
+[lgw_spi_wbu] 5460 1 63
+
+[lgw_spi_rbu] 5461 1 82
+
+[lgw_spi_wbu] 5461 1 02
+
+[lgw_spi_rbu] 5461 1 02
+
+[lgw_spi_wbu] 5461 1 22
+
+[lgw_spi_rbu] 5461 1 22
+
+[lgw_spi_wbu] 5461 1 2a
+
+[lgw_spi_rbu] 5461 1 2a
+
+[lgw_spi_wbu] 5461 1 2b
+
+[lgw_spi_rbu] 5462 1 21
+
+[lgw_spi_wbu] 5462 1 a1
+
+[lgw_spi_rbu] 5462 1 a1
+
+[lgw_spi_wbu] 5462 1 e1
+
+[lgw_spi_rbu] 5462 1 e1
+
+[lgw_spi_wbu] 5462 1 d1
+
+[lgw_spi_rbu] 5462 1 d1
+
+[lgw_spi_wbu] 5462 1 d3
+
+[lgw_spi_rbu] 5462 1 d3
+
+[lgw_spi_wbu] 5462 1 d2
+
+[lgw_spi_wbu] 5463 1 98
+
+[lgw_spi_rbu] 5464 1 00
+
+[lgw_spi_wbu] 5464 1 80
+
+[lgw_spi_rbu] 5464 1 80
+
+[lgw_spi_wbu] 5464 1 81
+
+[lgw_spi_rbu] 5465 1 00
+
+[lgw_spi_wbu] 5465 1 80
+
+[lgw_spi_rbu] 5465 1 80
+
+[lgw_spi_wbu] 5465 1 c0
+
+[lgw_spi_rbu] 5465 1 c0
+
+[lgw_spi_wbu] 5465 1 ea
+
+[lgw_spi_wbu] 5466 1 7d
+
+[lgw_spi_wbu] 5467 1 b1
+
+[lgw_spi_rbu] 5468 1 40
+
+[lgw_spi_wbu] 5468 1 00
+
+[lgw_spi_rbu] 5468 1 00
+
+[lgw_spi_wbu] 5468 1 20
+
+[lgw_spi_rbu] 5468 1 20
+
+[lgw_spi_wbu] 5468 1 30
+
+[lgw_spi_rbu] 5469 1 06
+
+[lgw_spi_wbu] 5469 1 16
+
+[lgw_spi_rbu] 5469 1 16
+
+[lgw_spi_wbu] 5469 1 1e
+
+[lgw_spi_rbu] 5469 1 1e
+
+[lgw_spi_wbu] 5469 1 1a
+
+[lgw_spi_rbu] 5469 1 1a
+
+[lgw_spi_wbu] 5469 1 18
+
+[lgw_spi_rbu] 5469 1 18
+
+[lgw_spi_wbu] 5469 1 19
+
+[lgw_spi_rbu] 546a 1 14
+
+[lgw_spi_wbu] 546a 1 1e
+
+[lgw_spi_wbu] 546b 1 98
+
+[lgw_spi_rbu] 546c 1 0a
+
+[lgw_spi_wbu] 546c 1 2a
+
+[lgw_spi_rbu] 546c 1 2a
+
+[lgw_spi_wbu] 546c 1 38
+
+[lgw_spi_rbu] 546d 1 a2
+
+[lgw_spi_wbu] 546d 1 22
+
+[lgw_spi_rbu] 546d 1 22
+
+[lgw_spi_wbu] 546d 1 62
+
+[lgw_spi_rbu] 546d 1 62
+
+[lgw_spi_wbu] 546d 1 42
+
+[lgw_spi_rbu] 546d 1 42
+
+[lgw_spi_wbu] 546d 1 4a
+
+[lgw_spi_rbu] 546e 1 64
+
+[lgw_spi_wbu] 546e 1 e4
+
+[lgw_spi_rbu] 546e 1 e4
+
+[lgw_spi_wbu] 546e 1 84
+
+[lgw_spi_rbu] 546e 1 84
+
+[lgw_spi_wbu] 546e 1 83
+
+[lgw_spi_rbu] 5470 1 00
+
+[lgw_spi_wbu] 5470 1 04
+
+[lgw_spi_rbu] 5470 1 00
+
+[lgw_spi_wbu] 5470 1 02
+
+[lgw_spi_rbu] 5470 1 00
+
+[lgw_spi_wbu] 5470 1 01
+
+[lgw_spi_rbu] 5640 1 00
+
+[lgw_spi_wbu] 5640 1 0b
+
+[lgw_spi_wbu] 5641 1 dd
+
+[lgw_spi_rbu] 5642 1 00
+
+[lgw_spi_wbu] 5642 1 0c
+
+[lgw_spi_wbu] 5643 1 9b
+
+[lgw_spi_rbu] 5646 1 00
+
+[lgw_spi_wbu] 5646 1 04
+
+[lgw_spi_wbu] 5647 1 f7
+
+[lgw_spi_rbu] 5648 1 00
+
+[lgw_spi_wbu] 5648 1 0d
+
+[lgw_spi_rbu] 5649 1 00
+
+[lgw_spi_wbu] 5649 1 03
+
+[lgw_spi_rbu] 564a 1 00
+
+[lgw_spi_wbu] 564a 1 08
+
+[lgw_spi_rbu] 564b 1 00
+
+[lgw_spi_wbu] 564b 1 0e
+
+[lgw_spi_rbu] 564c 1 00
+
+[lgw_spi_wbu] 564c 1 05
+
+[lgw_spi_rbu] 564d 1 00
+
+[lgw_spi_wbu] 564d 1 08
+
+[lgw_spi_rbu] 564e 1 00
+
+[lgw_spi_wbu] 564e 1 07
+
+[lgw_spi_rbu] 564f 1 00
+
+[lgw_spi_wbu] 564f 1 0a
+
+[lgw_spi_rbu] 5650 1 00
+
+[lgw_spi_wbu] 5650 1 0e
+
+[lgw_spi_rbu] 5650 1 0e
+
+[lgw_spi_wbu] 5650 1 0f
+
+[lgw_spi_rbu] 5651 1 00
+
+[lgw_spi_wbu] 5651 1 20
+
+[lgw_spi_rbu] 5651 1 00
+
+[lgw_spi_wbu] 5651 1 10
+
+[lgw_spi_rbu] 5651 1 00
+
+[lgw_spi_wbu] 5651 1 08
+
+[lgw_spi_rbu] 5651 1 00
+
+[lgw_spi_wbu] 5651 1 04
+
+[lgw_spi_rbu] 5651 1 00
+
+[lgw_spi_wbu] 5651 1 02
+
+[lgw_spi_rbu] 5651 1 00
+
+[lgw_spi_wbu] 5651 1 01
+
+[lgw_spi_rbu] 5652 1 00
+
+[lgw_spi_wbu] 5652 1 20
+
+[lgw_spi_rbu] 5652 1 20
+
+[lgw_spi_wbu] 5652 1 30
+
+[lgw_spi_rbu] 5652 1 30
+
+[lgw_spi_wbu] 5652 1 38
+
+[lgw_spi_rbu] 5652 1 38
+
+[lgw_spi_wbu] 5652 1 3c
+
+[lgw_spi_rbu] 5652 1 3c
+
+[lgw_spi_wbu] 5652 1 3e
+
+[lgw_spi_rbu] 5652 1 3e
+
+[lgw_spi_wbu] 5652 1 3f
+
+[lgw_spi_rbu] 6100 1 00
+
+[lgw_spi_wbu] 6100 1 02
+
+[lgw_spi_rbu] 6100 1 02
+
+[lgw_spi_wbu] 6100 1 03
+
+[lgw_spi_wbu] 6109 1 bb
+
+[lgw_spi_wbu] 610a 1 eb
+
+[lgw_spi_wbu] 610b 1 d2
+
+[lgw_spi_wbu] 610c 1 f0
+
+[lgw_spi_wbu] 610d 1 f0
+
+[lgw_spi_wbu] 610e 1 bf
+
+[lgw_spi_wbu] 610f 1 a2
+
+[lgw_spi_wbu] 6110 1 af
+
+[lgw_spi_rbu] 5800 1 00
+
+[lgw_spi_wbu] 5800 1 15
+
+[lgw_spi_wbu] 5801 1 c0
+
+[lgw_spi_rbu] 5802 1 01
+
+[lgw_spi_wbu] 5802 1 05
+
+[lgw_spi_wbu] 5803 1 5d
+
+[lgw_spi_rbu] 5804 1 1e
+
+[lgw_spi_wbu] 5804 1 0f
+
+[lgw_spi_wbu] 5805 1 68
+
+[lgw_spi_rbu] 5806 1 00
+
+[lgw_spi_wbu] 5806 1 0a
+
+[lgw_spi_wbu] 5807 1 eb
+
+[lgw_spi_rbu] 5808 1 00
+
+[lgw_spi_wbu] 5808 1 13
+
+[lgw_spi_wbu] 5809 1 ac
+
+[lgw_spi_rbu] 580a 1 00
+
+[lgw_spi_wbu] 580a 1 17
+
+[lgw_spi_wbu] 580b 1 3d
+
+[lgw_spi_rbu] 580c 1 00
+
+[lgw_spi_wbu] 580c 1 04
+
+[lgw_spi_wbu] 580d 1 d9
+
+[lgw_spi_rbu] 580e 1 00
+
+[lgw_spi_wbu] 580e 1 03
+
+[lgw_spi_wbu] 580f 1 19
+
+[lgw_spi_wbu] 5810 1 c3
+
+[lgw_spi_rbu] 5811 1 38
+
+[lgw_spi_wbu] 5811 1 a8
+
+[lgw_spi_rbu] 5811 1 a8
+
+[lgw_spi_wbu] 5811 1 ae
+
+[lgw_spi_wbu] 5812 1 0e
+
+[lgw_spi_wbu] 5813 1 65
+
+[lgw_spi_wbu] 5814 1 a4
+
+[lgw_spi_rbu] 5815 1 f0
+
+[lgw_spi_wbu] 5815 1 50
+
+[lgw_spi_rbu] 5815 1 50
+
+[lgw_spi_wbu] 5815 1 5a
+
+[lgw_spi_rbu] 5816 1 00
+
+[lgw_spi_wbu] 5816 1 0c
+
+[lgw_spi_rbu] 5817 1 00
+
+[lgw_spi_wbu] 5817 1 02
+
+[lgw_spi_rbu] 5819 1 00
+
+[lgw_spi_wbu] 5819 1 10
+
+[lgw_spi_rbu] 5819 1 10
+
+[lgw_spi_wbu] 5819 1 19
+
+[lgw_spi_rbu] 581a 1 01
+
+[lgw_spi_wbu] 581a 1 00
+
+[lgw_spi_wbu] 5820 1 50
+
+[lgw_spi_wbu] 5821 1 fa
+
+[lgw_spi_wbu] 5822 1 cb
+
+[lgw_spi_wbu] 5823 1 a0
+
+[lgw_spi_wbu] 5824 1 be
+
+[lgw_spi_rbu] 5825 1 bb
+
+[lgw_spi_wbu] 5825 1 7b
+
+[lgw_spi_rbu] 5825 1 7b
+
+[lgw_spi_wbu] 5825 1 5b
+
+[lgw_spi_rbu] 5825 1 5b
+
+[lgw_spi_wbu] 5825 1 4b
+
+[lgw_spi_rbu] 5825 1 4b
+
+[lgw_spi_wbu] 5825 1 43
+
+[lgw_spi_rbu] 5825 1 43
+
+[lgw_spi_wbu] 5825 1 41
+
+[lgw_spi_rbu] 5825 1 41
+
+[lgw_spi_wbu] 5825 1 40
+
+[lgw_spi_rbu] 5826 1 37
+
+[lgw_spi_wbu] 5826 1 b7
+
+[lgw_spi_rbu] 5826 1 b7
+
+[lgw_spi_wbu] 5826 1 c4
+
+[lgw_spi_wbu] 5827 1 c7
+
+[lgw_spi_rbu] 5828 1 20
+
+[lgw_spi_wbu] 5828 1 23
+
+[lgw_spi_rbu] 5829 1 30
+
+[lgw_spi_wbu] 5829 1 60
+
+[lgw_spi_rbu] 582a 1 2b
+
+[lgw_spi_wbu] 582a 1 23
+
+[lgw_spi_rbu] 582a 1 23
+
+[lgw_spi_wbu] 582a 1 25
+
+[lgw_spi_rbu] 582a 1 25
+
+[lgw_spi_wbu] 582a 1 24
+
+[lgw_spi_rbu] 582b 1 16
+
+[lgw_spi_wbu] 582b 1 12
+
+[lgw_spi_rbu] 582b 1 12
+
+[lgw_spi_wbu] 582b 1 10
+
+[lgw_spi_rbu] 582c 1 bb
+
+[lgw_spi_wbu] 582c 1 3b
+
+[lgw_spi_rbu] 582c 1 3b
+
+[lgw_spi_wbu] 582c 1 1b
+
+[lgw_spi_rbu] 582c 1 1b
+
+[lgw_spi_wbu] 582c 1 0b
+
+[lgw_spi_rbu] 582c 1 0b
+
+[lgw_spi_wbu] 582c 1 07
+
+[lgw_spi_rbu] 582c 1 07
+
+[lgw_spi_wbu] 582c 1 05
+
+[lgw_spi_rbu] 582c 1 05
+
+[lgw_spi_wbu] 582c 1 04
+
+[lgw_spi_rbu] 582d 1 37
+
+[lgw_spi_wbu] 582d 1 b7
+
+[lgw_spi_rbu] 582d 1 b7
+
+[lgw_spi_wbu] 582d 1 a3
+
+[lgw_spi_wbu] 582e 1 fe
+
+[lgw_spi_rbu] 582f 1 20
+
+[lgw_spi_wbu] 582f 1 2d
+
+[lgw_spi_rbu] 5830 1 30
+
+[lgw_spi_wbu] 5830 1 2f
+
+[lgw_spi_rbu] 5831 1 23
+
+[lgw_spi_wbu] 5831 1 1b
+
+[lgw_spi_rbu] 5831 1 1b
+
+[lgw_spi_wbu] 5831 1 1d
+
+[lgw_spi_rbu] 5831 1 1d
+
+[lgw_spi_wbu] 5831 1 1c
+
+[lgw_spi_rbu] 5832 1 16
+
+[lgw_spi_wbu] 5832 1 0a
+
+[lgw_spi_rbu] 5832 1 0a
+
+[lgw_spi_wbu] 5832 1 08
+
+[lgw_spi_rbu] 5833 1 bb
+
+[lgw_spi_wbu] 5833 1 3b
+
+[lgw_spi_rbu] 5833 1 3b
+
+[lgw_spi_wbu] 5833 1 1b
+
+[lgw_spi_rbu] 5833 1 1b
+
+[lgw_spi_wbu] 5833 1 0b
+
+[lgw_spi_rbu] 5833 1 0b
+
+[lgw_spi_wbu] 5833 1 07
+
+[lgw_spi_rbu] 5833 1 07
+
+[lgw_spi_wbu] 5833 1 05
+
+[lgw_spi_rbu] 5833 1 05
+
+[lgw_spi_wbu] 5833 1 04
+
+[lgw_spi_rbu] 5834 1 37
+
+[lgw_spi_wbu] 5834 1 b7
+
+[lgw_spi_rbu] 5834 1 b7
+
+[lgw_spi_wbu] 5834 1 84
+
+[lgw_spi_wbu] 5835 1 d8
+
+[lgw_spi_rbu] 5836 1 20
+
+[lgw_spi_wbu] 5836 1 45
+
+[lgw_spi_rbu] 5837 1 30
+
+[lgw_spi_wbu] 5837 1 10
+
+[lgw_spi_rbu] 5838 1 1b
+
+[lgw_spi_wbu] 5838 1 13
+
+[lgw_spi_rbu] 5838 1 13
+
+[lgw_spi_wbu] 5838 1 11
+
+[lgw_spi_rbu] 5838 1 11
+
+[lgw_spi_wbu] 5838 1 10
+
+[lgw_spi_rbu] 5839 1 16
+
+[lgw_spi_wbu] 5839 1 1a
+
+[lgw_spi_rbu] 5839 1 1a
+
+[lgw_spi_wbu] 5839 1 19
+
+[lgw_spi_rbu] 583a 1 bb
+
+[lgw_spi_wbu] 583a 1 3b
+
+[lgw_spi_rbu] 583a 1 3b
+
+[lgw_spi_wbu] 583a 1 1b
+
+[lgw_spi_rbu] 583a 1 1b
+
+[lgw_spi_wbu] 583a 1 0b
+
+[lgw_spi_rbu] 583a 1 0b
+
+[lgw_spi_wbu] 583a 1 03
+
+[lgw_spi_rbu] 583a 1 03
+
+[lgw_spi_wbu] 583a 1 01
+
+[lgw_spi_rbu] 583a 1 01
+
+[lgw_spi_wbu] 583a 1 00
+
+[lgw_spi_rbu] 583b 1 38
+
+[lgw_spi_wbu] 583b 1 b8
+
+[lgw_spi_rbu] 583b 1 b8
+
+[lgw_spi_wbu] 583b 1 9c
+
+[lgw_spi_wbu] 583c 1 d9
+
+[lgw_spi_rbu] 583d 1 20
+
+[lgw_spi_wbu] 583d 1 49
+
+[lgw_spi_rbu] 583e 1 30
+
+[lgw_spi_wbu] 583e 1 47
+
+[lgw_spi_rbu] 583f 1 1b
+
+[lgw_spi_wbu] 583f 1 33
+
+[lgw_spi_rbu] 583f 1 33
+
+[lgw_spi_wbu] 583f 1 35
+
+[lgw_spi_rbu] 583f 1 35
+
+[lgw_spi_wbu] 583f 1 34
+
+[lgw_spi_rbu] 5840 1 16
+
+[lgw_spi_wbu] 5840 1 0a
+
+[lgw_spi_rbu] 5840 1 0a
+
+[lgw_spi_wbu] 5840 1 09
+
+[lgw_spi_rbu] 5841 1 bb
+
+[lgw_spi_wbu] 5841 1 3b
+
+[lgw_spi_rbu] 5841 1 3b
+
+[lgw_spi_wbu] 5841 1 1b
+
+[lgw_spi_rbu] 5841 1 1b
+
+[lgw_spi_wbu] 5841 1 0b
+
+[lgw_spi_rbu] 5841 1 0b
+
+[lgw_spi_wbu] 5841 1 03
+
+[lgw_spi_rbu] 5841 1 03
+
+[lgw_spi_wbu] 5841 1 01
+
+[lgw_spi_rbu] 5841 1 01
+
+[lgw_spi_wbu] 5841 1 00
+
+[lgw_spi_rbu] 5842 1 3a
+
+[lgw_spi_wbu] 5842 1 ba
+
+[lgw_spi_rbu] 5842 1 ba
+
+[lgw_spi_wbu] 5842 1 90
+
+[lgw_spi_wbu] 5843 1 8b
+
+[lgw_spi_rbu] 5844 1 20
+
+[lgw_spi_wbu] 5844 1 53
+
+[lgw_spi_rbu] 5845 1 30
+
+[lgw_spi_wbu] 5845 1 2f
+
+[lgw_spi_rbu] 5846 1 1b
+
+[lgw_spi_wbu] 5846 1 0b
+
+[lgw_spi_rbu] 5846 1 0b
+
+[lgw_spi_wbu] 5846 1 09
+
+[lgw_spi_rbu] 5846 1 09
+
+[lgw_spi_wbu] 5846 1 08
+
+[lgw_spi_rbu] 5847 1 16
+
+[lgw_spi_wbu] 5847 1 0a
+
+[lgw_spi_rbu] 5847 1 0a
+
+[lgw_spi_wbu] 5847 1 08
+
+[lgw_spi_rbu] 5848 1 bb
+
+[lgw_spi_wbu] 5848 1 7b
+
+[lgw_spi_rbu] 5848 1 7b
+
+[lgw_spi_wbu] 5848 1 5b
+
+[lgw_spi_rbu] 5848 1 5b
+
+[lgw_spi_wbu] 5848 1 4b
+
+[lgw_spi_rbu] 5848 1 4b
+
+[lgw_spi_wbu] 5848 1 47
+
+[lgw_spi_rbu] 5848 1 47
+
+[lgw_spi_wbu] 5848 1 45
+
+[lgw_spi_rbu] 5848 1 45
+
+[lgw_spi_wbu] 5848 1 44
+
+[lgw_spi_rbu] 5849 1 3c
+
+[lgw_spi_wbu] 5849 1 bc
+
+[lgw_spi_rbu] 5849 1 bc
+
+[lgw_spi_wbu] 5849 1 ac
+
+[lgw_spi_wbu] 584a 1 a3
+
+[lgw_spi_rbu] 584b 1 20
+
+[lgw_spi_wbu] 584b 1 5a
+
+[lgw_spi_rbu] 584c 1 30
+
+[lgw_spi_wbu] 584c 1 14
+
+[lgw_spi_rbu] 584d 1 1b
+
+[lgw_spi_wbu] 584d 1 23
+
+[lgw_spi_rbu] 584d 1 23
+
+[lgw_spi_wbu] 584d 1 21
+
+[lgw_spi_rbu] 584d 1 21
+
+[lgw_spi_wbu] 584d 1 20
+
+[lgw_spi_rbu] 584e 1 16
+
+[lgw_spi_wbu] 584e 1 0e
+
+[lgw_spi_rbu] 584e 1 0e
+
+[lgw_spi_wbu] 584e 1 0c
+
+[lgw_spi_rbu] 584f 1 bb
+
+[lgw_spi_wbu] 584f 1 3b
+
+[lgw_spi_rbu] 584f 1 3b
+
+[lgw_spi_wbu] 584f 1 1b
+
+[lgw_spi_rbu] 584f 1 1b
+
+[lgw_spi_wbu] 584f 1 0b
+
+[lgw_spi_rbu] 584f 1 0b
+
+[lgw_spi_wbu] 584f 1 07
+
+[lgw_spi_rbu] 584f 1 07
+
+[lgw_spi_wbu] 584f 1 05
+
+[lgw_spi_rbu] 584f 1 05
+
+[lgw_spi_wbu] 584f 1 04
+
+[lgw_spi_rbu] 5850 1 3c
+
+[lgw_spi_wbu] 5850 1 bc
+
+[lgw_spi_rbu] 5850 1 bc
+
+[lgw_spi_wbu] 5850 1 c2
+
+[lgw_spi_wbu] 5851 1 1f
+
+[lgw_spi_rbu] 5852 1 20
+
+[lgw_spi_wbu] 5852 1 63
+
+[lgw_spi_rbu] 5853 1 30
+
+[lgw_spi_wbu] 5853 1 7c
+
+[lgw_spi_rbu] 5854 1 1b
+
+[lgw_spi_wbu] 5854 1 0b
+
+[lgw_spi_rbu] 5854 1 0b
+
+[lgw_spi_wbu] 5854 1 0d
+
+[lgw_spi_rbu] 5854 1 0d
+
+[lgw_spi_wbu] 5854 1 0c
+
+[lgw_spi_rbu] 5855 1 16
+
+[lgw_spi_wbu] 5855 1 02
+
+[lgw_spi_rbu] 5855 1 02
+
+[lgw_spi_wbu] 5855 1 00
+
+[lgw_spi_rbu] 5856 1 bb
+
+[lgw_spi_wbu] 5856 1 3b
+
+[lgw_spi_rbu] 5856 1 3b
+
+[lgw_spi_wbu] 5856 1 1b
+
+[lgw_spi_rbu] 5856 1 1b
+
+[lgw_spi_wbu] 5856 1 0b
+
+[lgw_spi_rbu] 5856 1 0b
+
+[lgw_spi_wbu] 5856 1 03
+
+[lgw_spi_rbu] 5856 1 03
+
+[lgw_spi_wbu] 5856 1 01
+
+[lgw_spi_rbu] 5856 1 01
+
+[lgw_spi_wbu] 5856 1 00
+
+[lgw_spi_rbu] 5857 1 3c
+
+[lgw_spi_wbu] 5857 1 bc
+
+[lgw_spi_rbu] 5857 1 bc
+
+[lgw_spi_wbu] 5857 1 83
+
+[lgw_spi_wbu] 5858 1 9a
+
+[lgw_spi_rbu] 5859 1 20
+
+[lgw_spi_wbu] 5859 1 51
+
+[lgw_spi_rbu] 585a 1 30
+
+[lgw_spi_wbu] 585a 1 7b
+
+[lgw_spi_rbu] 585b 1 1b
+
+[lgw_spi_wbu] 585b 1 33
+
+[lgw_spi_rbu] 585b 1 33
+
+[lgw_spi_wbu] 585b 1 31
+
+[lgw_spi_rbu] 585b 1 31
+
+[lgw_spi_wbu] 585b 1 30
+
+[lgw_spi_rbu] 585c 1 16
+
+[lgw_spi_wbu] 585c 1 12
+
+[lgw_spi_rbu] 585c 1 12
+
+[lgw_spi_wbu] 585c 1 10
+
+[lgw_spi_rbu] 5860 1 08
+
+[lgw_spi_wbu] 5860 1 18
+
+[lgw_spi_rbu] 5860 1 18
+
+[lgw_spi_wbu] 5860 1 10
+
+[lgw_spi_rbu] 5860 1 10
+
+[lgw_spi_wbu] 5860 1 14
+
+[lgw_spi_rbu] 5860 1 14
+
+[lgw_spi_wbu] 5860 1 16
+
+[lgw_spi_rbu] 5860 1 16
+
+[lgw_spi_wbu] 5860 1 17
+
+[lgw_spi_rbu] 5861 1 0d
+
+[lgw_spi_wbu] 5861 1 35
+
+[lgw_spi_rbu] 5861 1 35
+
+[lgw_spi_wbu] 5861 1 34
+
+[lgw_spi_rbu] 5862 1 00
+
+[lgw_spi_wbu] 5862 1 01
+
+[lgw_spi_wbu] 5863 1 a7
+
+[lgw_spi_wbu] 5864 1 53
+
+[lgw_spi_wbu] 5865 1 7a
+
+[lgw_spi_wbu] 5866 1 6b
+
+[lgw_spi_wbu] 5867 1 30
+
+[lgw_spi_wbu] 5868 1 13
+
+[lgw_spi_wbu] 5869 1 02
+
+[lgw_spi_wbu] 586a 1 52
+
+[lgw_spi_wbu] 586b 1 78
+
+[lgw_spi_wbu] 586c 1 73
+
+[lgw_spi_wbu] 586d 1 34
+
+[lgw_spi_wbu] 586e 1 3c
+
+[lgw_spi_wbu] 586f 1 6e
+
+[lgw_spi_wbu] 5870 1 60
+
+[lgw_spi_wbu] 5871 1 08
+
+[lgw_spi_wbu] 5872 1 7a
+
+[lgw_spi_wbu] 5873 1 11
+
+[lgw_spi_rbu] 5874 1 00
+
+[lgw_spi_wbu] 5874 1 80
+
+[lgw_spi_rbu] 5874 1 80
+
+[lgw_spi_wbu] 5874 1 e2
+
+[lgw_spi_rbu] 5875 1 07
+
+[lgw_spi_wbu] 5875 1 17
+
+[lgw_spi_rbu] 5875 1 17
+
+[lgw_spi_wbu] 5875 1 1f
+
+[lgw_spi_rbu] 5875 1 1f
+
+[lgw_spi_wbu] 5875 1 1b
+
+[lgw_spi_rbu] 5875 1 1b
+
+[lgw_spi_wbu] 5875 1 18
+
+[lgw_spi_rbu] 5876 1 2a
+
+[lgw_spi_wbu] 5876 1 6a
+
+[lgw_spi_rbu] 5876 1 6a
+
+[lgw_spi_wbu] 5876 1 4a
+
+[lgw_spi_rbu] 5876 1 4a
+
+[lgw_spi_wbu] 5876 1 52
+
+[lgw_spi_rbu] 5876 1 52
+
+[lgw_spi_wbu] 5876 1 54
+
+[lgw_spi_rbu] 5877 1 31
+
+[lgw_spi_wbu] 5877 1 b1
+
+[lgw_spi_rbu] 5877 1 b1
+
+[lgw_spi_wbu] 5877 1 f1
+
+[lgw_spi_rbu] 5877 1 f1
+
+[lgw_spi_wbu] 5877 1 d1
+
+[lgw_spi_rbu] 5877 1 d1
+
+[lgw_spi_wbu] 5877 1 d6
+
+[lgw_spi_rbu] 5878 1 0b
+
+[lgw_spi_wbu] 5878 1 8b
+
+[lgw_spi_rbu] 5878 1 8b
+
+[lgw_spi_wbu] 5878 1 ab
+
+[lgw_spi_rbu] 5878 1 ab
+
+[lgw_spi_wbu] 5878 1 bb
+
+[lgw_spi_rbu] 5878 1 bb
+
+[lgw_spi_wbu] 5878 1 b3
+
+[lgw_spi_rbu] 5878 1 b3
+
+[lgw_spi_wbu] 5878 1 b7
+
+[lgw_spi_rbu] 5878 1 b7
+
+[lgw_spi_wbu] 5878 1 b6
+
+[lgw_spi_wbu] 5879 1 ee
+
+[lgw_spi_wbu] 587a 1 b5
+
+[lgw_spi_wbu] 587b 1 60
+
+[lgw_spi_wbu] 587c 1 ed
+
+[lgw_spi_rbu] 587d 1 80
+
+[lgw_spi_wbu] 587d 1 c0
+
+[lgw_spi_rbu] 587d 1 c0
+
+[lgw_spi_wbu] 587d 1 c1
+
+[lgw_spi_rbu] 587e 1 82
+
+[lgw_spi_wbu] 587e 1 42
+
+[lgw_spi_rbu] 587e 1 42
+
+[lgw_spi_wbu] 587e 1 52
+
+[lgw_spi_rbu] 587e 1 52
+
+[lgw_spi_wbu] 587e 1 5a
+
+[lgw_spi_rbu] 587e 1 5a
+
+[lgw_spi_wbu] 587e 1 58
+
+[lgw_spi_rbu] 587f 1 05
+
+[lgw_spi_wbu] 587f 1 15
+
+[lgw_spi_rbu] 587f 1 05
+
+[lgw_spi_wbu] 587f 1 01
+
+[lgw_spi_rbu] 587f 1 01
+
+[lgw_spi_wbu] 587f 1 03
+
+[lgw_spi_rbu] 587f 1 03
+
+[lgw_spi_wbu] 587f 1 02
+
+[lgw_spi_wbu] 5880 1 b7
+
+[lgw_spi_rbu] 5881 1 00
+
+[lgw_spi_wbu] 5881 1 80
+
+[lgw_spi_rbu] 5881 1 80
+
+[lgw_spi_wbu] 5881 1 a5
+
+[lgw_spi_rbu] 5882 1 00
+
+[lgw_spi_wbu] 5882 1 40
+
+[lgw_spi_rbu] 5882 1 40
+
+[lgw_spi_wbu] 5882 1 66
+
+[lgw_spi_wbu] 5883 1 ee
+
+[lgw_spi_wbu] 5884 1 b9
+
+[lgw_spi_rbu] 5885 1 08
+
+[lgw_spi_wbu] 5885 1 00
+
+[lgw_spi_rbu] 5885 1 00
+
+[lgw_spi_wbu] 5885 1 04
+
+[lgw_spi_rbu] 5885 1 04
+
+[lgw_spi_wbu] 5885 1 06
+
+[lgw_spi_rbu] 5885 1 06
+
+[lgw_spi_wbu] 5885 1 07
+
+[lgw_spi_rbu] 5886 1 03
+
+[lgw_spi_wbu] 5886 1 83
+
+[lgw_spi_rbu] 5886 1 83
+
+[lgw_spi_wbu] 5886 1 c3
+
+[lgw_spi_rbu] 5886 1 c3
+
+[lgw_spi_wbu] 5886 1 e3
+
+[lgw_spi_rbu] 5886 1 e3
+
+[lgw_spi_wbu] 5886 1 f3
+
+[lgw_spi_rbu] 5886 1 f3
+
+[lgw_spi_wbu] 5886 1 fb
+
+[lgw_spi_rbu] 5886 1 fb
+
+[lgw_spi_wbu] 5886 1 ff
+
+[lgw_spi_rbu] 5886 1 ff
+
+[lgw_spi_wbu] 5886 1 fd
+
+[lgw_spi_rbu] 5886 1 fd
+
+[lgw_spi_wbu] 5886 1 fc
+
+[lgw_spi_rbu] 5887 1 34
+
+[lgw_spi_wbu] 5887 1 04
+
+[lgw_spi_rbu] 5887 1 04
+
+[lgw_spi_wbu] 5887 1 00
+
+[lgw_spi_rbu] 5887 1 00
+
+[lgw_spi_wbu] 5887 1 02
+
+[lgw_spi_rbu] 5887 1 02
+
+[lgw_spi_wbu] 5887 1 03
+
+[lgw_spi_wbu] 5888 1 e9
+
+[lgw_spi_rbu] 5889 1 1b
+
+[lgw_spi_wbu] 5889 1 0b
+
+[lgw_spi_rbu] 5889 1 0b
+
+[lgw_spi_wbu] 5889 1 09
+
+[lgw_spi_rbu] 588a 1 02
+
+[lgw_spi_wbu] 588a 1 08
+
+[lgw_spi_rbu] 588b 1 04
+
+[lgw_spi_wbu] 588b 1 06
+
+[lgw_spi_rbu] 588c 1 02
+
+[lgw_spi_wbu] 588c 1 0c
+
+[lgw_spi_rbu] 588d 1 04
+
+[lgw_spi_wbu] 588d 1 0b
+
+[lgw_spi_rbu] 588e 1 02
+
+[lgw_spi_wbu] 588e 1 09
+
+[lgw_spi_rbu] 588f 1 04
+
+[lgw_spi_wbu] 588f 1 0d
+
+[lgw_spi_rbu] 5890 1 17
+
+[lgw_spi_wbu] 5890 1 37
+
+[lgw_spi_rbu] 5890 1 37
+
+[lgw_spi_wbu] 5890 1 27
+
+[lgw_spi_rbu] 5890 1 27
+
+[lgw_spi_wbu] 5890 1 2f
+
+[lgw_spi_rbu] 5890 1 2f
+
+[lgw_spi_wbu] 5890 1 2b
+
+[lgw_spi_rbu] 5890 1 2b
+
+[lgw_spi_wbu] 5890 1 29
+
+[lgw_spi_rbu] 5891 1 83
+
+[lgw_spi_wbu] 5891 1 03
+
+[lgw_spi_rbu] 5891 1 03
+
+[lgw_spi_wbu] 5891 1 43
+
+[lgw_spi_rbu] 5891 1 43
+
+[lgw_spi_wbu] 5891 1 63
+
+[lgw_spi_rbu] 5891 1 63
+
+[lgw_spi_wbu] 5891 1 6b
+
+[lgw_spi_rbu] 5891 1 6b
+
+[lgw_spi_wbu] 5891 1 6a
+
+[lgw_spi_rbu] 5892 1 56
+
+[lgw_spi_wbu] 5892 1 96
+
+[lgw_spi_rbu] 5892 1 96
+
+[lgw_spi_wbu] 5892 1 ae
+
+[lgw_spi_rbu] 5892 1 ae
+
+[lgw_spi_wbu] 5892 1 ac
+
+[lgw_spi_rbu] 5893 1 cc
+
+[lgw_spi_wbu] 5893 1 0c
+
+[lgw_spi_rbu] 5893 1 0c
+
+[lgw_spi_wbu] 5893 1 24
+
+[lgw_spi_rbu] 5893 1 24
+
+[lgw_spi_wbu] 5893 1 26
+
+[lgw_spi_rbu] 5894 1 50
+
+[lgw_spi_wbu] 5894 1 d0
+
+[lgw_spi_rbu] 5894 1 d0
+
+[lgw_spi_wbu] 5894 1 b0
+
+[lgw_spi_rbu] 5895 1 00
+
+[lgw_spi_wbu] 5895 1 40
+
+[lgw_spi_rbu] 5895 1 40
+
+[lgw_spi_wbu] 5895 1 50
+
+[lgw_spi_rbu] 5895 1 50
+
+[lgw_spi_wbu] 5895 1 54
+
+[lgw_spi_rbu] 5895 1 54
+
+[lgw_spi_wbu] 5895 1 56
+
+[lgw_spi_rbu] 5896 1 00
+
+[lgw_spi_wbu] 5896 1 80
+
+[lgw_spi_rbu] 5896 1 80
+
+[lgw_spi_wbu] 5896 1 90
+
+[lgw_spi_rbu] 5896 1 90
+
+[lgw_spi_wbu] 5896 1 98
+
+[lgw_spi_rbu] 5896 1 98
+
+[lgw_spi_wbu] 5896 1 9a
+
+[lgw_spi_rbu] 5897 1 74
+
+[lgw_spi_wbu] 5897 1 14
+
+[lgw_spi_rbu] 5897 1 14
+
+[lgw_spi_wbu] 5897 1 16
+
+[lgw_spi_rbu] 5898 1 00
+
+[lgw_spi_wbu] 5898 1 40
+
+[lgw_spi_rbu] 5898 1 40
+
+[lgw_spi_wbu] 5898 1 42
+
+[lgw_spi_rbu] 5899 1 83
+
+[lgw_spi_wbu] 5899 1 03
+
+[lgw_spi_rbu] 5899 1 03
+
+[lgw_spi_wbu] 5899 1 43
+
+[lgw_spi_rbu] 5899 1 43
+
+[lgw_spi_wbu] 5899 1 63
+
+[lgw_spi_rbu] 5899 1 63
+
+[lgw_spi_wbu] 5899 1 6b
+
+[lgw_spi_rbu] 5899 1 6b
+
+[lgw_spi_wbu] 5899 1 68
+
+[lgw_spi_rbu] 589a 1 56
+
+[lgw_spi_wbu] 589a 1 96
+
+[lgw_spi_rbu] 589a 1 96
+
+[lgw_spi_wbu] 589a 1 9e
+
+[lgw_spi_rbu] 589a 1 9e
+
+[lgw_spi_wbu] 589a 1 9a
+
+[lgw_spi_rbu] 589b 1 cc
+
+[lgw_spi_wbu] 589b 1 8c
+
+[lgw_spi_rbu] 589b 1 8c
+
+[lgw_spi_wbu] 589b 1 9c
+
+[lgw_spi_rbu] 589b 1 9c
+
+[lgw_spi_wbu] 589b 1 99
+
+[lgw_spi_rbu] 589c 1 50
+
+[lgw_spi_wbu] 589c 1 d0
+
+[lgw_spi_rbu] 589c 1 d0
+
+[lgw_spi_wbu] 589c 1 c0
+
+[lgw_spi_rbu] 589d 1 00
+
+[lgw_spi_wbu] 589d 1 40
+
+[lgw_spi_rbu] 589d 1 40
+
+[lgw_spi_wbu] 589d 1 60
+
+[lgw_spi_rbu] 589d 1 60
+
+[lgw_spi_wbu] 589d 1 64
+
+[lgw_spi_rbu] 589d 1 64
+
+[lgw_spi_wbu] 589d 1 66
+
+[lgw_spi_rbu] 589e 1 00
+
+[lgw_spi_wbu] 589e 1 80
+
+[lgw_spi_rbu] 589e 1 80
+
+[lgw_spi_wbu] 589e 1 a0
+
+[lgw_spi_rbu] 589e 1 a0
+
+[lgw_spi_wbu] 589e 1 a4
+
+[lgw_spi_rbu] 589e 1 a4
+
+[lgw_spi_wbu] 589e 1 a6
+
+[lgw_spi_rbu] 589f 1 74
+
+[lgw_spi_wbu] 589f 1 44
+
+[lgw_spi_rbu] 589f 1 44
+
+[lgw_spi_wbu] 589f 1 40
+
+[lgw_spi_rbu] 58a0 1 09
+
+[lgw_spi_wbu] 58a0 1 07
+
+[lgw_spi_wbu] 58a1 1 f3
+
+[lgw_spi_rbu] 58a2 1 03
+
+[lgw_spi_wbu] 58a2 1 00
+
+[lgw_spi_rbu] 58a3 1 09
+
+[lgw_spi_wbu] 58a3 1 29
+
+[lgw_spi_rbu] 58a3 1 29
+
+[lgw_spi_wbu] 58a3 1 39
+
+[lgw_spi_rbu] 58a3 1 39
+
+[lgw_spi_wbu] 58a3 1 31
+
+[lgw_spi_rbu] 58a3 1 31
+
+[lgw_spi_wbu] 58a3 1 35
+
+[lgw_spi_rbu] 58a3 1 35
+
+[lgw_spi_wbu] 58a3 1 37
+
+[lgw_spi_rbu] 58a3 1 37
+
+[lgw_spi_wbu] 58a3 1 36
+
+[lgw_spi_wbu] 58a4 1 c1
+
+[lgw_spi_rbu] 58a5 1 ff
+
+[lgw_spi_wbu] 58a5 1 3f
+
+[lgw_spi_rbu] 58a5 1 3f
+
+[lgw_spi_wbu] 58a5 1 0f
+
+[lgw_spi_rbu] 58a5 1 0f
+
+[lgw_spi_wbu] 58a5 1 0b
+
+[lgw_spi_rbu] 58a5 1 0b
+
+[lgw_spi_wbu] 58a5 1 08
+
+[lgw_spi_rbu] 58a6 1 ff
+
+[lgw_spi_wbu] 58a6 1 7f
+
+[lgw_spi_rbu] 58a6 1 7f
+
+[lgw_spi_wbu] 58a6 1 5f
+
+[lgw_spi_rbu] 58a6 1 5f
+
+[lgw_spi_wbu] 58a6 1 5b
+
+[lgw_spi_rbu] 58a6 1 5b
+
+[lgw_spi_wbu] 58a6 1 58
+
+[lgw_spi_rbu] 58a7 1 ff
+
+[lgw_spi_wbu] 58a7 1 3f
+
+[lgw_spi_rbu] 58a7 1 3f
+
+[lgw_spi_wbu] 58a7 1 0f
+
+[lgw_spi_rbu] 58a7 1 0f
+
+[lgw_spi_wbu] 58a7 1 0b
+
+[lgw_spi_rbu] 58a7 1 0b
+
+[lgw_spi_wbu] 58a7 1 09
+
+[lgw_spi_rbu] 58a8 1 ff
+
+[lgw_spi_wbu] 58a8 1 7f
+
+[lgw_spi_rbu] 58a8 1 7f
+
+[lgw_spi_wbu] 58a8 1 6f
+
+[lgw_spi_rbu] 58a8 1 6f
+
+[lgw_spi_wbu] 58a8 1 67
+
+[lgw_spi_rbu] 58a8 1 67
+
+[lgw_spi_wbu] 58a8 1 65
+
+[lgw_spi_rbu] 58a9 1 40
+
+[lgw_spi_wbu] 58a9 1 c0
+
+[lgw_spi_rbu] 58a9 1 c0
+
+[lgw_spi_wbu] 58a9 1 80
+
+[lgw_spi_rbu] 58aa 1 53
+
+[lgw_spi_wbu] 58aa 1 43
+
+[lgw_spi_rbu] 58aa 1 43
+
+[lgw_spi_wbu] 58aa 1 41
+
+[lgw_spi_rbu] 58ab 1 28
+
+[lgw_spi_wbu] 58ab 1 08
+
+[lgw_spi_rbu] 58ab 1 08
+
+[lgw_spi_wbu] 58ab 1 18
+
+[lgw_spi_rbu] 58ab 1 18
+
+[lgw_spi_wbu] 58ab 1 15
+
+[lgw_spi_rbu] 58ac 1 20
+
+[lgw_spi_wbu] 58ac 1 7e
+
+[lgw_spi_rbu] 58ad 1 30
+
+[lgw_spi_wbu] 58ad 1 22
+
+[lgw_spi_rbu] 58ae 1 53
+
+[lgw_spi_wbu] 58ae 1 13
+
+[lgw_spi_rbu] 58ae 1 13
+
+[lgw_spi_wbu] 58ae 1 15
+
+[lgw_spi_rbu] 58af 1 25
+
+[lgw_spi_wbu] 58af 1 65
+
+[lgw_spi_rbu] 58af 1 65
+
+[lgw_spi_wbu] 58af 1 45
+
+[lgw_spi_rbu] 58af 1 45
+
+[lgw_spi_wbu] 58af 1 41
+
+[lgw_spi_rbu] 58af 1 41
+
+[lgw_spi_wbu] 58af 1 42
+
+[lgw_spi_rbu] 58b0 1 40
+
+[lgw_spi_wbu] 58b0 1 c0
+
+[lgw_spi_rbu] 58b0 1 c0
+
+[lgw_spi_wbu] 58b0 1 f0
+
+[lgw_spi_rbu] 58b1 1 af
+
+[lgw_spi_wbu] 58b1 1 2f
+
+[lgw_spi_rbu] 58b1 1 2f
+
+[lgw_spi_wbu] 58b1 1 1f
+
+[lgw_spi_rbu] 58b1 1 1f
+
+[lgw_spi_wbu] 58b1 1 17
+
+[lgw_spi_rbu] 58b1 1 17
+
+[lgw_spi_wbu] 58b1 1 13
+
+[lgw_spi_rbu] 58b1 1 13
+
+[lgw_spi_wbu] 58b1 1 11
+
+[lgw_spi_rbu] 58b1 1 11
+
+[lgw_spi_wbu] 58b1 1 10
+
+[lgw_spi_wbu] 58b2 1 97
+
+[lgw_spi_rbu] 58b3 1 07
+
+[lgw_spi_wbu] 58b3 1 17
+
+[lgw_spi_rbu] 58b3 1 17
+
+[lgw_spi_wbu] 58b3 1 1f
+
+[lgw_spi_rbu] 58b3 1 1f
+
+[lgw_spi_wbu] 58b3 1 1b
+
+[lgw_spi_rbu] 58b7 1 b8
+
+[lgw_spi_wbu] 58b7 1 38
+
+[lgw_spi_rbu] 58b7 1 38
+
+[lgw_spi_wbu] 58b7 1 28
+
+[lgw_spi_rbu] 58b7 1 28
+
+[lgw_spi_wbu] 58b7 1 20
+
+[lgw_spi_rbu] 58b7 1 20
+
+[lgw_spi_wbu] 58b7 1 22
+
+[lgw_spi_wbu] 58b8 1 b5
+
+[lgw_spi_rbu] 58b9 1 00
+
+[lgw_spi_wbu] 58b9 1 40
+
+[lgw_spi_rbu] 58b9 1 40
+
+[lgw_spi_wbu] 58b9 1 50
+
+[lgw_spi_rbu] 58b9 1 50
+
+[lgw_spi_wbu] 58b9 1 54
+
+[lgw_spi_rbu] 58b9 1 54
+
+[lgw_spi_wbu] 58b9 1 55
+
+[lgw_spi_rbu] 58ba 1 50
+
+[lgw_spi_wbu] 58ba 1 10
+
+[lgw_spi_rbu] 58ba 1 10
+
+[lgw_spi_wbu] 58ba 1 20
+
+[lgw_spi_rbu] 58ba 1 20
+
+[lgw_spi_wbu] 58ba 1 24
+
+[lgw_spi_rbu] 58ba 1 24
+
+[lgw_spi_wbu] 58ba 1 26
+
+[lgw_spi_wbu] 58bb 1 ec
+
+[lgw_spi_wbu] 58bc 1 57
+
+[lgw_spi_wbu] 58bd 1 71
+
+[lgw_spi_wbu] 58be 1 41
+
+[lgw_spi_rbu] 58c0 1 00
+
+[lgw_spi_wbu] 58c0 1 10
+
+[lgw_spi_rbu] 58c0 1 10
+
+[lgw_spi_wbu] 58c0 1 18
+
+[lgw_spi_rbu] 58c0 1 18
+
+[lgw_spi_wbu] 58c0 1 1c
+
+[lgw_spi_rbu] 58c0 1 1c
+
+[lgw_spi_wbu] 58c0 1 1e
+
+[lgw_spi_rbu] 58c0 1 1e
+
+[lgw_spi_wbu] 58c0 1 1f
+
+[lgw_spi_wbu] 58c1 1 14
+
+[lgw_spi_rbu] 58c2 1 00
+
+[lgw_spi_wbu] 58c2 1 0b
+
+[lgw_spi_wbu] 58c3 1 3e
+
+[lgw_spi_rbu] 58d9 1 01
+
+[lgw_spi_wbu] 58d9 1 00
+
+[lgw_spi_rbu] 6080 1 24
+
+[lgw_spi_wbu] 6080 1 04
+
+[lgw_spi_rbu] 6080 1 04
+
+[lgw_spi_wbu] 6080 1 14
+
+[lgw_spi_rbu] 6080 1 14
+
+[lgw_spi_wbu] 6080 1 1c
+
+[lgw_spi_rbu] 6080 1 1c
+
+[lgw_spi_wbu] 6080 1 18
+
+[lgw_spi_rbu] 6080 1 18
+
+[lgw_spi_wbu] 6080 1 1a
+
+[lgw_spi_rbu] 6087 1 01
+
+[lgw_spi_wbu] 6087 1 21
+
+[lgw_spi_rbu] 6087 1 21
+
+[lgw_spi_wbu] 6087 1 31
+
+[lgw_spi_rbu] 6087 1 31
+
+[lgw_spi_wbu] 6087 1 39
+
+[lgw_spi_rbu] 6087 1 39
+
+[lgw_spi_wbu] 6087 1 3d
+
+[lgw_spi_rbu] 6087 1 3d
+
+[lgw_spi_wbu] 6087 1 3f
+
+[lgw_spi_rbu] 6087 1 3f
+
+[lgw_spi_wbu] 6087 1 3e
+
+[lgw_spi_wbu] 6088 1 a4
+
+[lgw_spi_wbu] 6089 1 e1
+
+[lgw_spi_wbu] 608a 1 cf
+
+[lgw_spi_wbu] 608b 1 07
+
+[lgw_spi_wbu] 608c 1 9b
+
+[lgw_spi_rbu] 609d 1 00
+
+[lgw_spi_wbu] 609d 1 80
+
+[lgw_spi_rbu] 609d 1 80
+
+[lgw_spi_wbu] 609d 1 88
+
+[lgw_spi_rbu] 609e 1 00
+
+[lgw_spi_wbu] 609e 1 a0
+
+[lgw_spi_rbu] 609e 1 a0
+
+[lgw_spi_wbu] 609e 1 ac
+
+[lgw_spi_rbu] 609f 1 00
+
+[lgw_spi_wbu] 609f 1 40
+
+[lgw_spi_rbu] 609f 1 40
+
+[lgw_spi_wbu] 609f 1 4e
+
+[lgw_spi_rbu] 60a0 1 00
+
+[lgw_spi_wbu] 60a0 1 b0
+
+[lgw_spi_rbu] 60a0 1 b0
+
+[lgw_spi_wbu] 60a0 1 b7
+
+[lgw_spi_rbu] 5700 1 00
+
+[lgw_spi_wbu] 5700 1 02
+
+[lgw_spi_rbu] 5700 1 02
+
+[lgw_spi_wbu] 5700 1 03
+
+[lgw_spi_rbu] 5701 1 00
+
+[lgw_spi_wbu] 5701 1 20
+
+[lgw_spi_rbu] 5701 1 20
+
+[lgw_spi_wbu] 5701 1 30
+
+[lgw_spi_rbu] 5701 1 30
+
+[lgw_spi_wbu] 5701 1 3a
+
+[lgw_spi_wbu] 5702 1 0f
+
+[lgw_spi_wbu] 5703 1 e2
+
+[lgw_spi_rbu] 5707 1 00
+
+[lgw_spi_wbu] 5707 1 1e
+
+[lgw_spi_rbu] 5708 1 00
+
+[lgw_spi_wbu] 5708 1 02
+
+[lgw_spi_rbu] 5709 1 00
+
+[lgw_spi_wbu] 5709 1 36
+
+[lgw_spi_rbu] 570a 1 00
+
+[lgw_spi_wbu] 570a 1 36
+
+[lgw_spi_rbu] 570b 1 00
+
+[lgw_spi_wbu] 570b 1 37
+
+[lgw_spi_rbu] 570c 1 00
+
+[lgw_spi_wbu] 570c 1 0e
+
+[lgw_spi_rbu] 570e 1 00
+
+[lgw_spi_wbu] 570e 1 20
+
+[lgw_spi_rbu] 570e 1 20
+
+[lgw_spi_wbu] 570e 1 30
+
+[lgw_spi_rbu] 570e 1 30
+
+[lgw_spi_wbu] 570e 1 35
+
+[lgw_spi_wbu] 570f 1 92
+
+[lgw_spi_wbu] 5710 1 c0
+
+[lgw_spi_rbu] 5714 1 00
+
+[lgw_spi_wbu] 5714 1 15
+
+[lgw_spi_rbu] 5715 1 00
+
+[lgw_spi_wbu] 5715 1 13
+
+[lgw_spi_rbu] 5716 1 00
+
+[lgw_spi_wbu] 5716 1 1e
+
+[lgw_spi_rbu] 5717 1 00
+
+[lgw_spi_wbu] 5717 1 39
+
+[lgw_spi_rbu] 5718 1 00
+
+[lgw_spi_wbu] 5718 1 29
+
+[lgw_spi_rbu] 5719 1 00
+
+[lgw_spi_wbu] 5719 1 16
+
+[lgw_spi_rbu] 571b 1 00
+
+[lgw_spi_wbu] 571b 1 20
+
+[lgw_spi_rbu] 571b 1 20
+
+[lgw_spi_wbu] 571b 1 28
+
+[lgw_spi_rbu] 571b 1 28
+
+[lgw_spi_wbu] 571b 1 2c
+
+[lgw_spi_rbu] 571b 1 2c
+
+[lgw_spi_wbu] 571b 1 2e
+
+[lgw_spi_rbu] 571b 1 2e
+
+[lgw_spi_wbu] 571b 1 2f
+
+[lgw_spi_wbu] 571c 1 e9
+
+[lgw_spi_wbu] 6180 1 85
+
+[lgw_spi_rbu] 6183 1 00
+
+[lgw_spi_wbu] 6183 1 02
+
+[lgw_spi_rbu] 6184 1 00
+
+[lgw_spi_wbu] 6184 1 03
+
+[lgw_spi_rbu] 6185 1 00
+
+[lgw_spi_wbu] 6185 1 30
+
+[lgw_spi_rbu] 6185 1 30
+
+[lgw_spi_wbu] 6185 1 38
+
+[lgw_spi_rbu] 6185 1 38
+
+[lgw_spi_wbu] 6185 1 3c
+
+[lgw_spi_rbu] 6185 1 3c
+
+[lgw_spi_wbu] 6185 1 3e
+
+[lgw_spi_rbu] 6185 1 3e
+
+[lgw_spi_wbu] 6185 1 3f
+
+[lgw_spi_rbu] 6186 1 00
+
+[lgw_spi_wbu] 6186 1 04
+
+[lgw_spi_rbu] 6186 1 04
+
+[lgw_spi_wbu] 6186 1 06
+
+[lgw_spi_rbu] 6186 1 06
+
+[lgw_spi_wbu] 6186 1 07
+
+[lgw_spi_wbu] 6188 1 76
+
+[lgw_spi_wbu] 6189 1 2a
+
+[lgw_spi_wbu] 618a 1 79
+
+[lgw_spi_rbu] 618b 1 01
+
+[lgw_spi_wbu] 618b 1 00
+
+[lgw_spi_rbu] 5b00 1 00
+
+[lgw_spi_wbu] 5b00 1 0a
+
+[lgw_spi_wbu] 5b01 1 07
+
+[lgw_spi_rbu] 5b02 1 00
+
+[lgw_spi_wbu] 5b02 1 01
+
+[lgw_spi_rbu] 5b03 1 08
+
+[lgw_spi_wbu] 5b03 1 38
+
+[lgw_spi_rbu] 5b03 1 38
+
+[lgw_spi_wbu] 5b03 1 30
+
+[lgw_spi_rbu] 5b03 1 30
+
+[lgw_spi_wbu] 5b03 1 34
+
+[lgw_spi_rbu] 5b03 1 34
+
+[lgw_spi_wbu] 5b03 1 36
+
+[lgw_spi_rbu] 5b03 1 36
+
+[lgw_spi_wbu] 5b03 1 37
+
+[lgw_spi_rbu] 5b04 1 0d
+
+[lgw_spi_wbu] 5b04 1 15
+
+[lgw_spi_rbu] 5b04 1 15
+
+[lgw_spi_wbu] 5b04 1 16
+
+[lgw_spi_rbu] 5b05 1 00
+
+[lgw_spi_wbu] 5b05 1 03
+
+[lgw_spi_wbu] 5b06 1 d5
+
+[lgw_spi_wbu] 5b07 1 19
+
+[lgw_spi_wbu] 5b08 1 3d
+
+[lgw_spi_wbu] 5b09 1 79
+
+[lgw_spi_wbu] 5b0a 1 46
+
+[lgw_spi_wbu] 5b0b 1 0c
+
+[lgw_spi_wbu] 5b0c 1 47
+
+[lgw_spi_wbu] 5b0d 1 14
+
+[lgw_spi_wbu] 5b0e 1 5e
+
+[lgw_spi_wbu] 5b0f 1 4c
+
+[lgw_spi_wbu] 5b10 1 4e
+
+[lgw_spi_wbu] 5b11 1 2f
+
+[lgw_spi_wbu] 5b12 1 26
+
+[lgw_spi_wbu] 5b13 1 54
+
+[lgw_spi_wbu] 5b14 1 20
+
+[lgw_spi_wbu] 5b15 1 26
+
+[lgw_spi_wbu] 5b16 1 12
+
+[lgw_spi_rbu] 5b17 1 00
+
+[lgw_spi_wbu] 5b17 1 80
+
+[lgw_spi_rbu] 5b17 1 80
+
+[lgw_spi_wbu] 5b17 1 a5
+
+[lgw_spi_rbu] 5b18 1 07
+
+[lgw_spi_wbu] 5b18 1 17
+
+[lgw_spi_rbu] 5b18 1 17
+
+[lgw_spi_wbu] 5b18 1 1f
+
+[lgw_spi_rbu] 5b18 1 1f
+
+[lgw_spi_wbu] 5b18 1 1b
+
+[lgw_spi_rbu] 5b18 1 1b
+
+[lgw_spi_wbu] 5b18 1 1a
+
+[lgw_spi_rbu] 5b19 1 2a
+
+[lgw_spi_wbu] 5b19 1 6a
+
+[lgw_spi_rbu] 5b19 1 6a
+
+[lgw_spi_wbu] 5b19 1 4a
+
+[lgw_spi_rbu] 5b19 1 4a
+
+[lgw_spi_wbu] 5b19 1 42
+
+[lgw_spi_rbu] 5b19 1 42
+
+[lgw_spi_wbu] 5b19 1 45
+
+[lgw_spi_rbu] 5b1a 1 31
+
+[lgw_spi_wbu] 5b1a 1 b1
+
+[lgw_spi_rbu] 5b1a 1 b1
+
+[lgw_spi_wbu] 5b1a 1 f1
+
+[lgw_spi_rbu] 5b1a 1 f1
+
+[lgw_spi_wbu] 5b1a 1 c1
+
+[lgw_spi_rbu] 5b1a 1 c1
+
+[lgw_spi_wbu] 5b1a 1 c5
+
+[lgw_spi_rbu] 5b1b 1 0b
+
+[lgw_spi_wbu] 5b1b 1 8b
+
+[lgw_spi_rbu] 5b1b 1 8b
+
+[lgw_spi_wbu] 5b1b 1 ab
+
+[lgw_spi_rbu] 5b1b 1 ab
+
+[lgw_spi_wbu] 5b1b 1 bb
+
+[lgw_spi_rbu] 5b1b 1 bb
+
+[lgw_spi_wbu] 5b1b 1 b3
+
+[lgw_spi_rbu] 5b1b 1 b3
+
+[lgw_spi_wbu] 5b1b 1 b7
+
+[lgw_spi_rbu] 5b1b 1 b7
+
+[lgw_spi_wbu] 5b1b 1 b6
+
+[lgw_spi_wbu] 5b1c 1 9c
+
+[lgw_spi_wbu] 5b1d 1 9f
+
+[lgw_spi_wbu] 5b1e 1 34
+
+[lgw_spi_wbu] 5b1f 1 40
+
+[lgw_spi_rbu] 5b20 1 80
+
+[lgw_spi_wbu] 5b20 1 60
+
+[lgw_spi_rbu] 5b20 1 60
+
+[lgw_spi_wbu] 5b20 1 61
+
+[lgw_spi_rbu] 5b21 1 47
+
+[lgw_spi_wbu] 5b21 1 e7
+
+[lgw_spi_rbu] 5b21 1 e7
+
+[lgw_spi_wbu] 5b21 1 eb
+
+[lgw_spi_rbu] 5b22 1 82
+
+[lgw_spi_wbu] 5b22 1 02
+
+[lgw_spi_rbu] 5b22 1 02
+
+[lgw_spi_wbu] 5b22 1 12
+
+[lgw_spi_rbu] 5b22 1 12
+
+[lgw_spi_wbu] 5b22 1 1a
+
+[lgw_spi_rbu] 5b22 1 1a
+
+[lgw_spi_wbu] 5b22 1 1d
+
+[lgw_spi_rbu] 5b23 1 05
+
+[lgw_spi_wbu] 5b23 1 25
+
+[lgw_spi_rbu] 5b23 1 25
+
+[lgw_spi_wbu] 5b23 1 35
+
+[lgw_spi_rbu] 5b23 1 35
+
+[lgw_spi_wbu] 5b23 1 39
+
+[lgw_spi_rbu] 5b23 1 39
+
+[lgw_spi_wbu] 5b23 1 3b
+
+[lgw_spi_rbu] 5b23 1 3b
+
+[lgw_spi_wbu] 5b23 1 3a
+
+[lgw_spi_wbu] 5b24 1 6c
+
+[lgw_spi_rbu] 5b25 1 00
+
+[lgw_spi_wbu] 5b25 1 80
+
+[lgw_spi_rbu] 5b25 1 80
+
+[lgw_spi_wbu] 5b25 1 8e
+
+[lgw_spi_rbu] 5b26 1 00
+
+[lgw_spi_wbu] 5b26 1 40
+
+[lgw_spi_rbu] 5b26 1 40
+
+[lgw_spi_wbu] 5b26 1 5c
+
+[lgw_spi_wbu] 5b27 1 da
+
+[lgw_spi_wbu] 5b28 1 60
+
+[lgw_spi_rbu] 5b29 1 08
+
+[lgw_spi_wbu] 5b29 1 00
+
+[lgw_spi_rbu] 5b29 1 00
+
+[lgw_spi_wbu] 5b29 1 04
+
+[lgw_spi_rbu] 5b29 1 04
+
+[lgw_spi_wbu] 5b29 1 06
+
+[lgw_spi_rbu] 5b29 1 06
+
+[lgw_spi_wbu] 5b29 1 07
+
+[lgw_spi_rbu] 5b2a 1 34
+
+[lgw_spi_wbu] 5b2a 1 04
+
+[lgw_spi_rbu] 5b2a 1 04
+
+[lgw_spi_wbu] 5b2a 1 00
+
+[lgw_spi_rbu] 5b2a 1 00
+
+[lgw_spi_wbu] 5b2a 1 02
+
+[lgw_spi_rbu] 5b2a 1 02
+
+[lgw_spi_wbu] 5b2a 1 03
+
+[lgw_spi_wbu] 5b2b 1 32
+
+[lgw_spi_rbu] 5b2c 1 56
+
+[lgw_spi_wbu] 5b2c 1 36
+
+[lgw_spi_rbu] 5b2c 1 36
+
+[lgw_spi_wbu] 5b2c 1 20
+
+[lgw_spi_rbu] 5b2d 1 3b
+
+[lgw_spi_wbu] 5b2d 1 1b
+
+[lgw_spi_rbu] 5b2d 1 1b
+
+[lgw_spi_wbu] 5b2d 1 0b
+
+[lgw_spi_rbu] 5b2d 1 0b
+
+[lgw_spi_wbu] 5b2d 1 07
+
+[lgw_spi_rbu] 5b2e 1 02
+
+[lgw_spi_wbu] 5b2e 1 0b
+
+[lgw_spi_rbu] 5b2f 1 04
+
+[lgw_spi_wbu] 5b2f 1 0e
+
+[lgw_spi_rbu] 5b30 1 17
+
+[lgw_spi_wbu] 5b30 1 37
+
+[lgw_spi_rbu] 5b30 1 37
+
+[lgw_spi_wbu] 5b30 1 27
+
+[lgw_spi_rbu] 5b30 1 27
+
+[lgw_spi_wbu] 5b30 1 2f
+
+[lgw_spi_rbu] 5b30 1 2f
+
+[lgw_spi_wbu] 5b30 1 2b
+
+[lgw_spi_rbu] 5b30 1 2b
+
+[lgw_spi_wbu] 5b30 1 28
+
+[lgw_spi_rbu] 5b31 1 83
+
+[lgw_spi_wbu] 5b31 1 03
+
+[lgw_spi_rbu] 5b31 1 03
+
+[lgw_spi_wbu] 5b31 1 43
+
+[lgw_spi_rbu] 5b31 1 43
+
+[lgw_spi_wbu] 5b31 1 63
+
+[lgw_spi_rbu] 5b31 1 63
+
+[lgw_spi_wbu] 5b31 1 67
+
+[lgw_spi_rbu] 5b31 1 67
+
+[lgw_spi_wbu] 5b31 1 66
+
+[lgw_spi_rbu] 5b32 1 94
+
+[lgw_spi_wbu] 5b32 1 54
+
+[lgw_spi_rbu] 5b32 1 54
+
+[lgw_spi_wbu] 5b32 1 44
+
+[lgw_spi_rbu] 5b32 1 44
+
+[lgw_spi_wbu] 5b32 1 45
+
+[lgw_spi_rbu] 5b33 1 0c
+
+[lgw_spi_wbu] 5b33 1 8c
+
+[lgw_spi_rbu] 5b33 1 8c
+
+[lgw_spi_wbu] 5b33 1 a4
+
+[lgw_spi_rbu] 5b33 1 a4
+
+[lgw_spi_wbu] 5b33 1 a0
+
+[lgw_spi_rbu] 5b34 1 53
+
+[lgw_spi_wbu] 5b34 1 d3
+
+[lgw_spi_rbu] 5b34 1 d3
+
+[lgw_spi_wbu] 5b34 1 93
+
+[lgw_spi_rbu] 5b34 1 93
+
+[lgw_spi_wbu] 5b34 1 90
+
+[lgw_spi_rbu] 5b35 1 00
+
+[lgw_spi_wbu] 5b35 1 50
+
+[lgw_spi_rbu] 5b35 1 50
+
+[lgw_spi_wbu] 5b35 1 51
+
+[lgw_spi_rbu] 5b36 1 09
+
+[lgw_spi_wbu] 5b36 1 04
+
+[lgw_spi_wbu] 5b37 1 8f
+
+[lgw_spi_rbu] 5b38 1 03
+
+[lgw_spi_wbu] 5b38 1 05
+
+[lgw_spi_rbu] 5b39 1 09
+
+[lgw_spi_wbu] 5b39 1 29
+
+[lgw_spi_rbu] 5b39 1 29
+
+[lgw_spi_wbu] 5b39 1 39
+
+[lgw_spi_rbu] 5b39 1 39
+
+[lgw_spi_wbu] 5b39 1 31
+
+[lgw_spi_rbu] 5b39 1 31
+
+[lgw_spi_wbu] 5b39 1 35
+
+[lgw_spi_rbu] 5b39 1 35
+
+[lgw_spi_wbu] 5b39 1 37
+
+[lgw_spi_rbu] 5b39 1 37
+
+[lgw_spi_wbu] 5b39 1 36
+
+[lgw_spi_wbu] 5b3a 1 7a
+
+[lgw_spi_rbu] 5b3b 1 43
+
+[lgw_spi_wbu] 5b3b 1 c3
+
+[lgw_spi_rbu] 5b3b 1 c3
+
+[lgw_spi_wbu] 5b3b 1 e3
+
+[lgw_spi_rbu] 5b3b 1 e3
+
+[lgw_spi_wbu] 5b3b 1 e0
+
+[lgw_spi_rbu] 5b3c 1 53
+
+[lgw_spi_wbu] 5b3c 1 03
+
+[lgw_spi_rbu] 5b3c 1 03
+
+[lgw_spi_wbu] 5b3c 1 0a
+
+[lgw_spi_rbu] 5b3d 1 28
+
+[lgw_spi_wbu] 5b3d 1 48
+
+[lgw_spi_rbu] 5b3d 1 48
+
+[lgw_spi_wbu] 5b3d 1 58
+
+[lgw_spi_rbu] 5b3d 1 58
+
+[lgw_spi_wbu] 5b3d 1 52
+
+[lgw_spi_rbu] 5b3e 1 18
+
+[lgw_spi_wbu] 5b3e 1 2c
+
+[lgw_spi_rbu] 5b3f 1 30
+
+[lgw_spi_wbu] 5b3f 1 43
+
+[lgw_spi_rbu] 5b40 1 77
+
+[lgw_spi_wbu] 5b40 1 47
+
+[lgw_spi_rbu] 5b40 1 47
+
+[lgw_spi_wbu] 5b40 1 40
+
+[lgw_spi_rbu] 5b41 1 25
+
+[lgw_spi_wbu] 5b41 1 a5
+
+[lgw_spi_rbu] 5b41 1 a5
+
+[lgw_spi_wbu] 5b41 1 85
+
+[lgw_spi_rbu] 5b41 1 85
+
+[lgw_spi_wbu] 5b41 1 81
+
+[lgw_spi_rbu] 5b41 1 81
+
+[lgw_spi_wbu] 5b41 1 82
+
+[lgw_spi_rbu] 5b42 1 37
+
+[lgw_spi_wbu] 5b42 1 b7
+
+[lgw_spi_rbu] 5b42 1 b7
+
+[lgw_spi_wbu] 5b42 1 98
+
+[lgw_spi_rbu] 5b43 1 af
+
+[lgw_spi_wbu] 5b43 1 6f
+
+[lgw_spi_rbu] 5b43 1 6f
+
+[lgw_spi_wbu] 5b43 1 4f
+
+[lgw_spi_rbu] 5b43 1 4f
+
+[lgw_spi_wbu] 5b43 1 47
+
+[lgw_spi_rbu] 5b43 1 47
+
+[lgw_spi_wbu] 5b43 1 43
+
+[lgw_spi_rbu] 5b43 1 43
+
+[lgw_spi_wbu] 5b43 1 41
+
+[lgw_spi_rbu] 5b43 1 41
+
+[lgw_spi_wbu] 5b43 1 40
+
+[lgw_spi_wbu] 5b44 1 d0
+
+[lgw_spi_rbu] 5b45 1 07
+
+[lgw_spi_wbu] 5b45 1 17
+
+[lgw_spi_rbu] 5b45 1 17
+
+[lgw_spi_wbu] 5b45 1 1f
+
+[lgw_spi_rbu] 5b45 1 1f
+
+[lgw_spi_wbu] 5b45 1 1d
+
+[lgw_spi_rbu] 5b46 1 55
+
+[lgw_spi_wbu] 5b46 1 15
+
+[lgw_spi_rbu] 5b46 1 15
+
+[lgw_spi_wbu] 5b46 1 05
+
+[lgw_spi_rbu] 5b46 1 05
+
+[lgw_spi_wbu] 5b46 1 09
+
+[lgw_spi_rbu] 5b46 1 09
+
+[lgw_spi_wbu] 5b46 1 08
+
+[lgw_spi_rbu] 5b50 1 00
+
+[lgw_spi_wbu] 5b50 1 15
+
+[lgw_spi_wbu] 5b51 1 49
+
+[lgw_spi_rbu] 5b52 1 00
+
+[lgw_spi_wbu] 5b52 1 10
+
+[lgw_spi_rbu] 5b52 1 10
+
+[lgw_spi_wbu] 5b52 1 14
+
+[lgw_spi_rbu] 5b52 1 14
+
+[lgw_spi_wbu] 5b52 1 16
+
+[lgw_spi_rbu] 5b52 1 16
+
+[lgw_spi_wbu] 5b52 1 17
+
+[lgw_spi_rbu] 5b53 1 00
+
+[lgw_spi_wbu] 5b53 1 40
+
+[lgw_spi_rbu] 5b53 1 40
+
+[lgw_spi_wbu] 5b53 1 50
+
+[lgw_spi_rbu] 5b53 1 50
+
+[lgw_spi_wbu] 5b53 1 53
+
+[lgw_spi_rbu] 5b54 1 04
+
+[lgw_spi_wbu] 5b54 1 0c
+
+[lgw_spi_rbu] 5b54 1 0c
+
+[lgw_spi_wbu] 5b54 1 08
+
+[lgw_spi_rbu] 5b54 1 08
+
+[lgw_spi_wbu] 5b54 1 0a
+
+[lgw_spi_rbu] 5b54 1 0a
+
+[lgw_spi_wbu] 5b54 1 0b
+
+[lgw_spi_rbu] 5b55 1 80
+
+[lgw_spi_wbu] 5b55 1 c0
+
+[lgw_spi_rbu] 5b55 1 c0
+
+[lgw_spi_wbu] 5b55 1 c2
+
+[lgw_spi_wbu] 5b56 1 fd
+
+[lgw_spi_wbu] 5b57 1 73
+
+[lgw_spi_wbu] 5b58 1 21
+
+[lgw_spi_rbu] 5b59 1 00
+
+[lgw_spi_wbu] 5b59 1 01
+
+[lgw_spi_wbu] 5b5a 1 88
+
+[lgw_spi_wbu] 5b5b 1 ea
+
+[lgw_spi_wbu] 5b5c 1 9f
+
+[lgw_spi_wbu] 5b5d 1 bc
+
+[lgw_spi_wbu] 5b5e 1 cb
+
+[lgw_spi_wbu] 5b5f 1 0e
+
+[lgw_spi_wbu] 5b60 1 cd
+
+[lgw_spi_wbu] 5b61 1 15
+
+[lgw_spi_wbu] 5b62 1 0d
+
+[lgw_spi_wbu] 5b63 1 fe
+
+[lgw_spi_wbu] 5b64 1 06
+
+[lgw_spi_rbu] 5b65 1 04
+
+[lgw_spi_wbu] 5b65 1 07
+
+[lgw_spi_rbu] 6000 1 00
+
+[lgw_spi_wbu] 6000 1 10
+
+[lgw_spi_rbu] 6000 1 10
+
+[lgw_spi_wbu] 6000 1 18
+
+[lgw_spi_rbu] 6000 1 18
+
+[lgw_spi_wbu] 6000 1 1c
+
+[lgw_spi_rbu] 6000 1 1c
+
+[lgw_spi_wbu] 6000 1 1e
+
+[lgw_spi_rbu] 6000 1 1e
+
+[lgw_spi_wbu] 6000 1 1f
+
+[lgw_spi_rbu] 6001 1 00
+
+[lgw_spi_wbu] 6001 1 12
+
+[lgw_spi_rbu] 6002 1 00
+
+[lgw_spi_wbu] 6002 1 0f
+
+[lgw_spi_wbu] 6003 1 1e
+
+[lgw_spi_wbu] 6004 1 fa
+
+[lgw_spi_rbu] 6008 1 02
+
+[lgw_spi_wbu] 6008 1 00
+
+[lgw_spi_rbu] 5600 1 02
+
+[lgw_spi_rbu] 5601 1 04
+
+[lgw_spi_rbu] 5601 1 04
+
+[lgw_spi_rbu] 5601 1 04
+
+[lgw_spi_rbu] 5601 1 04
+
+[lgw_spi_rbu] 5602 1 0a
+
+[lgw_spi_rbu] 5602 1 0a
+
+[lgw_spi_rbu] 5602 1 0a
+
+[lgw_spi_rbu] 5602 1 0a
+
+[lgw_spi_rbu] 5603 1 4e
+
+[lgw_spi_rbu] 5604 1 3e
+
+[lgw_spi_rbu] 5605 1 0f
+
+[lgw_spi_rbu] 5605 1 0f
+
+[lgw_spi_rbu] 5605 1 0f
+
+[lgw_spi_rbu] 5605 1 0f
+
+[lgw_spi_rbu] 5780 1 0a
+
+[lgw_spi_rbu] 5780 1 0a
+
+[lgw_spi_rbu] 5780 1 0a
+
+[lgw_spi_rbu] 5780 1 0a
+
+[lgw_spi_rbu] 5782 1 09
+
+[lgw_spi_rbu] 5782 1 09
+
+[lgw_spi_rbu] 5783 1 0f
+
+[lgw_spi_rbu] 5783 1 0f
+
+[lgw_spi_rbu] 5783 1 0f
+
+[lgw_spi_rbu] 5783 1 0f
+
+[lgw_spi_rbu] 5784 1 0f
+
+[lgw_spi_rbu] 5784 1 0f
+
+[lgw_spi_rbu] 5784 1 0f
+
+[lgw_spi_rbu] 5784 1 0f
+
+[lgw_spi_rbu] 5785 1 6b
+
+[lgw_spi_rbu] 5785 1 6b
+
+[lgw_spi_rbu] 5786 1 46
+
+[lgw_spi_rbu] 5786 1 46
+
+[lgw_spi_rbu] 5787 1 3e
+
+[lgw_spi_rbu] 5787 1 3e
+
+[lgw_spi_rbu] 5787 1 3e
+
+[lgw_spi_rbu] 5787 1 3e
+
+[lgw_spi_rbu] 5787 1 3e
+
+[lgw_spi_rbu] 5787 1 3e
+
+[lgw_spi_rbu] 5788 1 bf
+
+[lgw_spi_rbu] 5789 1 e4
+
+[lgw_spi_rbu] 578a 1 b9
+
+[lgw_spi_rbu] 578b 1 3f
+
+[lgw_spi_rbu] 578c 1 35
+
+[lgw_spi_rbu] 57c0 1 07
+
+[lgw_spi_rbu] 57c0 1 07
+
+[lgw_spi_rbu] 57c0 1 07
+
+[lgw_spi_rbu] 5200 1 07
+
+[lgw_spi_rbu] 5200 1 07
+
+[lgw_spi_rbu] 5200 1 07
+
+[lgw_spi_rbu] 5201 1 4b
+
+[lgw_spi_rbu] 5202 1 c9
+
+[lgw_spi_rbu] 5203 1 e0
+
+[lgw_spi_rbu] 5204 1 d4
+
+[lgw_spi_rbu] 5205 1 e8
+
+[lgw_spi_rbu] 5206 1 6b
+
+[lgw_spi_rbu] 5207 1 01
+
+[lgw_spi_rbu] 5208 1 02
+
+[lgw_spi_rbu] 5209 1 01
+
+[lgw_spi_rbu] 520a 1 03
+
+[lgw_spi_rbu] 520a 1 03
+
+[lgw_spi_rbu] 520c 1 f8
+
+[lgw_spi_rbu] 520d 1 82
+
+[lgw_spi_rbu] 520e 1 2b
+
+[lgw_spi_rbu] 520f 1 18
+
+[lgw_spi_rbu] 5210 1 66
+
+[lgw_spi_rbu] 5220 1 a5
+
+[lgw_spi_rbu] 5220 1 a5
+
+[lgw_spi_rbu] 5220 1 a5
+
+[lgw_spi_rbu] 5220 1 a5
+
+[lgw_spi_rbu] 5220 1 a5
+
+[lgw_spi_rbu] 5221 1 03
+
+[lgw_spi_rbu] 5221 1 03
+
+[lgw_spi_rbu] 5222 1 02
+
+[lgw_spi_rbu] 5223 1 fa
+
+[lgw_spi_rbu] 5224 1 cc
+
+[lgw_spi_rbu] 5225 1 1e
+
+[lgw_spi_rbu] 5226 1 50
+
+[lgw_spi_rbu] 5227 1 4a
+
+[lgw_spi_rbu] 5228 1 05
+
+[lgw_spi_rbu] 5229 1 25
+
+[lgw_spi_rbu] 522a 1 59
+
+[lgw_spi_rbu] 5240 1 c6
+
+[lgw_spi_rbu] 5241 1 35
+
+[lgw_spi_rbu] 5241 1 35
+
+[lgw_spi_rbu] 5241 1 35
+
+[lgw_spi_rbu] 5241 1 35
+
+[lgw_spi_rbu] 5241 1 35
+
+[lgw_spi_rbu] 5242 1 9c
+
+[lgw_spi_rbu] 5243 1 81
+
+[lgw_spi_rbu] 5244 1 9d
+
+[lgw_spi_rbu] 5245 1 82
+
+[lgw_spi_rbu] 5246 1 b5
+
+[lgw_spi_rbu] 5246 1 b5
+
+[lgw_spi_rbu] 5246 1 b5
+
+[lgw_spi_rbu] 5246 1 b5
+
+[lgw_spi_rbu] 5246 1 b5
+
+[lgw_spi_rbu] 5247 1 ae
+
+[lgw_spi_rbu] 5248 1 81
+
+[lgw_spi_rbu] 5249 1 64
+
+[lgw_spi_rbu] 524a 1 90
+
+[lgw_spi_rbu] 524b 1 3c
+
+[lgw_spi_rbu] 524c 1 48
+
+[lgw_spi_rbu] 524d 1 dd
+
+[lgw_spi_rbu] 524e 1 4e
+
+[lgw_spi_rbu] 5260 1 49
+
+[lgw_spi_rbu] 5260 1 49
+
+[lgw_spi_rbu] 5261 1 69
+
+[lgw_spi_rbu] 5261 1 69
+
+[lgw_spi_rbu] 5261 1 69
+
+[lgw_spi_rbu] 5261 1 69
+
+[lgw_spi_rbu] 5262 1 d2
+
+[lgw_spi_rbu] 5262 1 d2
+
+[lgw_spi_rbu] 5262 1 d2
+
+[lgw_spi_rbu] 5262 1 d2
+
+[lgw_spi_rbu] 5262 1 d2
+
+[lgw_spi_rbu] 5263 1 20
+
+[lgw_spi_rbu] 5264 1 a2
+
+[lgw_spi_rbu] 5264 1 a2
+
+[lgw_spi_rbu] 5265 1 e0
+
+[lgw_spi_rbu] 5265 1 e0
+
+[lgw_spi_rbu] 5265 1 e0
+
+[lgw_spi_rbu] 5266 1 0a
+
+[lgw_spi_rbu] 5267 1 59
+
+[lgw_spi_rbu] 5268 1 30
+
+[lgw_spi_rbu] 5268 1 30
+
+[lgw_spi_rbu] 5268 1 30
+
+[lgw_spi_rbu] 5269 1 49
+
+[lgw_spi_rbu] 5269 1 49
+
+[lgw_spi_rbu] 5269 1 49
+
+[lgw_spi_rbu] 5269 1 49
+
+[lgw_spi_rbu] 5269 1 49
+
+[lgw_spi_rbu] 526a 1 1e
+
+[lgw_spi_rbu] 526b 1 f0
+
+[lgw_spi_rbu] 526c 1 45
+
+[lgw_spi_rbu] 526c 1 45
+
+[lgw_spi_rbu] 526d 1 44
+
+[lgw_spi_rbu] 526d 1 44
+
+[lgw_spi_rbu] 526d 1 44
+
+[lgw_spi_rbu] 526d 1 44
+
+[lgw_spi_rbu] 526e 1 ce
+
+[lgw_spi_rbu] 526e 1 ce
+
+[lgw_spi_rbu] 526e 1 ce
+
+[lgw_spi_rbu] 5400 1 07
+
+[lgw_spi_rbu] 5400 1 07
+
+[lgw_spi_rbu] 5400 1 07
+
+[lgw_spi_rbu] 5401 1 42
+
+[lgw_spi_rbu] 5402 1 f9
+
+[lgw_spi_rbu] 5403 1 83
+
+[lgw_spi_rbu] 5404 1 fe
+
+[lgw_spi_rbu] 5405 1 12
+
+[lgw_spi_rbu] 5406 1 b4
+
+[lgw_spi_rbu] 5407 1 01
+
+[lgw_spi_rbu] 5408 1 05
+
+[lgw_spi_rbu] 5409 1 01
+
+[lgw_spi_rbu] 540a 1 03
+
+[lgw_spi_rbu] 540a 1 03
+
+[lgw_spi_rbu] 540c 1 38
+
+[lgw_spi_rbu] 540d 1 77
+
+[lgw_spi_rbu] 540e 1 2c
+
+[lgw_spi_rbu] 540f 1 8e
+
+[lgw_spi_rbu] 5410 1 50
+
+[lgw_spi_rbu] 5420 1 c5
+
+[lgw_spi_rbu] 5420 1 c5
+
+[lgw_spi_rbu] 5420 1 c5
+
+[lgw_spi_rbu] 5420 1 c5
+
+[lgw_spi_rbu] 5420 1 c5
+
+[lgw_spi_rbu] 5421 1 03
+
+[lgw_spi_rbu] 5421 1 03
+
+[lgw_spi_rbu] 5422 1 01
+
+[lgw_spi_rbu] 5423 1 3c
+
+[lgw_spi_rbu] 5424 1 d9
+
+[lgw_spi_rbu] 5425 1 46
+
+[lgw_spi_rbu] 5426 1 2e
+
+[lgw_spi_rbu] 5427 1 71
+
+[lgw_spi_rbu] 5428 1 0b
+
+[lgw_spi_rbu] 5429 1 48
+
+[lgw_spi_rbu] 542a 1 16
+
+[lgw_spi_rbu] 5440 1 0b
+
+[lgw_spi_rbu] 5441 1 39
+
+[lgw_spi_rbu] 5441 1 39
+
+[lgw_spi_rbu] 5441 1 39
+
+[lgw_spi_rbu] 5441 1 39
+
+[lgw_spi_rbu] 5441 1 39
+
+[lgw_spi_rbu] 5442 1 9d
+
+[lgw_spi_rbu] 5443 1 06
+
+[lgw_spi_rbu] 5444 1 14
+
+[lgw_spi_rbu] 5445 1 8c
+
+[lgw_spi_rbu] 5446 1 d5
+
+[lgw_spi_rbu] 5446 1 d5
+
+[lgw_spi_rbu] 5446 1 d5
+
+[lgw_spi_rbu] 5446 1 d5
+
+[lgw_spi_rbu] 5446 1 d5
+
+[lgw_spi_rbu] 5447 1 bb
+
+[lgw_spi_rbu] 5448 1 9a
+
+[lgw_spi_rbu] 5449 1 39
+
+[lgw_spi_rbu] 544a 1 78
+
+[lgw_spi_rbu] 544b 1 e4
+
+[lgw_spi_rbu] 544c 1 ba
+
+[lgw_spi_rbu] 544d 1 3f
+
+[lgw_spi_rbu] 544e 1 75
+
+[lgw_spi_rbu] 5460 1 63
+
+[lgw_spi_rbu] 5460 1 63
+
+[lgw_spi_rbu] 5461 1 2b
+
+[lgw_spi_rbu] 5461 1 2b
+
+[lgw_spi_rbu] 5461 1 2b
+
+[lgw_spi_rbu] 5461 1 2b
+
+[lgw_spi_rbu] 5462 1 d2
+
+[lgw_spi_rbu] 5462 1 d2
+
+[lgw_spi_rbu] 5462 1 d2
+
+[lgw_spi_rbu] 5462 1 d2
+
+[lgw_spi_rbu] 5462 1 d2
+
+[lgw_spi_rbu] 5463 1 98
+
+[lgw_spi_rbu] 5464 1 81
+
+[lgw_spi_rbu] 5464 1 81
+
+[lgw_spi_rbu] 5465 1 ea
+
+[lgw_spi_rbu] 5465 1 ea
+
+[lgw_spi_rbu] 5465 1 ea
+
+[lgw_spi_rbu] 5466 1 7d
+
+[lgw_spi_rbu] 5467 1 b1
+
+[lgw_spi_rbu] 5468 1 30
+
+[lgw_spi_rbu] 5468 1 30
+
+[lgw_spi_rbu] 5468 1 30
+
+[lgw_spi_rbu] 5469 1 19
+
+[lgw_spi_rbu] 5469 1 19
+
+[lgw_spi_rbu] 5469 1 19
+
+[lgw_spi_rbu] 5469 1 19
+
+[lgw_spi_rbu] 5469 1 19
+
+[lgw_spi_rbu] 546a 1 1e
+
+[lgw_spi_rbu] 546b 1 98
+
+[lgw_spi_rbu] 546c 1 38
+
+[lgw_spi_rbu] 546c 1 38
+
+[lgw_spi_rbu] 546d 1 4a
+
+[lgw_spi_rbu] 546d 1 4a
+
+[lgw_spi_rbu] 546d 1 4a
+
+[lgw_spi_rbu] 546d 1 4a
+
+[lgw_spi_rbu] 546e 1 83
+
+[lgw_spi_rbu] 546e 1 83
+
+[lgw_spi_rbu] 546e 1 83
+
+[lgw_spi_rbu] 5640 1 0b
+
+[lgw_spi_rbu] 5641 1 dd
+
+[lgw_spi_rbu] 5642 1 0c
+
+[lgw_spi_rbu] 5643 1 9b
+
+[lgw_spi_rbu] 5646 1 04
+
+[lgw_spi_rbu] 5647 1 f7
+
+[lgw_spi_rbu] 5648 1 0d
+
+[lgw_spi_rbu] 5649 1 03
+
+[lgw_spi_rbu] 564a 1 08
+
+[lgw_spi_rbu] 564b 1 0e
+
+[lgw_spi_rbu] 564c 1 05
+
+[lgw_spi_rbu] 564d 1 08
+
+[lgw_spi_rbu] 564e 1 07
+
+[lgw_spi_rbu] 564f 1 0a
+
+[lgw_spi_rbu] 5650 1 0f
+
+[lgw_spi_rbu] 5650 1 0f
+
+[lgw_spi_rbu] 5652 1 3f
+
+[lgw_spi_rbu] 5652 1 3f
+
+[lgw_spi_rbu] 5652 1 3f
+
+[lgw_spi_rbu] 5652 1 3f
+
+[lgw_spi_rbu] 5652 1 3f
+
+[lgw_spi_rbu] 5652 1 3f
+
+[lgw_spi_rbu] 6100 1 03
+
+[lgw_spi_rbu] 6100 1 03
+
+[lgw_spi_rbu] 6109 1 bb
+
+[lgw_spi_rbu] 610a 1 eb
+
+[lgw_spi_rbu] 610b 1 d2
+
+[lgw_spi_rbu] 610c 1 f0
+
+[lgw_spi_rbu] 610d 1 f0
+
+[lgw_spi_rbu] 610e 1 bf
+
+[lgw_spi_rbu] 610f 1 a2
+
+[lgw_spi_rbu] 6110 1 af
+
+[lgw_spi_rbu] 5800 1 15
+
+[lgw_spi_rbu] 5801 1 c0
+
+[lgw_spi_rbu] 5802 1 05
+
+[lgw_spi_rbu] 5803 1 5d
+
+[lgw_spi_rbu] 5804 1 0f
+
+[lgw_spi_rbu] 5805 1 68
+
+[lgw_spi_rbu] 5806 1 0a
+
+[lgw_spi_rbu] 5807 1 eb
+
+[lgw_spi_rbu] 5808 1 13
+
+[lgw_spi_rbu] 5809 1 ac
+
+[lgw_spi_rbu] 580a 1 17
+
+[lgw_spi_rbu] 580b 1 3d
+
+[lgw_spi_rbu] 580c 1 04
+
+[lgw_spi_rbu] 580d 1 d9
+
+[lgw_spi_rbu] 580e 1 03
+
+[lgw_spi_rbu] 580f 1 19
+
+[lgw_spi_rbu] 5810 1 c3
+
+[lgw_spi_rbu] 5811 1 ae
+
+[lgw_spi_rbu] 5811 1 ae
+
+[lgw_spi_rbu] 5812 1 0e
+
+[lgw_spi_rbu] 5813 1 65
+
+[lgw_spi_rbu] 5814 1 a4
+
+[lgw_spi_rbu] 5815 1 5a
+
+[lgw_spi_rbu] 5815 1 5a
+
+[lgw_spi_rbu] 5816 1 0c
+
+[lgw_spi_rbu] 5817 1 02
+
+[lgw_spi_rbu] 5819 1 19
+
+[lgw_spi_rbu] 5819 1 19
+
+[lgw_spi_rbu] 581a 1 00
+
+[lgw_spi_rbu] 5820 1 50
+
+[lgw_spi_rbu] 5821 1 fa
+
+[lgw_spi_rbu] 5822 1 cb
+
+[lgw_spi_rbu] 5823 1 a0
+
+[lgw_spi_rbu] 5824 1 be
+
+[lgw_spi_rbu] 5825 1 40
+
+[lgw_spi_rbu] 5825 1 40
+
+[lgw_spi_rbu] 5825 1 40
+
+[lgw_spi_rbu] 5825 1 40
+
+[lgw_spi_rbu] 5825 1 40
+
+[lgw_spi_rbu] 5825 1 40
+
+[lgw_spi_rbu] 5826 1 c4
+
+[lgw_spi_rbu] 5826 1 c4
+
+[lgw_spi_rbu] 5827 1 c7
+
+[lgw_spi_rbu] 5828 1 23
+
+[lgw_spi_rbu] 5829 1 60
+
+[lgw_spi_rbu] 582a 1 24
+
+[lgw_spi_rbu] 582a 1 24
+
+[lgw_spi_rbu] 582a 1 24
+
+[lgw_spi_rbu] 582b 1 10
+
+[lgw_spi_rbu] 582b 1 10
+
+[lgw_spi_rbu] 582c 1 04
+
+[lgw_spi_rbu] 582c 1 04
+
+[lgw_spi_rbu] 582c 1 04
+
+[lgw_spi_rbu] 582c 1 04
+
+[lgw_spi_rbu] 582c 1 04
+
+[lgw_spi_rbu] 582c 1 04
+
+[lgw_spi_rbu] 582d 1 a3
+
+[lgw_spi_rbu] 582d 1 a3
+
+[lgw_spi_rbu] 582e 1 fe
+
+[lgw_spi_rbu] 582f 1 2d
+
+[lgw_spi_rbu] 5830 1 2f
+
+[lgw_spi_rbu] 5831 1 1c
+
+[lgw_spi_rbu] 5831 1 1c
+
+[lgw_spi_rbu] 5831 1 1c
+
+[lgw_spi_rbu] 5832 1 08
+
+[lgw_spi_rbu] 5832 1 08
+
+[lgw_spi_rbu] 5833 1 04
+
+[lgw_spi_rbu] 5833 1 04
+
+[lgw_spi_rbu] 5833 1 04
+
+[lgw_spi_rbu] 5833 1 04
+
+[lgw_spi_rbu] 5833 1 04
+
+[lgw_spi_rbu] 5833 1 04
+
+[lgw_spi_rbu] 5834 1 84
+
+[lgw_spi_rbu] 5834 1 84
+
+[lgw_spi_rbu] 5835 1 d8
+
+[lgw_spi_rbu] 5836 1 45
+
+[lgw_spi_rbu] 5837 1 10
+
+[lgw_spi_rbu] 5838 1 10
+
+[lgw_spi_rbu] 5838 1 10
+
+[lgw_spi_rbu] 5838 1 10
+
+[lgw_spi_rbu] 5839 1 19
+
+[lgw_spi_rbu] 5839 1 19
+
+[lgw_spi_rbu] 583a 1 00
+
+[lgw_spi_rbu] 583a 1 00
+
+[lgw_spi_rbu] 583a 1 00
+
+[lgw_spi_rbu] 583a 1 00
+
+[lgw_spi_rbu] 583a 1 00
+
+[lgw_spi_rbu] 583a 1 00
+
+[lgw_spi_rbu] 583b 1 9c
+
+[lgw_spi_rbu] 583b 1 9c
+
+[lgw_spi_rbu] 583c 1 d9
+
+[lgw_spi_rbu] 583d 1 49
+
+[lgw_spi_rbu] 583e 1 47
+
+[lgw_spi_rbu] 583f 1 34
+
+[lgw_spi_rbu] 583f 1 34
+
+[lgw_spi_rbu] 583f 1 34
+
+[lgw_spi_rbu] 5840 1 09
+
+[lgw_spi_rbu] 5840 1 09
+
+[lgw_spi_rbu] 5841 1 00
+
+[lgw_spi_rbu] 5841 1 00
+
+[lgw_spi_rbu] 5841 1 00
+
+[lgw_spi_rbu] 5841 1 00
+
+[lgw_spi_rbu] 5841 1 00
+
+[lgw_spi_rbu] 5841 1 00
+
+[lgw_spi_rbu] 5842 1 90
+
+[lgw_spi_rbu] 5842 1 90
+
+[lgw_spi_rbu] 5843 1 8b
+
+[lgw_spi_rbu] 5844 1 53
+
+[lgw_spi_rbu] 5845 1 2f
+
+[lgw_spi_rbu] 5846 1 08
+
+[lgw_spi_rbu] 5846 1 08
+
+[lgw_spi_rbu] 5846 1 08
+
+[lgw_spi_rbu] 5847 1 08
+
+[lgw_spi_rbu] 5847 1 08
+
+[lgw_spi_rbu] 5848 1 44
+
+[lgw_spi_rbu] 5848 1 44
+
+[lgw_spi_rbu] 5848 1 44
+
+[lgw_spi_rbu] 5848 1 44
+
+[lgw_spi_rbu] 5848 1 44
+
+[lgw_spi_rbu] 5848 1 44
+
+[lgw_spi_rbu] 5849 1 ac
+
+[lgw_spi_rbu] 5849 1 ac
+
+[lgw_spi_rbu] 584a 1 a3
+
+[lgw_spi_rbu] 584b 1 5a
+
+[lgw_spi_rbu] 584c 1 14
+
+[lgw_spi_rbu] 584d 1 20
+
+[lgw_spi_rbu] 584d 1 20
+
+[lgw_spi_rbu] 584d 1 20
+
+[lgw_spi_rbu] 584e 1 0c
+
+[lgw_spi_rbu] 584e 1 0c
+
+[lgw_spi_rbu] 584f 1 04
+
+[lgw_spi_rbu] 584f 1 04
+
+[lgw_spi_rbu] 584f 1 04
+
+[lgw_spi_rbu] 584f 1 04
+
+[lgw_spi_rbu] 584f 1 04
+
+[lgw_spi_rbu] 584f 1 04
+
+[lgw_spi_rbu] 5850 1 c2
+
+[lgw_spi_rbu] 5850 1 c2
+
+[lgw_spi_rbu] 5851 1 1f
+
+[lgw_spi_rbu] 5852 1 63
+
+[lgw_spi_rbu] 5853 1 7c
+
+[lgw_spi_rbu] 5854 1 0c
+
+[lgw_spi_rbu] 5854 1 0c
+
+[lgw_spi_rbu] 5854 1 0c
+
+[lgw_spi_rbu] 5855 1 00
+
+[lgw_spi_rbu] 5855 1 00
+
+[lgw_spi_rbu] 5856 1 00
+
+[lgw_spi_rbu] 5856 1 00
+
+[lgw_spi_rbu] 5856 1 00
+
+[lgw_spi_rbu] 5856 1 00
+
+[lgw_spi_rbu] 5856 1 00
+
+[lgw_spi_rbu] 5856 1 00
+
+[lgw_spi_rbu] 5857 1 83
+
+[lgw_spi_rbu] 5857 1 83
+
+[lgw_spi_rbu] 5858 1 9a
+
+[lgw_spi_rbu] 5859 1 51
+
+[lgw_spi_rbu] 585a 1 7b
+
+[lgw_spi_rbu] 585b 1 30
+
+[lgw_spi_rbu] 585b 1 30
+
+[lgw_spi_rbu] 585b 1 30
+
+[lgw_spi_rbu] 585c 1 10
+
+[lgw_spi_rbu] 585c 1 10
+
+[lgw_spi_rbu] 5860 1 17
+
+[lgw_spi_rbu] 5860 1 17
+
+[lgw_spi_rbu] 5860 1 17
+
+[lgw_spi_rbu] 5860 1 17
+
+[lgw_spi_rbu] 5860 1 17
+
+[lgw_spi_rbu] 5861 1 34
+
+[lgw_spi_rbu] 5861 1 34
+
+[lgw_spi_rbu] 5862 1 01
+
+[lgw_spi_rbu] 5863 1 a7
+
+[lgw_spi_rbu] 5864 1 53
+
+[lgw_spi_rbu] 5865 1 7a
+
+[lgw_spi_rbu] 5866 1 6b
+
+[lgw_spi_rbu] 5867 1 30
+
+[lgw_spi_rbu] 5868 1 13
+
+[lgw_spi_rbu] 5869 1 02
+
+[lgw_spi_rbu] 586a 1 52
+
+[lgw_spi_rbu] 586b 1 78
+
+[lgw_spi_rbu] 586c 1 73
+
+[lgw_spi_rbu] 586d 1 34
+
+[lgw_spi_rbu] 586e 1 3c
+
+[lgw_spi_rbu] 586f 1 6e
+
+[lgw_spi_rbu] 5870 1 60
+
+[lgw_spi_rbu] 5871 1 08
+
+[lgw_spi_rbu] 5872 1 7a
+
+[lgw_spi_rbu] 5873 1 11
+
+[lgw_spi_rbu] 5874 1 e2
+
+[lgw_spi_rbu] 5874 1 e2
+
+[lgw_spi_rbu] 5875 1 18
+
+[lgw_spi_rbu] 5875 1 18
+
+[lgw_spi_rbu] 5875 1 18
+
+[lgw_spi_rbu] 5875 1 18
+
+[lgw_spi_rbu] 5876 1 54
+
+[lgw_spi_rbu] 5876 1 54
+
+[lgw_spi_rbu] 5876 1 54
+
+[lgw_spi_rbu] 5876 1 54
+
+[lgw_spi_rbu] 5877 1 d6
+
+[lgw_spi_rbu] 5877 1 d6
+
+[lgw_spi_rbu] 5877 1 d6
+
+[lgw_spi_rbu] 5877 1 d6
+
+[lgw_spi_rbu] 5878 1 b6
+
+[lgw_spi_rbu] 5878 1 b6
+
+[lgw_spi_rbu] 5878 1 b6
+
+[lgw_spi_rbu] 5878 1 b6
+
+[lgw_spi_rbu] 5878 1 b6
+
+[lgw_spi_rbu] 5878 1 b6
+
+[lgw_spi_rbu] 5879 1 ee
+
+[lgw_spi_rbu] 587a 1 b5
+
+[lgw_spi_rbu] 587b 1 60
+
+[lgw_spi_rbu] 587c 1 ed
+
+[lgw_spi_rbu] 587d 1 c1
+
+[lgw_spi_rbu] 587d 1 c1
+
+[lgw_spi_rbu] 587e 1 58
+
+[lgw_spi_rbu] 587e 1 58
+
+[lgw_spi_rbu] 587e 1 58
+
+[lgw_spi_rbu] 587e 1 58
+
+[lgw_spi_rbu] 587f 1 02
+
+[lgw_spi_rbu] 587f 1 02
+
+[lgw_spi_rbu] 587f 1 02
+
+[lgw_spi_rbu] 5880 1 b7
+
+[lgw_spi_rbu] 5881 1 a5
+
+[lgw_spi_rbu] 5881 1 a5
+
+[lgw_spi_rbu] 5882 1 66
+
+[lgw_spi_rbu] 5882 1 66
+
+[lgw_spi_rbu] 5883 1 ee
+
+[lgw_spi_rbu] 5884 1 b9
+
+[lgw_spi_rbu] 5885 1 07
+
+[lgw_spi_rbu] 5885 1 07
+
+[lgw_spi_rbu] 5885 1 07
+
+[lgw_spi_rbu] 5885 1 07
+
+[lgw_spi_rbu] 5886 1 fc
+
+[lgw_spi_rbu] 5886 1 fc
+
+[lgw_spi_rbu] 5886 1 fc
+
+[lgw_spi_rbu] 5886 1 fc
+
+[lgw_spi_rbu] 5886 1 fc
+
+[lgw_spi_rbu] 5886 1 fc
+
+[lgw_spi_rbu] 5886 1 fc
+
+[lgw_spi_rbu] 5886 1 fc
+
+[lgw_spi_rbu] 5887 1 03
+
+[lgw_spi_rbu] 5887 1 03
+
+[lgw_spi_rbu] 5887 1 03
+
+[lgw_spi_rbu] 5887 1 03
+
+[lgw_spi_rbu] 5888 1 e9
+
+[lgw_spi_rbu] 5889 1 09
+
+[lgw_spi_rbu] 5889 1 09
+
+[lgw_spi_rbu] 588a 1 08
+
+[lgw_spi_rbu] 588b 1 06
+
+[lgw_spi_rbu] 588c 1 0c
+
+[lgw_spi_rbu] 588d 1 0b
+
+[lgw_spi_rbu] 588e 1 09
+
+[lgw_spi_rbu] 588f 1 0d
+
+[lgw_spi_rbu] 5890 1 29
+
+[lgw_spi_rbu] 5890 1 29
+
+[lgw_spi_rbu] 5890 1 29
+
+[lgw_spi_rbu] 5890 1 29
+
+[lgw_spi_rbu] 5890 1 29
+
+[lgw_spi_rbu] 5891 1 6a
+
+[lgw_spi_rbu] 5891 1 6a
+
+[lgw_spi_rbu] 5891 1 6a
+
+[lgw_spi_rbu] 5891 1 6a
+
+[lgw_spi_rbu] 5891 1 6a
+
+[lgw_spi_rbu] 5892 1 ac
+
+[lgw_spi_rbu] 5892 1 ac
+
+[lgw_spi_rbu] 5892 1 ac
+
+[lgw_spi_rbu] 5893 1 26
+
+[lgw_spi_rbu] 5893 1 26
+
+[lgw_spi_rbu] 5893 1 26
+
+[lgw_spi_rbu] 5894 1 b0
+
+[lgw_spi_rbu] 5894 1 b0
+
+[lgw_spi_rbu] 5895 1 56
+
+[lgw_spi_rbu] 5895 1 56
+
+[lgw_spi_rbu] 5895 1 56
+
+[lgw_spi_rbu] 5895 1 56
+
+[lgw_spi_rbu] 5896 1 9a
+
+[lgw_spi_rbu] 5896 1 9a
+
+[lgw_spi_rbu] 5896 1 9a
+
+[lgw_spi_rbu] 5896 1 9a
+
+[lgw_spi_rbu] 5897 1 16
+
+[lgw_spi_rbu] 5897 1 16
+
+[lgw_spi_rbu] 5898 1 42
+
+[lgw_spi_rbu] 5898 1 42
+
+[lgw_spi_rbu] 5899 1 68
+
+[lgw_spi_rbu] 5899 1 68
+
+[lgw_spi_rbu] 5899 1 68
+
+[lgw_spi_rbu] 5899 1 68
+
+[lgw_spi_rbu] 5899 1 68
+
+[lgw_spi_rbu] 589a 1 9a
+
+[lgw_spi_rbu] 589a 1 9a
+
+[lgw_spi_rbu] 589a 1 9a
+
+[lgw_spi_rbu] 589b 1 99
+
+[lgw_spi_rbu] 589b 1 99
+
+[lgw_spi_rbu] 589b 1 99
+
+[lgw_spi_rbu] 589c 1 c0
+
+[lgw_spi_rbu] 589c 1 c0
+
+[lgw_spi_rbu] 589d 1 66
+
+[lgw_spi_rbu] 589d 1 66
+
+[lgw_spi_rbu] 589d 1 66
+
+[lgw_spi_rbu] 589d 1 66
+
+[lgw_spi_rbu] 589e 1 a6
+
+[lgw_spi_rbu] 589e 1 a6
+
+[lgw_spi_rbu] 589e 1 a6
+
+[lgw_spi_rbu] 589e 1 a6
+
+[lgw_spi_rbu] 589f 1 40
+
+[lgw_spi_rbu] 589f 1 40
+
+[lgw_spi_rbu] 58a0 1 07
+
+[lgw_spi_rbu] 58a1 1 f3
+
+[lgw_spi_rbu] 58a2 1 00
+
+[lgw_spi_rbu] 58a3 1 36
+
+[lgw_spi_rbu] 58a3 1 36
+
+[lgw_spi_rbu] 58a3 1 36
+
+[lgw_spi_rbu] 58a3 1 36
+
+[lgw_spi_rbu] 58a3 1 36
+
+[lgw_spi_rbu] 58a3 1 36
+
+[lgw_spi_rbu] 58a4 1 c1
+
+[lgw_spi_rbu] 58a5 1 08
+
+[lgw_spi_rbu] 58a5 1 08
+
+[lgw_spi_rbu] 58a5 1 08
+
+[lgw_spi_rbu] 58a5 1 08
+
+[lgw_spi_rbu] 58a6 1 58
+
+[lgw_spi_rbu] 58a6 1 58
+
+[lgw_spi_rbu] 58a6 1 58
+
+[lgw_spi_rbu] 58a6 1 58
+
+[lgw_spi_rbu] 58a7 1 09
+
+[lgw_spi_rbu] 58a7 1 09
+
+[lgw_spi_rbu] 58a7 1 09
+
+[lgw_spi_rbu] 58a7 1 09
+
+[lgw_spi_rbu] 58a8 1 65
+
+[lgw_spi_rbu] 58a8 1 65
+
+[lgw_spi_rbu] 58a8 1 65
+
+[lgw_spi_rbu] 58a8 1 65
+
+[lgw_spi_rbu] 58a9 1 80
+
+[lgw_spi_rbu] 58a9 1 80
+
+[lgw_spi_rbu] 58aa 1 41
+
+[lgw_spi_rbu] 58aa 1 41
+
+[lgw_spi_rbu] 58ab 1 15
+
+[lgw_spi_rbu] 58ab 1 15
+
+[lgw_spi_rbu] 58ab 1 15
+
+[lgw_spi_rbu] 58ac 1 7e
+
+[lgw_spi_rbu] 58ad 1 22
+
+[lgw_spi_rbu] 58ae 1 15
+
+[lgw_spi_rbu] 58ae 1 15
+
+[lgw_spi_rbu] 58af 1 42
+
+[lgw_spi_rbu] 58af 1 42
+
+[lgw_spi_rbu] 58af 1 42
+
+[lgw_spi_rbu] 58af 1 42
+
+[lgw_spi_rbu] 58b0 1 f0
+
+[lgw_spi_rbu] 58b0 1 f0
+
+[lgw_spi_rbu] 58b1 1 10
+
+[lgw_spi_rbu] 58b1 1 10
+
+[lgw_spi_rbu] 58b1 1 10
+
+[lgw_spi_rbu] 58b1 1 10
+
+[lgw_spi_rbu] 58b1 1 10
+
+[lgw_spi_rbu] 58b1 1 10
+
+[lgw_spi_rbu] 58b2 1 97
+
+[lgw_spi_rbu] 58b3 1 1b
+
+[lgw_spi_rbu] 58b3 1 1b
+
+[lgw_spi_rbu] 58b3 1 1b
+
+[lgw_spi_rbu] 58b7 1 22
+
+[lgw_spi_rbu] 58b7 1 22
+
+[lgw_spi_rbu] 58b7 1 22
+
+[lgw_spi_rbu] 58b7 1 22
+
+[lgw_spi_rbu] 58b8 1 b5
+
+[lgw_spi_rbu] 58b9 1 55
+
+[lgw_spi_rbu] 58b9 1 55
+
+[lgw_spi_rbu] 58b9 1 55
+
+[lgw_spi_rbu] 58b9 1 55
+
+[lgw_spi_rbu] 58ba 1 26
+
+[lgw_spi_rbu] 58ba 1 26
+
+[lgw_spi_rbu] 58ba 1 26
+
+[lgw_spi_rbu] 58ba 1 26
+
+[lgw_spi_rbu] 58bb 1 ec
+
+[lgw_spi_rbu] 58bc 1 57
+
+[lgw_spi_rbu] 58bd 1 71
+
+[lgw_spi_rbu] 58be 1 41
+
+[lgw_spi_rbu] 58c0 1 1f
+
+[lgw_spi_rbu] 58c0 1 1f
+
+[lgw_spi_rbu] 58c0 1 1f
+
+[lgw_spi_rbu] 58c0 1 1f
+
+[lgw_spi_rbu] 58c0 1 1f
+
+[lgw_spi_rbu] 58c1 1 14
+
+[lgw_spi_rbu] 58c2 1 0b
+
+[lgw_spi_rbu] 58c3 1 3e
+
+[lgw_spi_rbu] 58d9 1 00
+
+[lgw_spi_rbu] 6080 1 1a
+
+[lgw_spi_rbu] 6080 1 1a
+
+[lgw_spi_rbu] 6080 1 1a
+
+[lgw_spi_rbu] 6080 1 1a
+
+[lgw_spi_rbu] 6080 1 1a
+
+[lgw_spi_rbu] 6087 1 3e
+
+[lgw_spi_rbu] 6087 1 3e
+
+[lgw_spi_rbu] 6087 1 3e
+
+[lgw_spi_rbu] 6087 1 3e
+
+[lgw_spi_rbu] 6087 1 3e
+
+[lgw_spi_rbu] 6087 1 3e
+
+[lgw_spi_rbu] 6088 1 a4
+
+[lgw_spi_rbu] 6089 1 e1
+
+[lgw_spi_rbu] 608a 1 cf
+
+[lgw_spi_rbu] 608b 1 07
+
+[lgw_spi_rbu] 608c 1 9b
+
+[lgw_spi_rbu] 609d 1 88
+
+[lgw_spi_rbu] 609d 1 88
+
+[lgw_spi_rbu] 609e 1 ac
+
+[lgw_spi_rbu] 609e 1 ac
+
+[lgw_spi_rbu] 609f 1 4e
+
+[lgw_spi_rbu] 609f 1 4e
+
+[lgw_spi_rbu] 60a0 1 b7
+
+[lgw_spi_rbu] 60a0 1 b7
+
+[lgw_spi_rbu] 5700 1 03
+
+[lgw_spi_rbu] 5700 1 03
+
+[lgw_spi_rbu] 5701 1 3a
+
+[lgw_spi_rbu] 5701 1 3a
+
+[lgw_spi_rbu] 5701 1 3a
+
+[lgw_spi_rbu] 5702 1 0f
+
+[lgw_spi_rbu] 5703 1 e2
+
+[lgw_spi_rbu] 5707 1 1e
+
+[lgw_spi_rbu] 5708 1 02
+
+[lgw_spi_rbu] 5709 1 36
+
+[lgw_spi_rbu] 570a 1 36
+
+[lgw_spi_rbu] 570b 1 37
+
+[lgw_spi_rbu] 570c 1 0e
+
+[lgw_spi_rbu] 570e 1 35
+
+[lgw_spi_rbu] 570e 1 35
+
+[lgw_spi_rbu] 570e 1 35
+
+[lgw_spi_rbu] 570f 1 92
+
+[lgw_spi_rbu] 5710 1 c0
+
+[lgw_spi_rbu] 5714 1 15
+
+[lgw_spi_rbu] 5715 1 13
+
+[lgw_spi_rbu] 5716 1 1e
+
+[lgw_spi_rbu] 5717 1 39
+
+[lgw_spi_rbu] 5718 1 29
+
+[lgw_spi_rbu] 5719 1 16
+
+[lgw_spi_rbu] 571b 1 2f
+
+[lgw_spi_rbu] 571b 1 2f
+
+[lgw_spi_rbu] 571b 1 2f
+
+[lgw_spi_rbu] 571b 1 2f
+
+[lgw_spi_rbu] 571b 1 2f
+
+[lgw_spi_rbu] 571c 1 e9
+
+[lgw_spi_rbu] 6180 1 85
+
+[lgw_spi_rbu] 6183 1 02
+
+[lgw_spi_rbu] 6184 1 03
+
+[lgw_spi_rbu] 6185 1 3f
+
+[lgw_spi_rbu] 6185 1 3f
+
+[lgw_spi_rbu] 6185 1 3f
+
+[lgw_spi_rbu] 6185 1 3f
+
+[lgw_spi_rbu] 6185 1 3f
+
+[lgw_spi_rbu] 6186 1 07
+
+[lgw_spi_rbu] 6186 1 07
+
+[lgw_spi_rbu] 6186 1 07
+
+[lgw_spi_rbu] 6188 1 76
+
+[lgw_spi_rbu] 6189 1 2a
+
+[lgw_spi_rbu] 618a 1 79
+
+[lgw_spi_rbu] 618b 1 00
+
+[lgw_spi_rbu] 5b00 1 0a
+
+[lgw_spi_rbu] 5b01 1 07
+
+[lgw_spi_rbu] 5b02 1 01
+
+[lgw_spi_rbu] 5b03 1 37
+
+[lgw_spi_rbu] 5b03 1 37
+
+[lgw_spi_rbu] 5b03 1 37
+
+[lgw_spi_rbu] 5b03 1 37
+
+[lgw_spi_rbu] 5b03 1 37
+
+[lgw_spi_rbu] 5b04 1 16
+
+[lgw_spi_rbu] 5b04 1 16
+
+[lgw_spi_rbu] 5b05 1 03
+
+[lgw_spi_rbu] 5b06 1 d5
+
+[lgw_spi_rbu] 5b07 1 19
+
+[lgw_spi_rbu] 5b08 1 3d
+
+[lgw_spi_rbu] 5b09 1 79
+
+[lgw_spi_rbu] 5b0a 1 46
+
+[lgw_spi_rbu] 5b0b 1 0c
+
+[lgw_spi_rbu] 5b0c 1 47
+
+[lgw_spi_rbu] 5b0d 1 14
+
+[lgw_spi_rbu] 5b0e 1 5e
+
+[lgw_spi_rbu] 5b0f 1 4c
+
+[lgw_spi_rbu] 5b10 1 4e
+
+[lgw_spi_rbu] 5b11 1 2f
+
+[lgw_spi_rbu] 5b12 1 26
+
+[lgw_spi_rbu] 5b13 1 54
+
+[lgw_spi_rbu] 5b14 1 20
+
+[lgw_spi_rbu] 5b15 1 26
+
+[lgw_spi_rbu] 5b16 1 12
+
+[lgw_spi_rbu] 5b17 1 a5
+
+[lgw_spi_rbu] 5b17 1 a5
+
+[lgw_spi_rbu] 5b18 1 1a
+
+[lgw_spi_rbu] 5b18 1 1a
+
+[lgw_spi_rbu] 5b18 1 1a
+
+[lgw_spi_rbu] 5b18 1 1a
+
+[lgw_spi_rbu] 5b19 1 45
+
+[lgw_spi_rbu] 5b19 1 45
+
+[lgw_spi_rbu] 5b19 1 45
+
+[lgw_spi_rbu] 5b19 1 45
+
+[lgw_spi_rbu] 5b1a 1 c5
+
+[lgw_spi_rbu] 5b1a 1 c5
+
+[lgw_spi_rbu] 5b1a 1 c5
+
+[lgw_spi_rbu] 5b1a 1 c5
+
+[lgw_spi_rbu] 5b1b 1 b6
+
+[lgw_spi_rbu] 5b1b 1 b6
+
+[lgw_spi_rbu] 5b1b 1 b6
+
+[lgw_spi_rbu] 5b1b 1 b6
+
+[lgw_spi_rbu] 5b1b 1 b6
+
+[lgw_spi_rbu] 5b1b 1 b6
+
+[lgw_spi_rbu] 5b1c 1 9c
+
+[lgw_spi_rbu] 5b1d 1 9f
+
+[lgw_spi_rbu] 5b1e 1 34
+
+[lgw_spi_rbu] 5b1f 1 40
+
+[lgw_spi_rbu] 5b20 1 61
+
+[lgw_spi_rbu] 5b20 1 61
+
+[lgw_spi_rbu] 5b21 1 eb
+
+[lgw_spi_rbu] 5b21 1 eb
+
+[lgw_spi_rbu] 5b22 1 1d
+
+[lgw_spi_rbu] 5b22 1 1d
+
+[lgw_spi_rbu] 5b22 1 1d
+
+[lgw_spi_rbu] 5b22 1 1d
+
+[lgw_spi_rbu] 5b23 1 3a
+
+[lgw_spi_rbu] 5b23 1 3a
+
+[lgw_spi_rbu] 5b23 1 3a
+
+[lgw_spi_rbu] 5b23 1 3a
+
+[lgw_spi_rbu] 5b23 1 3a
+
+[lgw_spi_rbu] 5b24 1 6c
+
+[lgw_spi_rbu] 5b25 1 8e
+
+[lgw_spi_rbu] 5b25 1 8e
+
+[lgw_spi_rbu] 5b26 1 5c
+
+[lgw_spi_rbu] 5b26 1 5c
+
+[lgw_spi_rbu] 5b27 1 da
+
+[lgw_spi_rbu] 5b28 1 60
+
+[lgw_spi_rbu] 5b29 1 07
+
+[lgw_spi_rbu] 5b29 1 07
+
+[lgw_spi_rbu] 5b29 1 07
+
+[lgw_spi_rbu] 5b29 1 07
+
+[lgw_spi_rbu] 5b2a 1 03
+
+[lgw_spi_rbu] 5b2a 1 03
+
+[lgw_spi_rbu] 5b2a 1 03
+
+[lgw_spi_rbu] 5b2a 1 03
+
+[lgw_spi_rbu] 5b2b 1 32
+
+[lgw_spi_rbu] 5b2c 1 20
+
+[lgw_spi_rbu] 5b2c 1 20
+
+[lgw_spi_rbu] 5b2d 1 07
+
+[lgw_spi_rbu] 5b2d 1 07
+
+[lgw_spi_rbu] 5b2d 1 07
+
+[lgw_spi_rbu] 5b2e 1 0b
+
+[lgw_spi_rbu] 5b2f 1 0e
+
+[lgw_spi_rbu] 5b30 1 28
+
+[lgw_spi_rbu] 5b30 1 28
+
+[lgw_spi_rbu] 5b30 1 28
+
+[lgw_spi_rbu] 5b30 1 28
+
+[lgw_spi_rbu] 5b30 1 28
+
+[lgw_spi_rbu] 5b31 1 66
+
+[lgw_spi_rbu] 5b31 1 66
+
+[lgw_spi_rbu] 5b31 1 66
+
+[lgw_spi_rbu] 5b31 1 66
+
+[lgw_spi_rbu] 5b31 1 66
+
+[lgw_spi_rbu] 5b32 1 45
+
+[lgw_spi_rbu] 5b32 1 45
+
+[lgw_spi_rbu] 5b32 1 45
+
+[lgw_spi_rbu] 5b33 1 a0
+
+[lgw_spi_rbu] 5b33 1 a0
+
+[lgw_spi_rbu] 5b33 1 a0
+
+[lgw_spi_rbu] 5b34 1 90
+
+[lgw_spi_rbu] 5b34 1 90
+
+[lgw_spi_rbu] 5b34 1 90
+
+[lgw_spi_rbu] 5b35 1 51
+
+[lgw_spi_rbu] 5b35 1 51
+
+[lgw_spi_rbu] 5b36 1 04
+
+[lgw_spi_rbu] 5b37 1 8f
+
+[lgw_spi_rbu] 5b38 1 05
+
+[lgw_spi_rbu] 5b39 1 36
+
+[lgw_spi_rbu] 5b39 1 36
+
+[lgw_spi_rbu] 5b39 1 36
+
+[lgw_spi_rbu] 5b39 1 36
+
+[lgw_spi_rbu] 5b39 1 36
+
+[lgw_spi_rbu] 5b39 1 36
+
+[lgw_spi_rbu] 5b3a 1 7a
+
+[lgw_spi_rbu] 5b3b 1 e0
+
+[lgw_spi_rbu] 5b3b 1 e0
+
+[lgw_spi_rbu] 5b3b 1 e0
+
+[lgw_spi_rbu] 5b3c 1 0a
+
+[lgw_spi_rbu] 5b3c 1 0a
+
+[lgw_spi_rbu] 5b3d 1 52
+
+[lgw_spi_rbu] 5b3d 1 52
+
+[lgw_spi_rbu] 5b3d 1 52
+
+[lgw_spi_rbu] 5b3e 1 2c
+
+[lgw_spi_rbu] 5b3f 1 43
+
+[lgw_spi_rbu] 5b40 1 40
+
+[lgw_spi_rbu] 5b40 1 40
+
+[lgw_spi_rbu] 5b41 1 82
+
+[lgw_spi_rbu] 5b41 1 82
+
+[lgw_spi_rbu] 5b41 1 82
+
+[lgw_spi_rbu] 5b41 1 82
+
+[lgw_spi_rbu] 5b42 1 98
+
+[lgw_spi_rbu] 5b42 1 98
+
+[lgw_spi_rbu] 5b43 1 40
+
+[lgw_spi_rbu] 5b43 1 40
+
+[lgw_spi_rbu] 5b43 1 40
+
+[lgw_spi_rbu] 5b43 1 40
+
+[lgw_spi_rbu] 5b43 1 40
+
+[lgw_spi_rbu] 5b43 1 40
+
+[lgw_spi_rbu] 5b44 1 d0
+
+[lgw_spi_rbu] 5b45 1 1d
+
+[lgw_spi_rbu] 5b45 1 1d
+
+[lgw_spi_rbu] 5b45 1 1d
+
+[lgw_spi_rbu] 5b46 1 08
+
+[lgw_spi_rbu] 5b46 1 08
+
+[lgw_spi_rbu] 5b46 1 08
+
+[lgw_spi_rbu] 5b46 1 08
+
+[lgw_spi_rbu] 5b50 1 15
+
+[lgw_spi_rbu] 5b51 1 49
+
+[lgw_spi_rbu] 5b52 1 17
+
+[lgw_spi_rbu] 5b52 1 17
+
+[lgw_spi_rbu] 5b52 1 17
+
+[lgw_spi_rbu] 5b52 1 17
+
+[lgw_spi_rbu] 5b53 1 53
+
+[lgw_spi_rbu] 5b53 1 53
+
+[lgw_spi_rbu] 5b53 1 53
+
+[lgw_spi_rbu] 5b54 1 0b
+
+[lgw_spi_rbu] 5b54 1 0b
+
+[lgw_spi_rbu] 5b54 1 0b
+
+[lgw_spi_rbu] 5b54 1 0b
+
+[lgw_spi_rbu] 5b55 1 c2
+
+[lgw_spi_rbu] 5b55 1 c2
+
+[lgw_spi_rbu] 5b56 1 fd
+
+[lgw_spi_rbu] 5b57 1 73
+
+[lgw_spi_rbu] 5b58 1 21
+
+[lgw_spi_rbu] 5b59 1 01
+
+[lgw_spi_rbu] 5b5a 1 88
+
+[lgw_spi_rbu] 5b5b 1 ea
+
+[lgw_spi_rbu] 5b5c 1 9f
+
+[lgw_spi_rbu] 5b5d 1 bc
+
+[lgw_spi_rbu] 5b5e 1 cb
+
+[lgw_spi_rbu] 5b5f 1 0e
+
+[lgw_spi_rbu] 5b60 1 cd
+
+[lgw_spi_rbu] 5b61 1 15
+
+[lgw_spi_rbu] 5b62 1 0d
+
+[lgw_spi_rbu] 5b63 1 fe
+
+[lgw_spi_rbu] 5b64 1 06
+
+[lgw_spi_rbu] 5b65 1 07
+
+[lgw_spi_rbu] 6000 1 1f
+
+[lgw_spi_rbu] 6000 1 1f
+
+[lgw_spi_rbu] 6000 1 1f
+
+[lgw_spi_rbu] 6000 1 1f
+
+[lgw_spi_rbu] 6000 1 1f
+
+[lgw_spi_rbu] 6001 1 12
+
+[lgw_spi_rbu] 6002 1 0f
+
+[lgw_spi_rbu] 6003 1 1e
+
+[lgw_spi_rbu] 6004 1 fa
+
+[lgw_spi_rbu] 6008 1 00
+
+------------------
+ TEST#2 PASSED
+------------------
+
+Time: 15058114 us
+> 
