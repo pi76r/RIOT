@@ -32,7 +32,8 @@
 #define ENABLE_DEBUG SX1302_DEBUG
 #include "debug.h"
 
-#define CHUNK_SIZE_MAX 1024
+//#define CHUNK_SIZE_MAX 1024
+#define CHUNK_SIZE_MAX 512
 
 static bool SX1302_SPI_ACQUIRE = true;
 
@@ -45,8 +46,18 @@ static bool SX1302_SPI_ACQUIRE = true;
 #define SX1302_SPI_SPEED  (SPI_CLK_5MHZ)
 #endif
 
+#define SPI_PAUSE_DELAY 1000
+
+#if SPI_PAUSE_DELAY == 0
+#define SPI_PAUSE
+#else
+#include "xtimer.h"
+#define SPI_PAUSE      xtimer_usleep(SPI_PAUSE_DELAY)
+#endif
+
 #define DEBUG_SPI 1
 #if DEBUG_SPI == 1
+
 
 static void printfhex(const uint8_t *data, const uint16_t size)
 {
@@ -110,9 +121,10 @@ static void sx1302_write_reg_buffer(const sx1302_t *dev,
     memcpy(cmd + 3, buffer, size);
     spi_transfer_bytes(dev->params.spi, dev->params.nss_pin, false, cmd, NULL,
                        size + 3);
-
+    SPI_PAUSE;
     _sx1302_spi_release(dev);
     // wait_on_busy(dev);
+    SPI_PAUSE;
 }
 
 static void sx1302_read_reg_buffer(const sx1302_t *dev,
@@ -129,9 +141,10 @@ static void sx1302_read_reg_buffer(const sx1302_t *dev,
     cmd[3] = 0;
     spi_transfer_bytes(dev->params.spi, dev->params.nss_pin, true, cmd, NULL,
                        4);
+    //SPI_PAUSE;
     spi_transfer_bytes(dev->params.spi, dev->params.nss_pin, false, NULL,
                        buffer, size);
-
+    SPI_PAUSE;
     _sx1302_spi_release(dev);
     // wait_on_busy(dev);
 
@@ -159,7 +172,7 @@ void sx1302_reg_read_batch(const sx1302_t *dev, uint16_t register_id,
     cmd[3] = 0;
     spi_transfer_bytes(dev->params.spi, dev->params.nss_pin, true, cmd, NULL,
                        4);
-
+    SPI_PAUSE;
     int chunk_size;
     int offset = 0;
     /* write memory by chunks */
@@ -171,7 +184,7 @@ void sx1302_reg_read_batch(const sx1302_t *dev, uint16_t register_id,
         spi_transfer_bytes(dev->params.spi, dev->params.nss_pin,
                            size > CHUNK_SIZE_MAX, NULL, &data[offset],
                            chunk_size);
-
+        SPI_PAUSE;
         /* prepare for next write */
         size -= chunk_size;
         offset += CHUNK_SIZE_MAX;
@@ -195,6 +208,7 @@ static void sx1302_write_reg_align32(const sx1302_t *dev,
         /* direct write */
         uint8_t val = (uint8_t)reg_value;
         sx1302_write_reg_buffer(dev, spi_mux_target, r.addr, &val, 1);
+
     } else if ((r.offs + r.leng) <= 8) {
         /* single-byte read-modify-write, offs:[0-7], leng:[1-7] */
         sx1302_read_reg_buffer(dev, spi_mux_target, r.addr, &buf[0], 1);
@@ -203,6 +217,7 @@ static void sx1302_write_reg_align32(const sx1302_t *dev,
         buf[3] =
             (~buf[1] & buf[0]) | (buf[1] & buf[2]); /* mixing old & new data */
         sx1302_write_reg_buffer(dev, spi_mux_target, r.addr, &buf[3], 1);
+
     } else if ((r.offs == 0) && (r.leng > 0) && (r.leng <= 32)) {
         /* multi-byte direct write routine */
         size_byte = (r.leng + 7) /
@@ -216,6 +231,7 @@ static void sx1302_write_reg_align32(const sx1302_t *dev,
         sx1302_write_reg_buffer(
             dev, spi_mux_target, r.addr, buf,
             size_byte); /* write the register in one burst */
+
     } else {
         /* register spanning multiple memory bytes but with an offset */
         DEBUG_PUTS("ERROR: REGISTER SIZE AND OFFSET ARE NOT SUPPORTED\n");
@@ -234,6 +250,7 @@ static int32_t sx1302_read_reg_align32(const sx1302_t *dev,
         /* read one byte, then shift and mask bits to get reg value with sign
          * extension if needed */
         sx1302_read_reg_buffer(dev, spi_mux_target, r.addr, &bufu[0], 1);
+
         bufu[1] = bufu[0] << (8 - r.leng - r.offs); /* left-align the data */
         if (r.sign) {
             bufs[2] = bufs[1] >>
@@ -286,6 +303,7 @@ void sx1302_reg_write(const sx1302_t *dev, uint16_t register_id,
     }
 
     sx1302_write_reg_align32(dev, SX1302_SPI_MUX_TARGET_SX1302, r, reg_value);
+
 }
 
 int32_t sx1302_reg_read(const sx1302_t *dev, uint16_t register_id) {
@@ -378,6 +396,7 @@ void sx1250_write_command(const sx1302_t *dev, uint8_t rf_chain,
     spi_transfer_bytes(dev->params.spi, dev->params.nss_pin, false, cmd, NULL,
                        size + 2);
 
+    SPI_PAUSE;
     _sx1302_spi_release(dev);
     // wait_on_busy(dev);
 }
@@ -395,8 +414,10 @@ void sx1250_read_command(const sx1302_t *dev, uint8_t rf_chain,
 
     spi_transfer_bytes(dev->params.spi, dev->params.nss_pin, true, cmd, NULL,
                        2);
+    //SPI_PAUSE;
     spi_transfer_bytes(dev->params.spi, dev->params.nss_pin, false, data, data,
                        size);
+    SPI_PAUSE;
 
     _sx1302_spi_release(dev);
     // wait_on_busy(dev);

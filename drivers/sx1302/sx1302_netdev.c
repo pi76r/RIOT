@@ -105,7 +105,7 @@ static int _init(netdev_t *netdev) {
     }
 
     sx1302_set_default(sx1302);
-    sx1302_init_radio(sx1302);
+    //sx1302_init_radio(sx1302);
 
     DEBUG_PUTS("[sx1302] netdev: initialization done");
 

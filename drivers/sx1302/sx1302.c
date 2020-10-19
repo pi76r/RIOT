@@ -87,18 +87,26 @@ int sx1302_init(sx1302_t *dev) {
 }
 
 void sx1302_reset(sx1302_t *dev) {
+
+    DEBUG("[sx1302] set power and reset\n");
     gpio_init(dev->params.power_en_pin, GPIO_OUT);  // SX1302_POWER_EN_PIN
     gpio_init(dev->params.reset_pin, GPIO_OUT);     // SX1302_RESET_PIN
     xtimer_usleep(1000);
 
     // write output for SX1302 CoreCell power_enable
+    gpio_clear(dev->params.power_en_pin);
+    xtimer_usleep(100000);
+
+    // write output for SX1302 CoreCell power_enable
     gpio_set(dev->params.power_en_pin);
-    xtimer_usleep(10000);
+    xtimer_usleep(100000);
     // write output for SX1302 CoreCell reset
-    gpio_set(dev->params.reset_pin);
-    xtimer_usleep(10000);
     gpio_clear(dev->params.reset_pin);
-    xtimer_usleep(10000);
+    xtimer_usleep(100000);
+    gpio_set(dev->params.reset_pin);
+    xtimer_usleep(100000);
+    gpio_clear(dev->params.reset_pin);
+    xtimer_usleep(100000);
 }
 
 void sx1302_radio_reset(sx1302_t *dev, uint8_t rf_chain) {
