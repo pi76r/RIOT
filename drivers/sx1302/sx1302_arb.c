@@ -19,6 +19,7 @@
 #include "sx1302_arb.h"
 
 #include <string.h>
+#include <stdlib.h>
 
 #include "sx1302_internal.h"
 #include "sx1302_registers.h"
@@ -140,13 +141,17 @@ int sx1302_arb_load_firmware(sx1302_t *dev, const uint8_t *firmware) {
                      SX1302_MCU_FW_SIZE);
 
     /* Read back and check */
-    /*
-    sx1302_mem_read(dev, SX1302_ARB_MEM_ADDR, fw_check, SX1302_MCU_FW_SIZE/2,
-    false); hexDump("original", firmware, 256); hexDump("check", fw_check, 256);
-    if (memcmp(firmware, fw_check, sizeof fw_check) != 0) {
-        printf("ERROR: Failed to load fw\n");
-        return -1;
-    }*/
+    if (ENABLE_DEBUG) {
+        uint8_t* fw_check = malloc((SX1302_MCU_FW_SIZE/2) * sizeof(uint8_t));
+        sx1302_mem_read(dev, SX1302_ARB_MEM_ADDR, fw_check, SX1302_MCU_FW_SIZE/2, false);
+        if (memcmp(firmware, fw_check, sizeof fw_check) != 0) {
+			printf ("ERROR: Failed to load fw\n");
+			return -1;
+		} else {
+			printf ("INFO: fw correctly loaded\n");
+		}
+		free(fw_check);
+	}
 
     /* Release control over ARB MCU */
     sx1302_reg_write(dev, SX1302_REG_ARB_MCU_CTRL_HOST_PROG, 0x00);
@@ -219,14 +224,19 @@ int sx1302_agc_load_firmware(sx1302_t *dev, const uint8_t *firmware) {
     /* Write AGC fw in AGC MEM */
     sx1302_mem_write(dev, SX1302_AGC_MEM_ADDR, firmware, SX1302_MCU_FW_SIZE);
 
+
     /* Read back and check */
-    /*
-    lgw_mem_rb(AGC_MEM_ADDR, fw_check, MCU_FW_SIZE, false);
-    if (memcmp(firmware, fw_check, sizeof fw_check) != 0) {
-        printf ("ERROR: Failed to load fw\n");
-        return -1;
-    }
-    */
+    if (ENABLE_DEBUG) {
+        uint8_t* fw_check = malloc(SX1302_MCU_FW_SIZE * sizeof(uint8_t));
+    	sx1302_mem_read(dev, SX1302_AGC_MEM_ADDR, fw_check, SX1302_MCU_FW_SIZE, false);
+		if (memcmp(firmware, fw_check, sizeof fw_check) != 0) {
+			printf ("ERROR: Failed to load fw\n");
+			return -1;
+		} else {
+			printf ("INFO: fw correctly loaded\n");
+		}
+		free(fw_check);
+	}
 
     /* Release control over AGC MCU */
     sx1302_reg_write(dev, SX1302_REG_AGC_MCU_CTRL_HOST_PROG, 0x00);
